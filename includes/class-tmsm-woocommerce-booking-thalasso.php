@@ -67,8 +67,8 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'PLUGIN_NAME_VERSION' ) ) {
-			$this->version = PLUGIN_NAME_VERSION;
+		if ( defined( 'TMSM_WOOCOMMERCE_BOOKING_THALASSO' ) ) {
+			$this->version = TMSM_WOOCOMMERCE_BOOKING_THALASSO;
 		} else {
 			$this->version = '1.0.0';
 		}
@@ -98,6 +98,15 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @access   private
 	 */
 	private function load_dependencies() {
+
+		/**
+		 * ACF
+		 */
+		//define( 'ACF_LITE', true ); // hides the admin menu ACF entry.
+		define('ACF_EARLY_ACCESS', '5');
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/advanced-custom-fields/acf.php';
+
 
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
@@ -156,6 +165,14 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+
+		// ACF
+		$this->loader->add_filter( 'acf/settings/path', $plugin_admin, 'acf_settings_path' );
+		$this->loader->add_filter( 'acf/settings/dir', $plugin_admin, 'acf_settings_dir' );
+		//$this->loader->add_filter( 'acf/settings/show_admin', $plugin_admin, 'acf_show_admin' );
+		$this->loader->add_filter( 'acf/settings/load_json', $plugin_admin, 'acf_json_load_path' );
+		$this->loader->add_filter( 'acf/settings/save_json', $plugin_admin, 'acf_json_save_path' );
+
 
 	}
 

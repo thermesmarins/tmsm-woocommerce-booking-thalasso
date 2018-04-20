@@ -100,4 +100,64 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 
 	}
 
+	/**
+	 * ACF Settings Path
+	 *
+	 * @param $path
+	 *
+	 * @return string
+	 */
+	function acf_settings_path( $path ) {
+		$path = plugin_dir_path( __FILE__ ) . 'advanced-custom-fields/';
+		return $path;
+	}
+
+	/**
+	 * ACF Settings Directory
+	 *
+	 * @param $path
+	 *
+	 * @return string
+	 */
+	function acf_settings_dir( $path ) {
+		$dir = plugin_dir_url( __FILE__ ) . '../includes/advanced-custom-fields/';
+		return $dir;
+	}
+
+	/**
+	 * ACF Show Admin Menu
+	 *
+	 * @param $path
+	 *
+	 * @return string
+	 */
+	function acf_show_admin( $path ) {
+		return false;
+	}
+
+	/**
+	 * ACF Json Save Path
+	 *
+	 * @param $path
+	 *
+	 * @return string
+	 */
+	function acf_json_save_path( $path ) {
+		$path = plugin_dir_path( __FILE__ ) . '../acf-json';
+		return $path;
+	}
+
+	/**
+	 * ACF Json Load Path
+	 *
+	 * @param array $path
+	 *
+	 * @return array
+	 */
+	function acf_json_load_path( $path ) {
+		unset($path[0]);
+		$path[] = plugin_dir_path( __FILE__ ) . '../acf-json';
+		return $path;
+	}
+
 }
