@@ -1,0 +1,7 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="translate">baseline</custom-field>
+        <custom-field action="translate">location</custom-field>
+        <custom-field action="translate">advantages</custom-field>
+    </custom-fields>
+</wpml-config>

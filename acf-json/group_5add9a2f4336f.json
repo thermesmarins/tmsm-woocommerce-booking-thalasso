@@ -1,0 +1,154 @@
+{
+    "key": "group_5add9a2f4336f",
+    "title": "Forfaits",
+    "fields": [
+        {
+            "key": "field_5add9b41ce377",
+            "label": "Type de séjour",
+            "name": "triptype",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Long-séjour",
+                "2": "Escapade"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5add9a5386f2a",
+            "label": "Jour de début",
+            "name": "startday",
+            "type": "checkbox",
+            "instructions": "Jours pour lequels on peut commencer le forfait",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Lundi",
+                "2": "Mardi",
+                "3": "Mercredi",
+                "4": "Jeudi",
+                "5": "Vendredi",
+                "6": "Samedi",
+                "0": "Dimanche"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5add9ad686f2b",
+            "label": "Jours minimum",
+            "name": "daysmin",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5add9b0286f2c",
+            "label": "Jours maximum",
+            "name": "daysmax",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5addcb883f3af",
+            "label": "Avantages",
+            "name": "advantages",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "package"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "comments",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1524485146
+}

@@ -1,12 +1,11 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
 "POT-Creation-Date: 2018-04-23 16:02+0200\n"
-"PO-Revision-Date: 2014-10-24 21:08+0100\n"
+"PO-Revision-Date: 2018-04-23 16:04+0200\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
-"Language: en\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;__;_n:1,2;_x:1,2c;esc_attr__;esc_attr_e;"
 "esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: languages\n"
 "X-Poedit-SearchPath-1: .\n"
 "X-Poedit-SearchPathExcluded-0: includes/advanced-custom-fields\n"
@@ -22,11 +21,11 @@ msgstr ""
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:89
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:391
 msgid "Accommodation"
-msgstr ""
+msgstr "Hébergement"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:90
 msgid "Accommodations"
-msgstr ""
+msgstr "Hébergements"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:124
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:125
@@ -34,7 +33,7 @@ msgstr ""
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:191
 #, php-format
 msgid "Add New %s"
-msgstr ""
+msgstr "Ajouter nouveau %s"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:126
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:128
@@ -48,117 +47,117 @@ msgstr ""
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:202
 #, php-format
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:127
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:193
 #, php-format
 msgid "Edit %s"
-msgstr ""
+msgstr "Modifier %s"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:131
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:197
 #, php-format
 msgid "New %s"
-msgstr ""
+msgstr "Ajouter %s"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:132
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:198
 #, php-format
 msgid "No %s Found"
-msgstr ""
+msgstr "Aucun %s trouvé"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:133
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:199
 #, php-format
 msgid "No %s Found in Trash"
-msgstr ""
+msgstr "Aucun %s trouvé dans la corbeille"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:134
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:200
 #, php-format
 msgid "Parent %s:"
-msgstr ""
+msgstr "%s parent :"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:135
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:201
 #, php-format
 msgid "Search %s"
-msgstr ""
+msgstr "Rechercher %s"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:137
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:203
 #, php-format
 msgid "View %s"
-msgstr ""
+msgstr "Voir %s"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:155
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:366
 msgid "Package"
-msgstr ""
+msgstr "Forfait"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:156
 msgid "Packages"
-msgstr ""
+msgstr "Forfaits"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:221
 msgctxt "taxonomy general name"
 msgid "Package Types"
-msgstr ""
+msgstr "Types de forfaits"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:222
 msgctxt "taxonomy singular name"
 msgid "Package Type"
-msgstr ""
+msgstr "Type de forfait"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:223
 msgid "Search Package Type"
-msgstr ""
+msgstr "Rechercher les types de forfait"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:224
 msgid "All Package Types"
-msgstr ""
+msgstr "Tous les types de forfait"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:225
 msgid "Parent Package Type"
-msgstr ""
+msgstr "Type de forfait parent"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:226
 msgid "Parent Package Type:"
-msgstr ""
+msgstr "Type de forfait parent :"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:227
 msgid "Edit Package Type"
-msgstr ""
+msgstr "Modifier le type de forfait"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:228
 msgid "Update Package Type"
-msgstr ""
+msgstr "Mettre à jour le type de forfait"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:229
 msgid "Add New Package Type"
-msgstr ""
+msgstr "Ajouter un type de forfait"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:230
 msgid "New Package Type"
-msgstr ""
+msgstr "Nouveau type de forfait"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:231
 msgid "Package Types"
-msgstr ""
+msgstr "Types de forfait"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:259
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:260
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:279
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:334
 msgid "Booking"
-msgstr ""
+msgstr "Réservation"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:360
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:385
 msgid "Select"
-msgstr ""
+msgstr "Choisir"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:376
 msgid "Booking has accommodation"
-msgstr ""
+msgstr "La réservation a un hébergement"

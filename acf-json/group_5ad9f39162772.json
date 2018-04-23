@@ -1,0 +1,229 @@
+{
+    "key": "group_5ad9f39162772",
+    "title": "Hébergement",
+    "fields": [
+        {
+            "key": "field_5ad9f3e298ae7",
+            "label": "Nom de code",
+            "name": "codename",
+            "type": "text",
+            "instructions": "3 caractères",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 3
+        },
+        {
+            "key": "field_5ad9f3f998ae8",
+            "label": "Étoiles",
+            "name": "stars",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5ad9f49d1a416",
+            "label": "Checkin",
+            "name": "checkin",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "12": "12",
+                "13": "13",
+                "14": "14",
+                "15": "15",
+                "16": "16",
+                "17": "17",
+                "18": "18",
+                "19": "19"
+            },
+            "default_value": [
+                15
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ad9f4de9c63c",
+            "label": "Checkout",
+            "name": "checkout",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "8": "8",
+                "9": "9",
+                "10": "10",
+                "11": "11",
+                "12": "12",
+                "13": "13",
+                "14": "14"
+            },
+            "default_value": [
+                12
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ad9f59d5060b",
+            "label": "Vue mer",
+            "name": "seaview",
+            "type": "true_false",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ad9f5c15060c",
+            "label": "Type d’hébergement",
+            "name": "accommodationtype",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hotel": "Hôtel",
+                "residence": "Résidence"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5ad9fe4bde5db",
+            "label": "Slogan",
+            "name": "baseline",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad9ff4798bbd",
+            "label": "Localisation",
+            "name": "location",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad9ff869c0c7",
+            "label": "Avantages",
+            "name": "advantages",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "accommodation"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1524236311
+}

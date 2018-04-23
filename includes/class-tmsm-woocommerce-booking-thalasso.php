@@ -102,11 +102,7 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		/**
 		 * ACF
 		 */
-		//define( 'ACF_LITE', true ); // hides the admin menu ACF entry.
-		define('ACF_EARLY_ACCESS', '5');
-
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/advanced-custom-fields/acf.php';
-
 
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
@@ -166,10 +162,26 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
+		// Post types
+		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_accommodation' );
+		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_package' );
+
+		// Taxonomies
+		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_packagetype' );
+
+		// WooCommerce Product Type options
+		$this->loader->add_filter( 'product_type_options', $plugin_admin, 'woocommerce_product_type_options_booking' );
+		$this->loader->add_action( 'woocommerce_variation_options', $plugin_admin, 'woocommerce_variation_options_booking', 10 , 3 );
+		$this->loader->add_action( 'woocommerce_save_product_variation', $plugin_admin, 'woocommerce_save_product_variation_booking', 10, 2 );
+		$this->loader->add_action( 'woocommerce_process_product_meta_simple', $plugin_admin, 'woocommerce_process_product_save_booking_options', 10, 1 );
+		$this->loader->add_action( 'woocommerce_process_product_meta_variable', $plugin_admin, 'woocommerce_process_product_save_booking_options', 10, 1 );
+		$this->loader->add_filter( 'woocommerce_product_data_tabs', $plugin_admin, 'woocommerce_product_data_tabs_booking', 98 );
+		$this->loader->add_filter( 'woocommerce_product_data_panels', $plugin_admin, 'woocommerce_product_data_panels_booking' );
+
 		// ACF
 		$this->loader->add_filter( 'acf/settings/path', $plugin_admin, 'acf_settings_path' );
 		$this->loader->add_filter( 'acf/settings/dir', $plugin_admin, 'acf_settings_dir' );
-		//$this->loader->add_filter( 'acf/settings/show_admin', $plugin_admin, 'acf_show_admin' );
+		$this->loader->add_filter( 'acf/settings/show_admin', $plugin_admin, 'acf_show_admin' );
 		$this->loader->add_filter( 'acf/settings/load_json', $plugin_admin, 'acf_json_load_path' );
 		$this->loader->add_filter( 'acf/settings/save_json', $plugin_admin, 'acf_json_save_path' );
 
