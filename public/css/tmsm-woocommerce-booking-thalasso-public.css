@@ -1,4 +1,23 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+.woocommerce  .omw-modal{
+  /*height: 90vh;*/
+  max-height: 100% ;
+}
+@media (max-width: 600px) {
+  .woocommerce .omw-modal{
+    height: 100%;
+    width: 100% ;
+
+    max-width: 100% ;
+    top: 0;
+    left: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+}
+
+.woocommerce .omw-modal-inner{
+  /*overflow-y: scroll;*/
+}
+
+#tmsm-woocommerce-booking-thalasso-modalform.loading{ opacity: 0.5}

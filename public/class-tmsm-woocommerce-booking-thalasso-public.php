@@ -61,18 +61,6 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Tmsm_Woocommerce_Booking_Thalasso_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Tmsm_Woocommerce_Booking_Thalasso_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/tmsm-woocommerce-booking-thalasso-public.css', array(), $this->version, 'all' );
 
 	}
@@ -83,21 +71,234 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
+		global $post;
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Tmsm_Woocommerce_Booking_Thalasso_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Tmsm_Woocommerce_Booking_Thalasso_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
+		// Scripts
+		wp_enqueue_script( 'moment', plugin_dir_url( dirname(__FILE__) ) . 'vendor/moment/min/moment.min.js', array( 'jquery' ), $this->version, true );
+		if ( function_exists( 'PLL' ) && $language = PLL()->model->get_language( get_locale() ) )
+		{
+			wp_enqueue_script( 'moment-'.pll_current_language(), plugin_dir_url( dirname(__FILE__) ) . 'vendor/moment/locale/'.pll_current_language().'.js', array( 'jquery' ), $this->version, true );
+		}
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/tmsm-woocommerce-booking-thalasso-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( 'clndr', plugin_dir_url( dirname(__FILE__) ) . 'vendor/clndr/clndr.min.js', array( 'jquery', 'moment', 'underscore' ), $this->version, true );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/tmsm-woocommerce-booking-thalasso-public.js', array( 'jquery','clndr', 'moment' ), $this->version, true );
 
+		// Params
+		$params = [
+			'ajax_url' => admin_url( 'admin-ajax.php' ),
+			'security' => wp_create_nonce( 'security' ),
+			'i18n' => [
+				'button_continue' => __( 'Book now', 'tmsm-woocommerce-booking-thalasso' ),
+			],
+			'booking_settings' => [
+				'hourlimit' => 17,
+			],
+		];
+		if(is_singular('product')){
+			$params['product_data'] = [
+				'title' => get_the_title($post),
+				'bookable' => (get_post_meta($post->ID, '_bookable', true) == 'yes'),
+			];
+		}
+
+		wp_localize_script( $this->plugin_name, 'tmsm_woocommerce_booking_thalasso_params', $params);
+
+	}
+
+	/**
+	 *  WooCommerce Before Add To Cart Button
+	 */
+	public function woocommerce_before_add_to_cart_form(){
+		global $product;
+
+		if ($product instanceof WC_Product) {
+
+			$is_booking = get_post_meta( $product->get_id(), '_booking', true) == 'yes';
+			if($is_booking){
+				echo '<div style="display: none">';
+			}
+
+		}
+	}
+
+	/**
+	 *  WooCommerce After Add To Cart Button
+	 */
+	public function woocommerce_after_add_to_cart_form(){
+		global $product;
+
+		if ($product instanceof WC_Product) {
+
+			$is_booking = get_post_meta( $product->get_id(), '_booking', true) == 'yes';
+			$accommodation_id = get_post_meta( $product->get_id(), '_booking_accommodation', true);
+			$package_id = get_post_meta( $product->get_id(), '_booking_package', true);
+
+			if($is_booking){
+
+				echo '</div>';
+				echo '<a class="button button-booking omw-open-modal" data-productid="'. $product->get_id().'"   data-accommodationid="'. $accommodation_id.'"  data-packageid="'. $package_id.'" id="booking-'. $product->get_id().'" href="#omw-2263">'.__('Book now', 'tmsm-woocommerce-booking-thalasso').'</a>';
+				echo '
+				<div id="'.$this->plugin_name.'-calendar">
+                            <script id="tmsm-woocommerce-booking-thalasso-calendar-template" type="text/template">
+
+                                <table class="table-calendarprices table-condensed" border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr class="clndr-controls">
+                                        <th class="clndr-control-button">
+                                            <span class="clndr-previous-button"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></span>
+                                        </th>
+                                        <th class="month text-center" colspan="5">
+                                            <%= month %> <%= year %>
+
+                                            &nbsp;
+                                            <small class="calendar-error">(Aucune date disponible pour ce mois)</small>
+                                            <small class="calendar-loading">Chargement <span class="glyphicon glyphicon-refresh glyphicon-spin"></span></small>
+
+                                        </th>
+                                        <th class="clndr-control-button text-right">
+                                            <span class="clndr-next-button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></span>
+                                        </th>
+                                    </tr>
+                                    <tr class="header-days">
+
+                                        <% for(var i = 0; i < daysOfTheWeek.length; i++) { %>
+                                        <th class="header-day">
+                                            <%= moment().weekday(i).format(\'dd\').charAt(0) %><span class="rest"><%= moment().weekday(i).format(\'dddd\').slice(1) %></span>
+                                        </th>
+                                        <% } %>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <% for(var i = 0; i < numberOfRows; i++){ %>
+                                    <tr>
+                                        <% for(var j = 0; j < 7; j++){ %>
+                                        <% var d = j + i * 7; %>
+                                        <td class="<%= days[d].classes %>" data-daynumber="<%= days[d].day %>">
+
+                                            <% if (days[d].events.length != 0) { %>
+                                            <% _.each(days[d].events, function(event) { %>
+                                            <div class="cell" data-promofebruary="<%= event._special_promofebruary %>"  data-vidangeaquatonic="<%= event._special_vidangeaquatonic %>"   data-vidangepiscine="<%= event._special_vidangepiscine %>"  data-christmas="<%= event._special_christmas %>" data-newyearseve="<%= event._special_newyearseve %>"  data-dateend="<%= event.date_end %>" data-roomorderids="<%= event.room_order_ids %>" data-pricediscounted="<%= event.price_discounted %>" data-priceregular="<%= event.price_regular %>" data-discount="<%= event.discount %>" data-discount-10="<%= event.discount > 0 %>" data-discount-15="<%= event.discount > 10 %>" data-discount-20="<%= event.discount > 15 %>" data-discount-30="<%= event.discount > 20 %>" data-equal="<%= event.discount == \'0\' %>">
+                                                <small class="day-number"><%= days[d].day %></small>
+                                                <small class="day-special">
+                                                    <%= (event._special_promofebruary == 1 ? \'<span class="glyphicon glyphicon-special glyphicon-star"></span>\':\'\') %>
+                                                    <%= (event._special_vidangeaquatonic == 1 ? \'<span class="glyphicon glyphicon-special glyphicon-warning-sign"></span>\':\'\') %>
+                                                    <%= (event._special_vidangepiscine == 1 ? \'<span class="glyphicon glyphicon-special glyphicon-warning-sign"></span>\':\'\') %>
+                                                    <%= (event._special_christmas == 1 ? \'<span class="glyphicon glyphicon-special glyphicon-warning-sign"></span>\':\'\') %>
+                                                    <%= (event._special_newyearseve == 1 ? \'<span class="glyphicon glyphicon-special glyphicon-warning-sign"></span>\':\'\') %>
+                                                </small>
+
+                                                <p class="price"><%= event.price_perperson_discounted %><sup class="currency">&euro;</sup></p>
+                                                <small class="instead">au lieu de <%=
+                                                    event.price_perperson_regular
+                                                    %><sup class="currency">&euro;</sup>
+                                                </small>
+
+                                            </div>
+                                            <% }) %>
+
+                                            <% } else { %>
+
+                                            <div class="cell">
+                                                <small class="day-number"><%= days[d].day %></small>
+                                                <small class="day-special"></small>
+                                                <p class="price">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                                <small class="instead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>
+                                            </div>
+                                            <% } %>
+                                        </td>
+                                        <% } %>
+                                    </tr>
+                                    <% } %>
+                                    </tbody>
+                                </table>
+
+                            </script>
+                        </div>
+				';
+			}
+
+		}
+
+	}
+
+	/*
+	 * Ajax Function: Booking Start
+	 */
+	public function booking_start(){
+		check_ajax_referer( 'security', 'nonce' );
+
+		sleep(0.5);
+
+		$error = null;
+
+
+		$packageid = wc_clean(urldecode($_POST['packageid']));
+		$productid = wc_clean(urldecode($_POST['productid']));
+		$bookinghasaccommodation = get_post_meta( $productid, '_booking_has_accommodation', true);
+
+		$package = get_post($packageid);
+		if(empty($package)){
+			$error = __('Package not found', 'tmsm-woocommerce-booking-thalasso');
+		}
+
+		$pages = self::get_pages_all();
+		$posts = self::get_posts_all();
+
+		$results = [
+			'package' => get_the_title($package),
+			'bookinghasaccommodation' => $bookinghasaccommodation,
+			'pages' => $pages,
+			'posts' => $posts,
+			'ccc' => 'ddd',
+			111 => 222,
+		];
+
+		if(!empty($results)){
+			wp_send_json($results);
+		}
+
+		wp_send_json_error($error);
+		wp_die();
+	}
+
+	/**
+	 * Get All Pages
+	 *
+	 * @return array
+	 */
+	private function get_pages_all(){
+		$data = get_posts( [
+			'post_type'      => 'page',
+			'posts_per_page' => -1,
+		]);
+		$items = [];
+		if(is_array($data)){
+			foreach($data as $item){
+				$items[$item->ID] = $item->post_title;
+			}
+		}
+
+		return $items;
+	}
+
+	/**
+	 * Get All Posts
+	 *
+	 * @return array
+	 */
+	private function get_posts_all(){
+		$data = get_posts( [
+			'post_type'      => 'post',
+			'posts_per_page' => -1,
+		]);
+		$items = [];
+		if(is_array($data)){
+			foreach($data as $item){
+				$items[$item->ID] = $item->post_title;
+			}
+		}
+
+		return $items;
 	}
 
 }

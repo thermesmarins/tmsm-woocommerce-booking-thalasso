@@ -170,13 +170,13 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_packagetype' );
 
 		// WooCommerce Product Type options
-		$this->loader->add_filter( 'product_type_options', $plugin_admin, 'woocommerce_product_type_options_booking' );
-		$this->loader->add_action( 'woocommerce_variation_options', $plugin_admin, 'woocommerce_variation_options_booking', 10 , 3 );
-		$this->loader->add_action( 'woocommerce_save_product_variation', $plugin_admin, 'woocommerce_save_product_variation_booking', 10, 2 );
-		$this->loader->add_action( 'woocommerce_process_product_meta_simple', $plugin_admin, 'woocommerce_process_product_save_booking_options', 10, 1 );
-		$this->loader->add_action( 'woocommerce_process_product_meta_variable', $plugin_admin, 'woocommerce_process_product_save_booking_options', 10, 1 );
-		$this->loader->add_filter( 'woocommerce_product_data_tabs', $plugin_admin, 'woocommerce_product_data_tabs_booking', 98 );
-		$this->loader->add_filter( 'woocommerce_product_data_panels', $plugin_admin, 'woocommerce_product_data_panels_booking' );
+		$this->loader->add_filter( 'product_type_options', $plugin_admin, 'woocommerce_product_type_options_bookable' );
+		$this->loader->add_action( 'woocommerce_variation_options', $plugin_admin, 'woocommerce_variation_options_bookable', 10 , 3 );
+		$this->loader->add_action( 'woocommerce_save_product_variation', $plugin_admin, 'woocommerce_save_product_variation_bookable', 10, 2 );
+		$this->loader->add_action( 'woocommerce_process_product_meta_simple', $plugin_admin, 'woocommerce_process_product_save_bookable_options', 10, 1 );
+		$this->loader->add_action( 'woocommerce_process_product_meta_variable', $plugin_admin, 'woocommerce_process_product_save_bookable_options', 10, 1 );
+		$this->loader->add_filter( 'woocommerce_product_data_tabs', $plugin_admin, 'woocommerce_product_data_tabs_bookable', 98 );
+		$this->loader->add_filter( 'woocommerce_product_data_panels', $plugin_admin, 'woocommerce_product_data_panels_bookable' );
 
 		// ACF
 		$this->loader->add_filter( 'acf/settings/path', $plugin_admin, 'acf_settings_path' );
@@ -202,6 +202,15 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		error_log('define_public_hooks');
+
+		// WooCommerce Button Booking
+		$this->loader->add_action( 'woocommerce_before_add_to_cart_button', $plugin_public, 'woocommerce_before_add_to_cart_form' );
+		$this->loader->add_action( 'woocommerce_after_add_to_cart_button', $plugin_public, 'woocommerce_after_add_to_cart_form' );
+
+		// Ajax Functions
+		$this->loader->add_action( 'wp_ajax_nopriv_booking_start', $plugin_public, 'booking_start' );
+		$this->loader->add_action( 'wp_ajax_booking_start', $plugin_public, 'booking_start' );
 	}
 
 	/**

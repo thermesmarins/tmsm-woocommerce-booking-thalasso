@@ -244,7 +244,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	}
 
 	/**
-	 * Definition for product type option "booking"
+	 * Definition for product type option "bookable"
 	 *
 	 * @since 1.0.0
 	 *
@@ -252,19 +252,19 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	 *
 	 * @return mixed
 	 */
-	function woocommerce_product_type_options_booking( $product_type_options ) {
-		$product_type_options['booking'] = array(
-			'id'            => '_booking',
+	function woocommerce_product_type_options_bookable( $product_type_options ) {
+		$product_type_options['bookable'] = array(
+			'id'            => '_bookable',
 			'wrapper_class' => 'show_if_simple',
-			'label'         => __( 'Booking', 'tmsm-woocommerce-booking-thalasso' ),
-			'description'   => __( 'Booking', 'tmsm-woocommerce-booking-thalasso' ),
+			'label'         => __( 'Bookable', 'tmsm-woocommerce-booking-thalasso' ),
+			'description'   => __( 'Bookable', 'tmsm-woocommerce-booking-thalasso' ),
 			'default'       => 'no'
 		);
 		return $product_type_options;
 	}
 
 	/**
-	 * Checkbox for product variation type "booking"
+	 * Checkbox for product variation type "bookable"
 	 *
 	 * @since 1.0.0
 	 *
@@ -274,13 +274,13 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	 *
 	 * @return void
 	 */
-	public function woocommerce_variation_options_booking( $loop, $variation_data, $variation ) {
-		$is_booking = ( isset( $variation_data['_booking'] ) && 'yes' == $variation_data['_booking'][0] );
-		echo '<label class="notips"><input type="checkbox" class="checkbox variable_is_booking" name="variable_is_booking[' . $loop . ']"' . checked( true, $is_booking, false ) . '> '.__( 'Booking', 'tmsm-woocommerce-booking-thalasso' ).'</label>' . PHP_EOL;
+	public function woocommerce_variation_options_bookable( $loop, $variation_data, $variation ) {
+		$is_bookable = ( isset( $variation_data['_bookable'] ) && 'yes' == $variation_data['_bookable'][0] );
+		echo '<label class="notips"><input type="checkbox" class="checkbox variable_is_bookable" name="variable_is_bookable[' . $loop . ']"' . checked( true, $is_bookable, false ) . '> '.__( 'Bookable', 'tmsm-woocommerce-booking-thalasso' ).'</label>' . PHP_EOL;
 	}
 
 	/**
-	 * Save product variation type "booking"
+	 * Save product variation type "bookable"
 	 *
 	 * @since 1.0.0
 	 *
@@ -289,14 +289,14 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	 *
 	 * @return void
 	 */
-	public function woocommerce_save_product_variation_booking( $post_id, $i ) {
-		$is_booking = isset( $_POST['variable_is_booking'][ $i ] ) ? 'yes' : 'no';
-		update_post_meta( $post_id , '_booking', $is_booking );
+	public function woocommerce_save_product_variation_bookable( $post_id, $i ) {
+		$is_bookable = isset( $_POST['variable_is_bookable'][ $i ] ) ? 'yes' : 'no';
+		update_post_meta( $post_id , '_bookable', $is_bookable );
 	}
 
 
 	/**
-	 * Save options for tab "booking"
+	 * Save options for tab "bookable"
 	 *
 	 * @since 1.0.0
 	 *
@@ -304,24 +304,24 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	 *
 	 * @return void
 	 */
-	function woocommerce_process_product_save_booking_options( $post_id ) {
-		$is_booking = isset( $_POST['_booking'] ) ? 'yes' : 'no';
-		update_post_meta( $post_id, '_booking', $is_booking );
+	function woocommerce_process_product_save_bookable_options( $post_id ) {
+		$is_bookable = isset( $_POST['_bookable'] ) ? 'yes' : 'no';
+		update_post_meta( $post_id, '_bookable', wc_clean($is_bookable) );
 
-		if ( isset( $_POST['_booking_has_accommodation'] ) && $_POST['_booking_accommodation'] !== 0 ) :
-			update_post_meta( $post_id, '_booking_has_accommodation', wc_clean( $_POST['_booking_has_accommodation'] ) );
+		if ( isset( $_POST['_bookable_has_accommodation'] ) && $_POST['_bookable_accommodation'] !== 0 ) :
+			update_post_meta( $post_id, '_bookable_has_accommodation', wc_clean( $_POST['_bookable_has_accommodation'] ) );
 		endif;
-		if ( isset( $_POST['_booking_accommodation'] ) && $_POST['_booking_accommodation'] !== 0) :
-			update_post_meta( $post_id, '_booking_accommodation', wc_clean( $_POST['_booking_accommodation'] ) );
+		if ( isset( $_POST['_bookable_accommodation'] ) && $_POST['_bookable_accommodation'] !== 0) :
+			update_post_meta( $post_id, '_bookable_accommodation', wc_clean( $_POST['_bookable_accommodation'] ) );
 		endif;
-		if ( isset( $_POST['_booking_package'] )  && $_POST['_booking_accommodation'] !== 0 ) :
-			update_post_meta( $post_id, '_booking_package', wc_clean( $_POST['_booking_package'] ) );
+		if ( isset( $_POST['_bookable_package'] )  && $_POST['_bookable_accommodation'] !== 0 ) :
+			update_post_meta( $post_id, '_bookable_package', wc_clean( $_POST['_bookable_package'] ) );
 		endif;
 
 	}
 
 	/**
-	 * Add a custom product tab "booking"
+	 * Add a custom product tab "bookable"
 	 *
 	 * @since 1.0.0
 	 *
@@ -329,27 +329,27 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	 *
 	 * @return mixed $tabs
 	 */
-	function woocommerce_product_data_tabs_booking( $tabs ) {
-		$tabs['booking'] = array(
-			'label'		=> __( 'Booking', 'tmsm-woocommerce-booking-thalasso' ),
-			'target'	=> 'booking_options',
-			'class'  => array( 'show_if_virtual', 'show_if_booking', 'show_if_variable' ),
+	function woocommerce_product_data_tabs_bookable( $tabs ) {
+		$tabs['bookable'] = array(
+			'label'		=> __( 'Bookable', 'tmsm-woocommerce-booking-thalasso' ),
+			'target'	=> 'bookable_options',
+			'class'  => array( 'show_if_virtual', 'show_if_bookable', 'show_if_variable' ),
 		);
 		return $tabs;
 	}
 
 	/**
-	 * Tab content of tab "booking"
+	 * Tab content of tab "bookable"
 	 *
 	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
-	function woocommerce_product_data_panels_booking() {
+	function woocommerce_product_data_panels_bookable() {
 		global $post;
 
 		// Note the 'id' attribute needs to match the 'target' parameter set above
-		?><div id="booking_options" class="panel woocommerce_options_panel hidden"><?php
+		?><div id="bookable_options" class="panel woocommerce_options_panel hidden"><?php
 		?>
 
 		<div class='options_group'>
@@ -362,7 +362,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 					$packages_array[$package->ID] = $package->post_title;
 				}
 				woocommerce_wp_select( array(
-						'id'      => '_booking_package',
+						'id'      => '_bookable_package',
 						'label'   => __( 'Package', 'tmsm-woocommerce-booking-thalasso' ),
 						'options' => $packages_array
 					)
@@ -372,8 +372,8 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 
 			<?php
 			woocommerce_wp_checkbox( array(
-				'id'          => '_booking_has_accommodation',
-				'label'       => __( 'Booking has accommodation', 'tmsm-woocommerce-booking-thalasso' ),
+				'id'          => '_bookable_has_accommodation',
+				'label'       => __( 'Product has accommodation', 'tmsm-woocommerce-booking-thalasso' ),
 				'default'     => 'no',
 				'desc_tip'    => false,
 			) );
@@ -387,7 +387,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 					$accommodations_array[$accommodation->ID] = $accommodation->post_title;
 				}
 				woocommerce_wp_select( array(
-						'id'      => '_booking_accommodation',
+						'id'      => '_bookable_accommodation',
 						'label'   => __( 'Accommodation', 'tmsm-woocommerce-booking-thalasso' ),
 						'options' => $accommodations_array
 					)
