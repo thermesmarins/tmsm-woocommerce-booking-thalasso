@@ -3,5 +3,13 @@
         <custom-field action="translate">baseline</custom-field>
         <custom-field action="translate">location</custom-field>
         <custom-field action="translate">advantages</custom-field>
+        <custom-field action="translate">short_description</custom-field>
+        <custom-field action="translate">long_description</custom-field>
+        <custom-field action="translate">availpro_url</custom-field>
+        <custom-field action="translate">resaweb_url</custom-field>
+        <custom-field action="translate">phone</custom-field>
+        <custom-field action="translate">fax</custom-field>
+        <custom-field action="translate">gift_url</custom-field>
+        <custom-field action="translate">booking_url</custom-field>
     </custom-fields>
 </wpml-config>

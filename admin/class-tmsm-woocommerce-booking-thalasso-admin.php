@@ -144,6 +144,40 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	}
 
 	/**
+	 * Creates a new custom taxonomy: accommodationtype
+	 *
+	 * @since 	1.0.0
+	 * @access 	public
+	 * @uses 	register_taxonomy()
+	 */
+	function register_taxonomy_accommodationtype() {
+		$labels = array(
+			'name'              => _x( 'Accommodation Types', 'taxonomy general name', 'tmsm-woocommerce-booking-thalasso' ),
+			'singular_name'     => _x( 'Accommodation Type', 'taxonomy singular name', 'tmsm-woocommerce-booking-thalasso' ),
+			'search_items'      => __( 'Search Accommodation Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'all_items'         => __( 'All Accommodation Types', 'tmsm-woocommerce-booking-thalasso' ),
+			'parent_item'       => __( 'Parent Accommodation Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'parent_item_colon' => __( 'Parent Accommodation Type:', 'tmsm-woocommerce-booking-thalasso' ),
+			'edit_item'         => __( 'Edit Accommodation Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'update_item'       => __( 'Update Accommodation Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'add_new_item'      => __( 'Add New Accommodation Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'new_item_name'     => __( 'New Accommodation Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'menu_name'         => __( 'Accommodation Types', 'tmsm-woocommerce-booking-thalasso' ),
+		);
+
+		$args = array(
+			'hierarchical'      => false,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'accomodation-type' ),
+		);
+
+		register_taxonomy( 'accommodation_type', array( 'accommodation' ), $args );
+	}
+
+	/**
 	 * Creates a new custom post type: package
 	 *
 	 * @since 	1.0.0
@@ -240,7 +274,241 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 			'rewrite'           => array( 'slug' => 'package-type' ),
 		);
 
-		register_taxonomy( 'package-type', array( 'package' ), $args );
+		register_taxonomy( 'package_type', array( 'package' ), $args );
+	}
+
+	/**
+	 * Creates a new custom taxonomy: triptype
+	 *
+	 * @since 	1.0.0
+	 * @access 	public
+	 * @uses 	register_taxonomy()
+	 */
+	function register_taxonomy_triptype() {
+		$labels = array(
+			'name'              => _x( 'Trip Types', 'taxonomy general name', 'tmsm-woocommerce-booking-thalasso' ),
+			'singular_name'     => _x( 'Trip Type', 'taxonomy singular name', 'tmsm-woocommerce-booking-thalasso' ),
+			'search_items'      => __( 'Search Trip Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'all_items'         => __( 'All Trip Types', 'tmsm-woocommerce-booking-thalasso' ),
+			'parent_item'       => __( 'Parent Trip Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'parent_item_colon' => __( 'Parent Trip Type:', 'tmsm-woocommerce-booking-thalasso' ),
+			'edit_item'         => __( 'Edit Trip Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'update_item'       => __( 'Update Trip Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'add_new_item'      => __( 'Add New Trip Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'new_item_name'     => __( 'New Trip Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'menu_name'         => __( 'Trip Types', 'tmsm-woocommerce-booking-thalasso' ),
+		);
+
+		$args = array(
+			'hierarchical'      => false,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'trip-type' ),
+		);
+
+		register_taxonomy( 'trip_type', array( 'package' ), $args );
+	}
+
+
+	/**
+	 * Creates a new custom post type: discovery
+	 *
+	 * @since 	1.0.1
+	 * @access 	public
+	 * @uses 	register_post_type()
+	 */
+	public static function register_post_type_discovery() {
+		$opts                                           = [];
+		$single                                         = __( 'Discovery', 'tmsm-woocommerce-booking-thalasso' );
+		$plural                                         = __( 'Discoveries', 'tmsm-woocommerce-booking-thalasso' );
+		$cpt_name                                       = 'discovery';
+		$opts['menu_icon']                              = 'dashicons-clipboard';
+		$opts['can_export']                             = true;
+		$opts['capability_type']                        = 'page';
+		$opts['description']                            = '';
+		$opts['exclude_from_search']                    = false;
+		$opts['has_archive']                            = false;
+		$opts['hierarchical']                           = false;
+		$opts['map_meta_cap']                           = true;
+		$opts['menu_position']                          = 30;
+		$opts['public']                                 = true;
+		$opts['publicly_querable']                      = true;
+		$opts['query_var']                              = true;
+		$opts['register_meta_box_cb']                   = '';
+		$opts['show_in_admin_bar']                      = true;
+		$opts['show_in_menu']                           = true;
+		$opts['show_in_nav_menu']                       = true;
+		$opts['show_ui']                                = true;
+		$opts['supports']                               = array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt' );
+		$opts['taxonomies']                             = array();
+		$opts['capabilities']['delete_others_posts']    = "delete_others_posts";
+		$opts['capabilities']['delete_post']            = "delete_post";
+		$opts['capabilities']['delete_posts']           = "delete_posts";
+		$opts['capabilities']['delete_private_posts']   = "delete_private_posts";
+		$opts['capabilities']['delete_published_posts'] = "delete_published_posts";
+		$opts['capabilities']['edit_others_posts']      = "edit_others_posts";
+		$opts['capabilities']['edit_post']              = "edit_post";
+		$opts['capabilities']['edit_posts']             = "edit_posts";
+		$opts['capabilities']['edit_private_posts']     = "edit_private_posts";
+		$opts['capabilities']['edit_published_posts']   = "edit_published_posts";
+		$opts['capabilities']['publish_posts']          = "publish_posts";
+		$opts['capabilities']['read_post']              = "read_post";
+		$opts['capabilities']['read_private_posts']     = "read_private_posts";
+		$opts['labels']['add_new']                      = sprintf( esc_html__( 'Add New %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['add_new_item']                 = sprintf( esc_html__( 'Add New %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['all_items']                    = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['edit_item']                    = sprintf( esc_html__( 'Edit %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['menu_name']                    = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['name']                         = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['name_admin_bar']               = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['new_item']                     = sprintf( esc_html__( 'New %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['not_found']                    = sprintf( esc_html__( 'No %s Found', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['not_found_in_trash']           = sprintf( esc_html__( 'No %s Found in Trash', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['parent_item_colon']            = sprintf( esc_html__( 'Parent %s:', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['search_items']                 = sprintf( esc_html__( 'Search %s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['singular_name']                = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['view_item']                    = sprintf( esc_html__( 'View %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['rewrite']['ep_mask']                     = EP_PERMALINK;
+		$opts['rewrite']['feeds']                       = false;
+		$opts['rewrite']['pages']                       = true;
+		$opts['rewrite']['slug']                        = strtolower( $cpt_name );
+		$opts['rewrite']['with_front']                  = false;
+		register_post_type( strtolower( $cpt_name ), $opts );
+	}
+
+	/**
+	 * Creates a new custom taxonomy: discovery_type
+	 *
+	 * @since 	1.0.1
+	 * @access 	public
+	 * @uses 	register_taxonomy()
+	 */
+	function register_taxonomy_discoverytype() {
+		$labels = array(
+			'name'              => _x( 'Discovery Types', 'taxonomy general name', 'tmsm-woocommerce-booking-thalasso' ),
+			'singular_name'     => _x( 'Discovery Type', 'taxonomy singular name', 'tmsm-woocommerce-booking-thalasso' ),
+			'search_items'      => __( 'Search Discovery Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'all_items'         => __( 'All Discovery Types', 'tmsm-woocommerce-booking-thalasso' ),
+			'parent_item'       => __( 'Parent Discovery Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'parent_item_colon' => __( 'Parent Discovery Type:', 'tmsm-woocommerce-booking-thalasso' ),
+			'edit_item'         => __( 'Edit Discovery Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'update_item'       => __( 'Update Discovery Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'add_new_item'      => __( 'Add New Discovery Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'new_item_name'     => __( 'New Discovery Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'menu_name'         => __( 'Discovery Types', 'tmsm-woocommerce-booking-thalasso' ),
+		);
+
+		$args = array(
+			'hierarchical'      => false,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'discovery-type' ),
+		);
+
+		register_taxonomy( 'discovery_type', array( 'discovery' ), $args );
+	}
+	/**
+	 * Creates a new custom post type: spa-treatment
+	 *
+	 * @since 	1.0.1
+	 * @access 	public
+	 * @uses 	register_post_type()
+	 */
+	public static function register_post_type_spatreatment() {
+		$opts                                           = [];
+		$single                                         = __( 'Spa Treatment', 'tmsm-woocommerce-booking-thalasso' );
+		$plural                                         = __( 'Spa Treatments', 'tmsm-woocommerce-booking-thalasso' );
+		$cpt_name                                       = 'spatreatment';
+		$opts['menu_icon']                              = 'dashicons-clipboard';
+		$opts['can_export']                             = true;
+		$opts['capability_type']                        = 'page';
+		$opts['description']                            = '';
+		$opts['exclude_from_search']                    = false;
+		$opts['has_archive']                            = false;
+		$opts['hierarchical']                           = false;
+		$opts['map_meta_cap']                           = true;
+		$opts['menu_position']                          = 30;
+		$opts['public']                                 = true;
+		$opts['publicly_querable']                      = true;
+		$opts['query_var']                              = true;
+		$opts['register_meta_box_cb']                   = '';
+		$opts['show_in_admin_bar']                      = true;
+		$opts['show_in_menu']                           = true;
+		$opts['show_in_nav_menu']                       = true;
+		$opts['show_ui']                                = true;
+		$opts['supports']                               = array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt' );
+		$opts['taxonomies']                             = array();
+		$opts['capabilities']['delete_others_posts']    = "delete_others_posts";
+		$opts['capabilities']['delete_post']            = "delete_post";
+		$opts['capabilities']['delete_posts']           = "delete_posts";
+		$opts['capabilities']['delete_private_posts']   = "delete_private_posts";
+		$opts['capabilities']['delete_published_posts'] = "delete_published_posts";
+		$opts['capabilities']['edit_others_posts']      = "edit_others_posts";
+		$opts['capabilities']['edit_post']              = "edit_post";
+		$opts['capabilities']['edit_posts']             = "edit_posts";
+		$opts['capabilities']['edit_private_posts']     = "edit_private_posts";
+		$opts['capabilities']['edit_published_posts']   = "edit_published_posts";
+		$opts['capabilities']['publish_posts']          = "publish_posts";
+		$opts['capabilities']['read_post']              = "read_post";
+		$opts['capabilities']['read_private_posts']     = "read_private_posts";
+		$opts['labels']['add_new']                      = sprintf( esc_html__( 'Add New %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['add_new_item']                 = sprintf( esc_html__( 'Add New %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['all_items']                    = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['edit_item']                    = sprintf( esc_html__( 'Edit %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['menu_name']                    = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['name']                         = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['name_admin_bar']               = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['new_item']                     = sprintf( esc_html__( 'New %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['labels']['not_found']                    = sprintf( esc_html__( 'No %s Found', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['not_found_in_trash']           = sprintf( esc_html__( 'No %s Found in Trash', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['parent_item_colon']            = sprintf( esc_html__( 'Parent %s:', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['search_items']                 = sprintf( esc_html__( 'Search %s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['singular_name']                = sprintf( esc_html__( '%s', 'tmsm-woocommerce-booking-thalasso' ), $plural );
+		$opts['labels']['view_item']                    = sprintf( esc_html__( 'View %s', 'tmsm-woocommerce-booking-thalasso' ), $single );
+		$opts['rewrite']['ep_mask']                     = EP_PERMALINK;
+		$opts['rewrite']['feeds']                       = false;
+		$opts['rewrite']['pages']                       = true;
+		$opts['rewrite']['slug']                        = strtolower( $cpt_name );
+		$opts['rewrite']['with_front']                  = false;
+		register_post_type( strtolower( $cpt_name ), $opts );
+	}
+
+	/**
+	 * Creates a new custom taxonomy: spatreatment_type
+	 *
+	 * @since 	1.0.1
+	 * @access 	public
+	 * @uses 	register_taxonomy()
+	 */
+	function register_taxonomy_spatreatmenttype() {
+		$labels = array(
+			'name'              => _x( 'Spa Treatment Types', 'taxonomy general name', 'tmsm-woocommerce-booking-thalasso' ),
+			'singular_name'     => _x( 'Spa Treatment Type', 'taxonomy singular name', 'tmsm-woocommerce-booking-thalasso' ),
+			'search_items'      => __( 'Search Spa Treatment Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'all_items'         => __( 'All Spa Treatment Types', 'tmsm-woocommerce-booking-thalasso' ),
+			'parent_item'       => __( 'Parent Spa Treatment Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'parent_item_colon' => __( 'Parent Spa Treatment Type:', 'tmsm-woocommerce-booking-thalasso' ),
+			'edit_item'         => __( 'Edit Spa Treatment Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'update_item'       => __( 'Update Spa Treatment Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'add_new_item'      => __( 'Add New Spa Treatment Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'new_item_name'     => __( 'New Spa Treatment Type', 'tmsm-woocommerce-booking-thalasso' ),
+			'menu_name'         => __( 'Spa Treatment Types', 'tmsm-woocommerce-booking-thalasso' ),
+		);
+
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'spa-treatment-type' ),
+		);
+
+		register_taxonomy( 'spatreatment_type', array( 'spatreatment' ), $args );
 	}
 
 	/**

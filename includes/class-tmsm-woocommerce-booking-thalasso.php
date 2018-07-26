@@ -165,9 +165,15 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		// Post types
 		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_accommodation' );
 		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_package' );
+		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_discovery' );
+		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_spatreatment' );
 
 		// Taxonomies
+		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_accommodationtype' );
 		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_packagetype' );
+		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_triptype' );
+		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_discoverytype' );
+		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_spatreatmenttype' );
 
 		// WooCommerce Product Type options
 		$this->loader->add_filter( 'product_type_options', $plugin_admin, 'woocommerce_product_type_options_bookable' );
@@ -202,7 +208,6 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-		error_log('define_public_hooks');
 
 		// WooCommerce Button Booking
 		$this->loader->add_action( 'woocommerce_before_add_to_cart_button', $plugin_public, 'woocommerce_before_add_to_cart_form' );

@@ -3,10 +3,10 @@
     "title": "Forfaits",
     "fields": [
         {
-            "key": "field_5add9b41ce377",
+            "key": "field_5b597fb250c94",
             "label": "Type de séjour",
-            "name": "triptype",
-            "type": "select",
+            "name": "trip_type",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,24 +15,21 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "1": "Long-séjour",
-                "2": "Escapade"
-            },
-            "default_value": [],
+            "taxonomy": "trip_type",
+            "field_type": "radio",
             "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0
         },
         {
-            "key": "field_5add9a5386f2a",
-            "label": "Jour de début",
-            "name": "startday",
-            "type": "checkbox",
-            "instructions": "Jours pour lequels on peut commencer le forfait",
+            "key": "field_5add9b41ce377",
+            "label": "Type de forfait",
+            "name": "package_type",
+            "type": "taxonomy",
+            "instructions": "",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -40,29 +37,14 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "1": "Lundi",
-                "2": "Mardi",
-                "3": "Mercredi",
-                "4": "Jeudi",
-                "5": "Vendredi",
-                "6": "Samedi",
-                "0": "Dimanche"
-            },
-            "allow_custom": 0,
-            "save_custom": 0,
-            "default_value": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
-            ],
-            "layout": "horizontal",
-            "toggle": 0,
-            "return_format": "value"
+            "taxonomy": "package_type",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0
         },
         {
             "key": "field_5add9ad686f2b",
@@ -107,6 +89,62 @@
             "step": ""
         },
         {
+            "key": "field_5add9a5386f2a",
+            "label": "Jour de début",
+            "name": "startday",
+            "type": "checkbox",
+            "instructions": "Jours pour lequels on peut commencer le forfait",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Lundi",
+                "2": "Mardi",
+                "3": "Mercredi",
+                "4": "Jeudi",
+                "5": "Vendredi",
+                "6": "Samedi",
+                "0": "Dimanche"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b598b7aac662",
+            "label": "Description courte",
+            "name": "short_description",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5addcb883f3af",
             "label": "Avantages",
             "name": "advantages",
@@ -124,6 +162,44 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_5b598b8bac663",
+            "label": "Description longue",
+            "name": "long_description",
+            "type": "wysiwyg",
+            "instructions": "Programme, Soins",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5b59b732917ca",
+            "label": "ID Resaweb",
+            "name": "id_resaweb",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -141,6 +217,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
+        "the_content",
+        "excerpt",
         "comments",
         "author",
         "format",
@@ -150,5 +228,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1524485146
+    "modified": 1532606275
 }
