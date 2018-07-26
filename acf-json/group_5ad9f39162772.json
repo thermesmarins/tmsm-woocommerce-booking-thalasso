@@ -3,23 +3,26 @@
     "title": "Hébergement",
     "fields": [
         {
-            "key": "field_5ad9f3e298ae7",
-            "label": "Nom de code",
-            "name": "codename",
-            "type": "text",
-            "instructions": "3 caractères",
-            "required": 1,
+            "key": "field_5b5976b4739c7",
+            "label": "Type d’hébergement",
+            "name": "accommodation_type",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "25",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": 3
+            "taxonomy": "accommodation_type",
+            "field_type": "radio",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0
         },
         {
             "key": "field_5ad9f3f998ae8",
@@ -30,7 +33,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "13",
                 "class": "",
                 "id": ""
             },
@@ -43,71 +46,6 @@
             "step": ""
         },
         {
-            "key": "field_5ad9f49d1a416",
-            "label": "Checkin",
-            "name": "checkin",
-            "type": "select",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "12": "12",
-                "13": "13",
-                "14": "14",
-                "15": "15",
-                "16": "16",
-                "17": "17",
-                "18": "18",
-                "19": "19"
-            },
-            "default_value": [
-                15
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5ad9f4de9c63c",
-            "label": "Checkout",
-            "name": "checkout",
-            "type": "select",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "8": "8",
-                "9": "9",
-                "10": "10",
-                "11": "11",
-                "12": "12",
-                "13": "13",
-                "14": "14"
-            },
-            "default_value": [
-                12
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
-        },
-        {
             "key": "field_5ad9f59d5060b",
             "label": "Vue mer",
             "name": "seaview",
@@ -116,7 +54,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "12",
                 "class": "",
                 "id": ""
             },
@@ -236,14 +174,14 @@
         },
         {
             "key": "field_5b58882e783ca",
-            "label": "aaaa",
+            "label": "Téléphone",
             "name": "phone",
             "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "12",
                 "class": "",
                 "id": ""
             },
@@ -262,7 +200,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "13",
                 "class": "",
                 "id": ""
             },
@@ -273,26 +211,69 @@
             "maxlength": ""
         },
         {
-            "key": "field_5b5976b4739c7",
-            "label": "Type d’hébergement",
-            "name": "accommodation_type",
-            "type": "taxonomy",
+            "key": "field_5ad9f49d1a416",
+            "label": "Checkin",
+            "name": "checkin",
+            "type": "select",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "12",
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "accommodation_type",
-            "field_type": "radio",
+            "choices": {
+                "12": "12",
+                "13": "13",
+                "14": "14",
+                "15": "15",
+                "16": "16",
+                "17": "17",
+                "18": "18",
+                "19": "19"
+            },
+            "default_value": [
+                15
+            ],
             "allow_null": 0,
-            "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 0,
-            "return_format": "object",
-            "multiple": 0
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ad9f4de9c63c",
+            "label": "Checkout",
+            "name": "checkout",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "12",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "8": "8",
+                "9": "9",
+                "10": "10",
+                "11": "11",
+                "12": "12",
+                "13": "13",
+                "14": "14"
+            },
+            "default_value": [
+                12
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         },
         {
             "key": "field_5b59b71d31a3b",
@@ -303,7 +284,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "12",
                 "class": "",
                 "id": ""
             },
@@ -314,6 +295,25 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_5ad9f3e298ae7",
+            "label": "Nom de code",
+            "name": "codename",
+            "type": "text",
+            "instructions": "3 caractères",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "13",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 3
         }
     ],
     "location": [
@@ -342,5 +342,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532618612
+    "modified": 1532619101
 }
