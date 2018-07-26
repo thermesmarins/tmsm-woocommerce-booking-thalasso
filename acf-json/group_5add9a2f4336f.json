@@ -217,8 +217,6 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "the_content",
-        "excerpt",
         "comments",
         "author",
         "format",
@@ -228,5 +226,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532614651
+    "modified": 1532618608
 }

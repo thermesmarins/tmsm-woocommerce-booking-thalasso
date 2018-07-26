@@ -331,8 +331,6 @@
     "label_placement": "top",
     "instruction_placement": "field",
     "hide_on_screen": [
-        "the_content",
-        "excerpt",
         "discussion",
         "comments",
         "revisions",
@@ -344,5 +342,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532614613
+    "modified": 1532618612
 }
