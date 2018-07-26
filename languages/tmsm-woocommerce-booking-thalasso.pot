@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-07-26 14:34+0200\n"
+"POT-Creation-Date: 2018-07-26 15:22+0200\n"
 "PO-Revision-Date: 2014-10-24 21:08+0100\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
@@ -18,6 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: languages\n"
 "X-Poedit-SearchPath-1: .\n"
 "X-Poedit-SearchPathExcluded-0: includes/advanced-custom-fields\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:89
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:659
@@ -398,32 +399,4 @@ msgstr ""
 
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:241
 msgid "Package not found"
-msgstr ""
-
-#: vendor/moment/min/locales.min.js:1
-msgid "s"
-msgstr ""
-
-#: vendor/moment/min/locales.min.js:1
-msgid "m"
-msgstr ""
-
-#: vendor/moment/min/locales.min.js:1
-msgid "h"
-msgstr ""
-
-#: vendor/moment/min/locales.min.js:1
-msgid "d"
-msgstr ""
-
-#: vendor/moment/min/locales.min.js:1
-msgid "M"
-msgstr ""
-
-#: vendor/moment/min/locales.min.js:1
-msgid "y"
-msgstr ""
-
-#: vendor/moment/min/moment.min.js:1
-msgid ": "
 msgstr ""
