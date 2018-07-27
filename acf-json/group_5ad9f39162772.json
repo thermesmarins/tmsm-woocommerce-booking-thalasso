@@ -8,7 +8,7 @@
             "name": "accommodation_type",
             "type": "taxonomy",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "25",
@@ -20,7 +20,7 @@
             "allow_null": 0,
             "add_term": 0,
             "save_terms": 1,
-            "load_terms": 0,
+            "load_terms": 1,
             "return_format": "object",
             "multiple": 0
         },
@@ -85,11 +85,11 @@
         },
         {
             "key": "field_5ad9fe4bde5db",
-            "label": "Description longue",
+            "label": "Description courte",
             "name": "short_description",
             "type": "textarea",
             "instructions": "Slogan",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "50",
@@ -342,5 +342,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532619101
+    "modified": 1532620834
 }

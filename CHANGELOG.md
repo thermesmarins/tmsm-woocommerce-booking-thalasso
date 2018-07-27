@@ -1,3 +1,8 @@
+* **Fix** - Github Updater compatibility
+* **Tweak** - ACF for Spa Treatment, new field persons
+* **Tweak** - ACF for Spa Treatment, new field spatreatment_type
+* **Tweak** - ACF for Discovery, new field price
+
 ### 1.0.2: July 26th, 2018
 * **Tweak** - Enable post_content and post_excerpt for easier content migration
 * **Tweak** - ACF Disable Autocomplete

@@ -92,6 +92,27 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_5b5b0c4bfe052",
+            "label": "Prix",
+            "name": "price",
+            "type": "number",
+            "instructions": "€ TTC",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "en € TTC",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -121,5 +142,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532618618
+    "modified": 1532693628
 }

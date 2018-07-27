@@ -3,6 +3,28 @@
     "title": "Soins",
     "fields": [
         {
+            "key": "field_5b5b0b1c1fca4",
+            "label": "Type de soin",
+            "name": "spatreatment_type",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "spatreatment_type",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0
+        },
+        {
             "key": "field_5b5993752a733",
             "label": "Durée",
             "name": "duration",
@@ -11,7 +33,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "12",
                 "class": "",
                 "id": ""
             },
@@ -25,20 +47,46 @@
             "key": "field_5b5993952a734",
             "label": "Prix",
             "name": "price",
-            "type": "text",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "13",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": "€ TTC",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5b59f042a0189",
+            "label": "Nombre de personnes",
+            "name": "persons",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "12",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "1",
+                "2": "2"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": 1,
+            "layout": "horizontal",
+            "return_format": "value"
         },
         {
             "key": "field_5b5993c6a088a",
@@ -49,7 +97,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "13",
                 "class": "",
                 "id": ""
             },
@@ -157,5 +205,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532618615
+    "modified": 1532693622
 }
