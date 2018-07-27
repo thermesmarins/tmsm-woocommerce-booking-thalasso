@@ -1,3 +1,4 @@
+### 1.0.3: July 27th, 2018
 * **Fix** - Github Updater compatibility
 * **Tweak** - ACF for Spa Treatment, new field persons
 * **Tweak** - ACF for Spa Treatment, new field spatreatment_type
