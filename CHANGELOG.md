@@ -1,3 +1,6 @@
+### 1.0.5: July 30th, 2018
+* **Tweak** - ACF for Discovery, new field discovery_type
+
 ### 1.0.4: July 30th, 2018
 * **Tweak** - ACF for Discovery, new field duration
 
