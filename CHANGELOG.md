@@ -1,3 +1,6 @@
+### 1.0.4: July 30th, 2018
+* **Tweak** - ACF for Discovery, new field duration
+
 ### 1.0.3: July 27th, 2018
 * **Fix** - Github Updater compatibility
 * **Tweak** - ACF for Spa Treatment, new field persons

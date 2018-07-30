@@ -98,11 +98,11 @@
             "label": "Prix",
             "name": "price",
             "type": "number",
-            "instructions": "€ TTC",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "13",
                 "class": "",
                 "id": ""
             },
@@ -113,6 +113,25 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_5b5f11f7a55dc",
+            "label": "Durée",
+            "name": "duration",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "12",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -142,5 +161,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532693628
+    "modified": 1532957335
 }
