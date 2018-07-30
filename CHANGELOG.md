@@ -1,3 +1,6 @@
+* **Tweak** - ACF for Discovery, field discovery_type required
+* **Tweak** - ACF for Package, field package_type not required
+
 ### 1.0.5: July 30th, 2018
 * **Tweak** - ACF for Discovery, new field discovery_type
 
