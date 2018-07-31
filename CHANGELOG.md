@@ -1,4 +1,8 @@
-* **Tweak** - Custom Post Types: Package, Accommodations, Discovery, Spa Treatment now have an archive
+* **Tweak** - Custom Post Types: Package, Accommodation, Discovery, Spa Treatment now have an archive
+* **Tweak** - ACF for Accommodation, field resaweb_url not required
+* **Tweak** - ACF for Accommodation, new field website_url
+* **Tweak** - ACF for Accommodation, new field email
+* **Tweak** - ACF for Accommodation, field stars now required
 
 ### 1.0.6: July 30th, 2018
 * **Tweak** - ACF for Discovery, field discovery_type required
@@ -22,7 +26,7 @@
 * **Tweak** - Update ACF Fields: reorder, textarea format
 
 ### 1.0.1: July 26th, 2018
-* **New** - Custom Post Types: Package, Accommodations, Discovery, Spa Treatment
+* **New** - Custom Post Types: Package, Accommodation, Discovery, Spa Treatment
 * **New** - ACF Fields
 
 ### 1.0.0: April 20th, 2018

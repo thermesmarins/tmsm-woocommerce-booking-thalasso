@@ -30,7 +30,7 @@
             "name": "stars",
             "type": "number",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "13",
@@ -143,7 +143,7 @@
             "name": "resaweb_url",
             "type": "url",
             "instructions": "URL de la page de l’hébergement",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "50",
@@ -171,6 +171,40 @@
             "maxlength": "",
             "rows": 6,
             "new_lines": ""
+        },
+        {
+            "key": "field_5b602c2f4639c",
+            "label": "URL Site web",
+            "name": "website_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b602c544639d",
+            "label": "Email de contact",
+            "name": "email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_5b58882e783ca",
@@ -342,5 +376,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532620834
+    "modified": 1533030481
 }
