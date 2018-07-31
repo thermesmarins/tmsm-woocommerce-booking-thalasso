@@ -3,6 +3,7 @@
 * **Tweak** - ACF for Accommodation, new field website_url
 * **Tweak** - ACF for Accommodation, new field email
 * **Tweak** - ACF for Accommodation, field stars now required
+* **Tweak** - Check if calendar is present in page before starting Clndr
 
 ### 1.0.6: July 30th, 2018
 * **Tweak** - ACF for Discovery, field discovery_type required

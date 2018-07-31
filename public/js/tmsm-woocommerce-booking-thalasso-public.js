@@ -2,14 +2,16 @@
 	'use strict';
 
 	// Calendar
-  var clndr_calendar = $('#tmsm-woocommerce-booking-thalasso-calendar').clndr({
-    template: $('#tmsm-woocommerce-booking-thalasso-calendar-template').html(),
+  var clndr_calendar_element = $('#tmsm-woocommerce-booking-thalasso-calendar');
+  if(clndr_calendar_element.length > 0){
+    var clndr_calendar = clndr_calendar_element.clndr({
+      template: $('#tmsm-woocommerce-booking-thalasso-calendar-template').html(),
 
-  });
+    });
 
-	// Button Start Booking
-  $(document).on('click', '.button-booking', function (e) {
-    console.log('click button');
+    // Button Start Booking
+    $(document).on('click', '.button-booking', function (e) {
+      console.log('click button');
       var productid = $(this).data('productid');
       var accommodationid = $(this).data('accommodationid');
       var packageid = $(this).data('packageid');
@@ -97,7 +99,9 @@
 
           $('#tmsm-woocommerce-booking-thalasso-modalform').removeClass('loading');
         }
+      });
     });
-  });
+  }
+
 
 })(jQuery);
