@@ -1,3 +1,5 @@
+* **Tweak** - Custom Post Types: Package, Accommodations, Discovery, Spa Treatment now have an archive
+
 ### 1.0.6: July 30th, 2018
 * **Tweak** - ACF for Discovery, field discovery_type required
 * **Tweak** - ACF for Package, field package_type not required

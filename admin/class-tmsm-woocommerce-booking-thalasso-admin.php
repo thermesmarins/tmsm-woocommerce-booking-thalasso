@@ -94,7 +94,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 		$opts['capability_type']                        = 'page';
 		$opts['description']                            = '';
 		$opts['exclude_from_search']                    = false;
-		$opts['has_archive']                            = false;
+		$opts['has_archive']                            = true;
 		$opts['hierarchical']                           = false;
 		$opts['map_meta_cap']                           = true;
 		$opts['menu_position']                          = 25;
@@ -141,6 +141,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 		$opts['rewrite']['slug']                        = strtolower( $cpt_name );
 		$opts['rewrite']['with_front']                  = false;
 		register_post_type( strtolower( $cpt_name ), $opts );
+
 	}
 
 	/**
@@ -194,7 +195,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 		$opts['capability_type']                        = 'page';
 		$opts['description']                            = '';
 		$opts['exclude_from_search']                    = false;
-		$opts['has_archive']                            = false;
+		$opts['has_archive']                            = true;
 		$opts['hierarchical']                           = false;
 		$opts['map_meta_cap']                           = true;
 		$opts['menu_position']                          = 30;
@@ -329,7 +330,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 		$opts['capability_type']                        = 'page';
 		$opts['description']                            = '';
 		$opts['exclude_from_search']                    = false;
-		$opts['has_archive']                            = false;
+		$opts['has_archive']                            = true;
 		$opts['hierarchical']                           = false;
 		$opts['map_meta_cap']                           = true;
 		$opts['menu_position']                          = 30;
@@ -428,7 +429,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 		$opts['capability_type']                        = 'page';
 		$opts['description']                            = '';
 		$opts['exclude_from_search']                    = false;
-		$opts['has_archive']                            = false;
+		$opts['has_archive']                            = true;
 		$opts['hierarchical']                           = false;
 		$opts['map_meta_cap']                           = true;
 		$opts['menu_position']                          = 30;
