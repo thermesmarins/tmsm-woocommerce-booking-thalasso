@@ -1,3 +1,6 @@
+* **New** - Elementor Dynamic Tag: Book Room Button Label
+* **New** - Elementor Dynamic Tag: Accommodation URL
+* **New** - CSS: Remove links with class .hideifnohref if href=#
 * **Tweak** - Custom Post Types: Package, Accommodation, Discovery, Spa Treatment now have an archive
 * **Tweak** - ACF for Accommodation, field resaweb_url not required
 * **Tweak** - ACF for Accommodation, new field website_url

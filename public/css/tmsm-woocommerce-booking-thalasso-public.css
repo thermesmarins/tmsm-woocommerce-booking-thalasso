@@ -1,5 +1,4 @@
 .woocommerce  .omw-modal{
-  /*height: 90vh;*/
   max-height: 100% ;
 }
 @media (max-width: 600px) {
@@ -16,8 +15,9 @@
 
 }
 
-.woocommerce .omw-modal-inner{
-  /*overflow-y: scroll;*/
-}
-
 #tmsm-woocommerce-booking-thalasso-modalform.loading{ opacity: 0.5}
+
+/* Links with Fallback #, Hide The Link (In Particular For Elementor when using Dynamic Tags) */
+.hideifnohref[href^="#"]{
+  display: none !important;
+}

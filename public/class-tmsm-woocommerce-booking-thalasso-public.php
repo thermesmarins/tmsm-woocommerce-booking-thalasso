@@ -301,4 +301,17 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 		return $items;
 	}
 
+	/**
+	 * Elementor Register Dynamic Tags
+	 *
+	 * @param $dynamic_tags
+	 */
+	public function elementor_tags_register( $dynamic_tags){
+		\Elementor\Plugin::$instance->dynamic_tags->register_group( 'tmsm-woocommerce-booking-thalasso-tags', [
+			'title' => __('TMSM WooCommerce Booking Thalasso Tags', 'tmsm-woocommerce-booking-thalasso')
+		] );
+
+		$dynamic_tags->register_tag( 'Elementor_Tag_BookRoomButtonLabel' );
+		$dynamic_tags->register_tag( 'Elementor_Tag_AccommodationUrl' );
+	}
 }

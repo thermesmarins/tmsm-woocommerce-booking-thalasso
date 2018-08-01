@@ -105,6 +105,14 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/advanced-custom-fields/acf.php';
 
 		/**
+		 * Elementor overrides
+		 */
+		if ( function_exists( '_is_elementor_installed' ) ) {
+			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookroombuttonlabel.php';
+			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-accommodationurl.php';
+		}
+
+		/**
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
@@ -191,7 +199,6 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_filter( 'acf/settings/load_json', $plugin_admin, 'acf_json_load_path' );
 		$this->loader->add_filter( 'acf/settings/save_json', $plugin_admin, 'acf_json_save_path' );
 
-
 	}
 
 	/**
@@ -216,6 +223,9 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		// Ajax Functions
 		$this->loader->add_action( 'wp_ajax_nopriv_booking_start', $plugin_public, 'booking_start' );
 		$this->loader->add_action( 'wp_ajax_booking_start', $plugin_public, 'booking_start' );
+
+		// Elementor
+		$this->loader->add_action( 'elementor/dynamic_tags/register_tags', $plugin_public, 'elementor_tags_register', 1, 10 );
 	}
 
 	/**
@@ -257,5 +267,6 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	public function get_version() {
 		return $this->version;
 	}
+
 
 }
