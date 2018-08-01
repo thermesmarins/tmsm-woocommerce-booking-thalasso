@@ -1,3 +1,4 @@
+### 1.0.7: August 1st, 2018
 * **New** - Elementor Dynamic Tag: Book Room Button Label
 * **New** - Elementor Dynamic Tag: Accommodation URL
 * **New** - CSS: Remove links with class .hideifnohref if href=#
