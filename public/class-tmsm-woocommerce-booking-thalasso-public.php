@@ -75,7 +75,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 
 		// Scripts
 		wp_enqueue_script( 'moment', plugin_dir_url( dirname(__FILE__) ) . 'vendor/moment/min/moment.min.js', array( 'jquery' ), $this->version, true );
-		if ( function_exists( 'PLL' ) && $language = PLL()->model->get_language( get_locale() ) )
+		if ( function_exists( 'PLL' ) && $language = PLL()->model->get_language( get_locale() ) && pll_current_language() !== 'en')
 		{
 			wp_enqueue_script( 'moment-'.pll_current_language(), plugin_dir_url( dirname(__FILE__) ) . 'vendor/moment/locale/'.pll_current_language().'.js', array( 'jquery' ), $this->version, true );
 		}
@@ -313,5 +313,6 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookRoomButtonLabel' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_AccommodationUrl' );
+		$dynamic_tags->register_tag( 'Elementor_Tag_PackageRatesTable' );
 	}
 }

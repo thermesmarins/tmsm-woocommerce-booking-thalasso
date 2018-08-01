@@ -1,3 +1,9 @@
+### 1.0.8: August 1st, 2018
+* **New** - Elementor Dynamic Tag: PackageRatesTable
+* **New** - Compatibility with themes: Stormbringer, OceanWP
+* **Fix** - Exclude Moment library locale file when locale is english
+* **Tweak** - ACF for Package, new field codename
+
 ### 1.0.7: August 1st, 2018
 * **New** - Elementor Dynamic Tag: Book Room Button Label
 * **New** - Elementor Dynamic Tag: Accommodation URL

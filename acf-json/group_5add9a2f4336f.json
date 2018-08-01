@@ -191,7 +191,26 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "13",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b61ce089b222",
+            "label": "Nom de code Resaweb",
+            "name": "codename",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "12",
                 "class": "",
                 "id": ""
             },
@@ -226,5 +245,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532961932
+    "modified": 1533136477
 }

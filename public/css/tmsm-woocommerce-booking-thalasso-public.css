@@ -1,12 +1,13 @@
-.woocommerce  .omw-modal{
-  max-height: 100% ;
+.woocommerce .omw-modal {
+  max-height: 100%;
 }
-@media (max-width: 600px) {
-  .woocommerce .omw-modal{
-    height: 100%;
-    width: 100% ;
 
-    max-width: 100% ;
+@media (max-width: 600px) {
+  .woocommerce .omw-modal {
+    height: 100%;
+    width: 100%;
+
+    max-width: 100%;
     top: 0;
     left: 0;
     -webkit-transform: none;
@@ -15,9 +16,11 @@
 
 }
 
-#tmsm-woocommerce-booking-thalasso-modalform.loading{ opacity: 0.5}
+#tmsm-woocommerce-booking-thalasso-modalform.loading {
+  opacity: 0.5
+}
 
 /* Links with Fallback #, Hide The Link (In Particular For Elementor when using Dynamic Tags) */
-.hideifnohref[href^="#"]{
+.hideifnohref[href^="#"], .hideifnohref a[href^="#"] {
   display: none !important;
 }
