@@ -38,7 +38,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'TMSM_WOOCOMMERCE_BOOKING_THALASSO', '1.0.8' );
+define( 'TMSM_WOOCOMMERCE_BOOKING_THALASSO_VERSION', '1.0.8' );
 
 /**
  * The code that runs during plugin activation.

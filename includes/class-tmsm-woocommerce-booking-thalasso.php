@@ -67,8 +67,8 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'TMSM_WOOCOMMERCE_BOOKING_THALASSO' ) ) {
-			$this->version = TMSM_WOOCOMMERCE_BOOKING_THALASSO;
+		if ( defined( 'TMSM_WOOCOMMERCE_BOOKING_THALASSO_VERSION' ) ) {
+			$this->version = TMSM_WOOCOMMERCE_BOOKING_THALASSO_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
