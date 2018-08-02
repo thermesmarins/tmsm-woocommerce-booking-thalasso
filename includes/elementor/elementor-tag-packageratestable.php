@@ -40,10 +40,12 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 			$triptype_slug = esc_html($triptype->slug);
 			if(!empty($triptype_slug)){
 				switch($triptype_slug){
+					case 'long-sejours':
 					case 'long-sejour':
 					case 'thalasso-spa-packages':
 						$triptype_defaultnights = 6;
 						break;
+					case 'court-sejours':
 					case 'court-sejour':
 					case 'escapade':
 					case 'short-breaks':
@@ -83,29 +85,29 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 				$accommodation_resaweburl = esc_html(get_field('resaweb_url', $accommodation->ID));
 				if(!empty($accommodation_resaweburl)){
 					$accommodation_resaweburl .= esc_html('/'.$package_codename);
+					$output .= '<tr id="resaweb-price-container-'.$accommodation_codename.'-'.$package_idresaweb.'-'.$triptype_defaultnights.'">';
+					$output .= '<td class="accommodationname">';
+					if(!empty($accommodation_resaweburl)){
+						$output .= '<a href="'.$accommodation_resaweburl.'">';
+					}
+					$output .= esc_html($accommodation->post_title).'</td>';
+					if(!empty($accommodation_resaweburl)){
+						$output .= '</a>';
+					}
+					$output .= '</td>';
+					$output .= '<td class="price">';
+					$output .= do_shortcode('[resaweb_price from="1" instead="1" hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" nights="'.$triptype_defaultnights.'" lang="'.$lang.'"]');
+					$output .= '</td>';
+					$output .= '<td class="booklink">';
+					if(!empty($accommodation_resaweburl)){
+						$output .= '<a href="'.$accommodation_resaweburl.'" class="'.$buttonclass.'">';
+						$output .= __('Book now', 'tmsm-woocommerce-booking-thalasso');
+						$output .= '</a>';
+					}
+					$output .= '</td>';
+					$output .= '</tr>';
 				}
 
-				$output .= '<tr id="resaweb-price-container-'.$accommodation_codename.'-'.$package_idresaweb.'-'.$triptype_defaultnights.'">';
-				$output .= '<td class="accommodationname">';
-				if(!empty($accommodation_resaweburl)){
-					$output .= '<a href="'.$accommodation_resaweburl.'">';
-				}
-				$output .= esc_html($accommodation->post_title).'</td>';
-				if(!empty($accommodation_resaweburl)){
-					$output .= '</a>';
-				}
-				$output .= '</td>';
-				$output .= '<td class="price">';
-				$output .= do_shortcode('[resaweb_price from="1" instead="1" hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" nights="'.$triptype_defaultnights.'" lang="'.$lang.'"]');
-				$output .= '</td>';
-				$output .= '<td class="booklink">';
-				if(!empty($accommodation_resaweburl)){
-					$output .= '<a href="'.$accommodation_resaweburl.'" class="'.$buttonclass.'">';
-					$output .= __('Book now', 'tmsm-woocommerce-booking-thalasso');
-					$output .= '</a>';
-				}
-				$output .= '</td>';
-				$output .= '</tr>';
 			}
 			$output .= '</table>';
 		}
