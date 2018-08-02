@@ -23,19 +23,24 @@ class Elementor_Tag_BookRoomButtonLabel extends \Elementor\Core\DynamicTags\Tag 
 	public function render() {
 		$output = '';
 
-		$post = get_post();
+		$accommodation = get_post();
 
-		if(!empty($post)){
-			$accommodationtypes = get_the_terms( $post, 'accommodation_type' );
-			if(!empty($accommodationtypes ) && count($accommodationtypes) > 0){
-				$accommodationtype = $accommodationtypes[0];
-				if(!empty($accommodationtype->slug)){
-					$accommodationtype_slug = $accommodationtype->slug;
-					switch($accommodationtype_slug){
-						case 'hotel': $output .= __('Book a room', 'tmsm-woocommerce-booking-thalasso'); break;
-						case 'residence': $output .= __('Book an apartment', 'tmsm-woocommerce-booking-thalasso'); break;
-						default: break;
-					}
+		if(empty($accommodation)){
+			return;
+		}
+		if(get_post_type($accommodation) !== 'package'){
+			return;
+		}
+
+		$accommodationtypes = get_the_terms( $accommodation, 'accommodation_type' );
+		if(!empty($accommodationtypes ) && count($accommodationtypes) > 0){
+			$accommodationtype = $accommodationtypes[0];
+			if(!empty($accommodationtype->slug)){
+				$accommodationtype_slug = $accommodationtype->slug;
+				switch($accommodationtype_slug){
+					case 'hotel': $output .= __('Book a room', 'tmsm-woocommerce-booking-thalasso'); break;
+					case 'residence': $output .= __('Book an apartment', 'tmsm-woocommerce-booking-thalasso'); break;
+					default: break;
 				}
 			}
 		}

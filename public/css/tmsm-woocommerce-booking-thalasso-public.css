@@ -24,3 +24,8 @@
 .hideifnohref[href^="#"], .hideifnohref a[href^="#"] {
   display: none !important;
 }
+
+.tmsm-woocommerce-booking-thalasso-packageratestable{
+  padding: 10px;
+  caption-side: bottom;
+}

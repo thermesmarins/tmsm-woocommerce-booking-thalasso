@@ -80,11 +80,42 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 		if(!empty($accommodations) ){
 			$output .= do_shortcode('[resaweb_load package_id="'.$package_idresaweb.'" nights="'.$triptype_defaultnights.'" lang="'.$lang.']');
 			$output .= '<table class="tmsm-woocommerce-booking-thalasso-packageratestable">';
+			$output .= '<tbody>';
 			foreach ($accommodations as $accommodation){
 				$accommodation_codename = esc_html(get_field('codename', $accommodation->ID));
 				$accommodation_resaweburl = esc_html(get_field('resaweb_url', $accommodation->ID));
+
+				if(!empty($triptype_slug)){
+					switch($triptype_slug){
+						case 'long-sejours':
+						case 'long-sejour':
+						case 'thalasso-spa-packages':
+							$triptype_defaultnights = 6;
+							break;
+						case 'court-sejours':
+						case 'court-sejour':
+						case 'escapade':
+						case 'short-breaks':
+						default:
+							$triptype_defaultnights = 1;
+					}
+				}
+				$accommodation_types = get_the_terms( $accommodation, 'accommodation_type' );
+				if(!empty($accommodation_types ) && count($accommodation_types) > 0){
+					$accommodation_type = $accommodation_types[0];
+					if(!empty($accommodation_type->slug)){
+						$accommodation_typeslug = $accommodation_type->slug;
+						switch($accommodation_typeslug){
+							case 'residence': $triptype_defaultnights = 7; break;
+							default: break;
+						}
+					}
+				}
+
 				if(!empty($accommodation_resaweburl)){
-					$accommodation_resaweburl .= esc_html('/'.$package_codename);
+					if(!empty($accommodation_codename)){
+						$accommodation_resaweburl .= esc_html('/'.$package_codename);
+					}
 					$output .= '<tr id="resaweb-price-container-'.$accommodation_codename.'-'.$package_idresaweb.'-'.$triptype_defaultnights.'">';
 					$output .= '<td class="accommodationname">';
 					if(!empty($accommodation_resaweburl)){
@@ -108,6 +139,26 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 					$output .= '</tr>';
 				}
 
+			}
+			$output .= '</tbody>';
+
+			if(!empty($triptype_slug)){
+				$output .= '<caption>';
+				switch($triptype_slug){
+					case 'long-sejours':
+					case 'long-sejour':
+					case 'thalasso-spa-packages':
+					$output .= __('In hotel: Rates per person for 6 days in a double room, half board.','tmsm-woocommerce-booking-thalasso').'<br/>';
+					$output .= __('In Residence: Rates per person for 2 persons spa guests occupying the same apartment, including 6 treatments days and 7 nights from saturday to saturday.','tmsm-woocommerce-booking-thalasso');
+						break;
+					case 'court-sejours':
+					case 'court-sejour':
+					case 'escapade':
+					case 'short-breaks':
+					$output .= __('Rates per person per day in a double room, half board (except Hotel du Louvre, breakfast only).','tmsm-woocommerce-booking-thalasso').'<br/>';
+					default:
+				}
+				$output .= '</caption>';
 			}
 			$output .= '</table>';
 		}
