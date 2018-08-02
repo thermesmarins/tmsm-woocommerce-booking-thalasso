@@ -1,3 +1,10 @@
+### 1.0.9: August 2nd, 2018
+* **Fix** - Not all default nights were loading prices from resaweb
+* **Tweak** - ACF for Trip Type and Accommodation Type, new field defaultnights
+* **Fix** - Change accommodations orders: menuorder with menu_order
+* **Tweak** - Add capaiton to table PackageRatesTable
+* **Tweak** - Don't display rates if accommodation doesn't have resaweb
+
 ### 1.0.8: August 1st, 2018
 * **New** - Elementor Dynamic Tag: PackageRatesTable
 * **New** - Compatibility with themes: Stormbringer, OceanWP

@@ -38,7 +38,10 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 		$triptype_defaultnights = null;
 		if(!empty($triptype)){
 			$triptype_slug = esc_html($triptype->slug);
-			if(!empty($triptype_slug)){
+
+			$triptype_defaultnights = get_field('defaultnights', $triptype->taxonomy . '_' . $triptype->term_id);
+
+			/*if(!empty($triptype_slug)){
 				switch($triptype_slug){
 					case 'long-sejours':
 					case 'long-sejour':
@@ -52,7 +55,8 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 					default:
 						$triptype_defaultnights = 1;
 				}
-			}
+			}*/
+			echo '$triptype_defaultnights:'.$triptype_defaultnights;
 		}
 
 		if(get_post_type($package) !== 'package'){
@@ -77,46 +81,35 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 			$buttonclass = 'button';
 		}
 
+		$defaultnights_toload = [];
+
 		if(!empty($accommodations) ){
-			$output .= do_shortcode('[resaweb_load package_id="'.$package_idresaweb.'" nights="'.$triptype_defaultnights.'" lang="'.$lang.']');
+
 			$output .= '<table class="tmsm-woocommerce-booking-thalasso-packageratestable">';
 			$output .= '<tbody>';
 			foreach ($accommodations as $accommodation){
 				$accommodation_codename = esc_html(get_field('codename', $accommodation->ID));
 				$accommodation_resaweburl = esc_html(get_field('resaweb_url', $accommodation->ID));
 
-				if(!empty($triptype_slug)){
-					switch($triptype_slug){
-						case 'long-sejours':
-						case 'long-sejour':
-						case 'thalasso-spa-packages':
-							$triptype_defaultnights = 6;
-							break;
-						case 'court-sejours':
-						case 'court-sejour':
-						case 'escapade':
-						case 'short-breaks':
-						default:
-							$triptype_defaultnights = 1;
+				$defaultnights = $triptype_defaultnights;
+				$accommodation_type = get_field('accommodation_type', $accommodation->ID); // term object accommodation_type
+				if(!empty($accommodation_type)){
+					$accommodation_defaultnights = get_field('defaultnights', $accommodation_type->taxonomy . '_' . $accommodation_type->term_id);
+					echo '$accommodation_defaultnights:'.$accommodation_defaultnights;
+					if(!empty($accommodation_defaultnights)){
+						$defaultnights = $accommodation_defaultnights;
 					}
 				}
-				$accommodation_types = get_the_terms( $accommodation, 'accommodation_type' );
-				if(!empty($accommodation_types ) && count($accommodation_types) > 0){
-					$accommodation_type = $accommodation_types[0];
-					if(!empty($accommodation_type->slug)){
-						$accommodation_typeslug = $accommodation_type->slug;
-						switch($accommodation_typeslug){
-							case 'residence': $triptype_defaultnights = 7; break;
-							default: break;
-						}
-					}
+
+				if(!in_array($defaultnights, $defaultnights_toload)){
+					$defaultnights_toload[] = $defaultnights;
 				}
 
 				if(!empty($accommodation_resaweburl)){
 					if(!empty($accommodation_codename)){
 						$accommodation_resaweburl .= esc_html('/'.$package_codename);
 					}
-					$output .= '<tr id="resaweb-price-container-'.$accommodation_codename.'-'.$package_idresaweb.'-'.$triptype_defaultnights.'">';
+					$output .= '<tr id="resaweb-price-container-'.$accommodation_codename.'-'.$package_idresaweb.'-'.$defaultnights.'">';
 					$output .= '<td class="accommodationname">';
 					if(!empty($accommodation_resaweburl)){
 						$output .= '<a href="'.$accommodation_resaweburl.'">';
@@ -127,7 +120,7 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 					}
 					$output .= '</td>';
 					$output .= '<td class="price">';
-					$output .= do_shortcode('[resaweb_price from="1" instead="1" hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" nights="'.$triptype_defaultnights.'" lang="'.$lang.'"]');
+					$output .= do_shortcode('[resaweb_price from="1" instead="1" hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" nights="'.$defaultnights.'" lang="'.$lang.'"]');
 					$output .= '</td>';
 					$output .= '<td class="booklink">';
 					if(!empty($accommodation_resaweburl)){
@@ -161,6 +154,10 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 				$output .= '</caption>';
 			}
 			$output .= '</table>';
+
+			foreach($defaultnights_toload as $defaultnights_toload_item){
+				$output .= do_shortcode('[resaweb_load package_id="'.$package_idresaweb.'" nights="'.$defaultnights_toload_item.'" lang="'.$lang.']');
+			}
 		}
 
 		echo $output;
