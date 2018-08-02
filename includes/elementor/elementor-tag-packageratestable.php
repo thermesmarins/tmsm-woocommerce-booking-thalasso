@@ -62,7 +62,7 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 		$accommodations = get_posts([
 			'post_type' => 'accommodation',
 			'numberposts' => -1,
-			'orderby' => 'menuorder',
+			'orderby' => 'menu_order',
 			'order' => 'ASC',
 		]);
 
