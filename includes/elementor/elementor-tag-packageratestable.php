@@ -38,25 +38,7 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 		$triptype_defaultnights = null;
 		if(!empty($triptype)){
 			$triptype_slug = esc_html($triptype->slug);
-
 			$triptype_defaultnights = get_field('defaultnights', $triptype->taxonomy . '_' . $triptype->term_id);
-
-			/*if(!empty($triptype_slug)){
-				switch($triptype_slug){
-					case 'long-sejours':
-					case 'long-sejour':
-					case 'thalasso-spa-packages':
-						$triptype_defaultnights = 6;
-						break;
-					case 'court-sejours':
-					case 'court-sejour':
-					case 'escapade':
-					case 'short-breaks':
-					default:
-						$triptype_defaultnights = 1;
-				}
-			}*/
-			echo '$triptype_defaultnights:'.$triptype_defaultnights;
 		}
 
 		if(get_post_type($package) !== 'package'){
@@ -95,7 +77,6 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 				$accommodation_type = get_field('accommodation_type', $accommodation->ID); // term object accommodation_type
 				if(!empty($accommodation_type)){
 					$accommodation_defaultnights = get_field('defaultnights', $accommodation_type->taxonomy . '_' . $accommodation_type->term_id);
-					echo '$accommodation_defaultnights:'.$accommodation_defaultnights;
 					if(!empty($accommodation_defaultnights)){
 						$defaultnights = $accommodation_defaultnights;
 					}
@@ -120,7 +101,7 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 					}
 					$output .= '</td>';
 					$output .= '<td class="price">';
-					$output .= do_shortcode('[resaweb_price from="1" instead="1" hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" nights="'.$defaultnights.'" lang="'.$lang.'"]');
+					$output .= do_shortcode('[resaweb_price fallback="1" from="1" instead="1" hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" nights="'.$defaultnights.'" lang="'.$lang.'"]');
 					$output .= '</td>';
 					$output .= '<td class="booklink">';
 					if(!empty($accommodation_resaweburl)){
