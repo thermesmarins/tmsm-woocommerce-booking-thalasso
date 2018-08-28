@@ -6,6 +6,7 @@ WooCommerce Booking Thalasso for Thermes Marins de Saint-Malo
 Features
 -----------
 
+Requires Advanced Custom Fields Pro v5.3.7+
 
 * Register Post Types:
     * Accommodation

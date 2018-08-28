@@ -1,3 +1,5 @@
+* Remove Advanced Custom Fields files in the plugin
+
 ### 1.0.9: August 2nd, 2018
 * **Fix** - Not all default nights were loading prices from resaweb
 * **Tweak** - ACF for Trip Type and Accommodation Type, new field defaultnights
