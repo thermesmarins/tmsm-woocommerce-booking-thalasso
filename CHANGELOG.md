@@ -1,3 +1,4 @@
+### 1.1.0: August 28th, 2018
 * **Tweak** - Remove Advanced Custom Fields files in the plugin
 * **Tweak** - Advanced Custom Fields Pro now required for gallery field
 * **New** - ACF for Package, Accommodation, Discovery, Spa Treatment: new field gallery

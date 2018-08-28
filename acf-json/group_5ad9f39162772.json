@@ -393,7 +393,7 @@
         "discussion",
         "comments",
         "revisions",
-        "slug",
+        "author",
         "format",
         "categories",
         "tags",
@@ -401,5 +401,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1535457554
+    "modified": 1535458850
 }
