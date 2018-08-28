@@ -1,4 +1,6 @@
-* Remove Advanced Custom Fields files in the plugin
+* **Tweak** - Remove Advanced Custom Fields files in the plugin
+* **Tweak** - Advanced Custom Fields Pro now required for gallery field
+* **New** - ACF for Package, Accommodation, Discovery, Spa Treatment: new field gallery
 
 ### 1.0.9: August 2nd, 2018
 * **Fix** - Not all default nights were loading prices from resaweb
