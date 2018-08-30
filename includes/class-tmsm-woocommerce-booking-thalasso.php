@@ -100,11 +100,6 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	private function load_dependencies() {
 
 		/**
-		 * ACF
-		 */
-		//require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/advanced-custom-fields/acf.php';
-
-		/**
 		 * Elementor overrides
 		 */
 		if ( function_exists( '_is_elementor_installed' ) ) {
@@ -194,12 +189,8 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_filter( 'woocommerce_product_data_panels', $plugin_admin, 'woocommerce_product_data_panels_bookable' );
 
 		// ACF
-		//$this->loader->add_filter( 'acf/settings/path', $plugin_admin, 'acf_settings_path' );
-		//$this->loader->add_filter( 'acf/settings/dir', $plugin_admin, 'acf_settings_dir' );
+		$this->loader->add_filter( 'acf/init', $plugin_admin, 'acf_register_groups' );
 		$this->loader->add_filter( 'acf/settings/show_admin', $plugin_admin, 'acf_show_admin' );
-		$this->loader->add_filter( 'acf/settings/load_json', $plugin_admin, 'acf_json_load_path' );
-		$this->loader->add_filter( 'acf/settings/save_json', $plugin_admin, 'acf_json_save_path' );
-
 	}
 
 	/**
