@@ -1,4 +1,5 @@
 * **Tweak** - Make ACF field pitch translatable
+* **Tweak** - Make ACF field secondary_desc translatable
 * **New** - ACF, secondary description for custom taxonomies
 
 ### 1.1.1: August 30th, 2018

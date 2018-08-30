@@ -7,6 +7,7 @@
         <custom-field action="translate">duration</custom-field>
         <custom-field action="translate">short_description</custom-field>
         <custom-field action="translate">long_description</custom-field>
+        <custom-field action="translate">secondary_desc</custom-field>
         <custom-field action="translate">availpro_url</custom-field>
         <custom-field action="translate">resaweb_url</custom-field>
         <custom-field action="translate">phone</custom-field>
