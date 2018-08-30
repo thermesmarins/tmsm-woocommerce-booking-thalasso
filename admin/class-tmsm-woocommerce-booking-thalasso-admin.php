@@ -1082,6 +1082,77 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 			));
 
 			acf_add_local_field_group(array(
+				'key' => 'group_5b87ec0d07b9f',
+				'title' => 'Taxonomy Secondary Description',
+				'fields' => array(
+					array(
+						'key' => 'field_5b87ec05f12a8',
+						'label' => 'Description secondaire',
+						'name' => 'secondary_desc',
+						'type' => 'wysiwyg',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'tabs' => 'visual',
+						'toolbar' => 'full',
+						'media_upload' => 1,
+						'delay' => 0,
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'taxonomy',
+							'operator' => '==',
+							'value' => 'package_type',
+						),
+					),
+					array(
+						array(
+							'param' => 'taxonomy',
+							'operator' => '==',
+							'value' => 'trip_type',
+						),
+					),
+					array(
+						array(
+							'param' => 'taxonomy',
+							'operator' => '==',
+							'value' => 'discovery_type',
+						),
+					),
+					array(
+						array(
+							'param' => 'taxonomy',
+							'operator' => '==',
+							'value' => 'spatreatment_type',
+						),
+					),
+					array(
+						array(
+							'param' => 'taxonomy',
+							'operator' => '==',
+							'value' => 'accommodation_type',
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'seamless',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => 1,
+				'description' => '',
+			));
+
+			acf_add_local_field_group(array(
 				'key' => 'group_5b62f9a2d2c62',
 				'title' => 'Trip Type',
 				'fields' => array(
@@ -1113,13 +1184,6 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 							'param' => 'taxonomy',
 							'operator' => '==',
 							'value' => 'trip_type',
-						),
-					),
-					array(
-						array(
-							'param' => 'taxonomy',
-							'operator' => '==',
-							'value' => 'accommodation_type',
 						),
 					),
 				),
