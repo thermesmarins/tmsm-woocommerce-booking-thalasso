@@ -1,4 +1,5 @@
 * **Tweak** - Change the way ACF Fields are loaded (HPP replaced JSON)
+* **New** - ACF for Package, new field pitch
 
 ### 1.1.0: August 28th, 2018
 * **Tweak** - Remove Advanced Custom Fields files in the plugin
