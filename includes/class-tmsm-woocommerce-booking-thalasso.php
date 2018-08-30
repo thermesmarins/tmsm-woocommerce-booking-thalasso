@@ -189,7 +189,7 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_filter( 'woocommerce_product_data_panels', $plugin_admin, 'woocommerce_product_data_panels_bookable' );
 
 		// ACF
-		$this->loader->add_filter( 'acf/init', $plugin_admin, 'acf_register_groups' );
+		$this->loader->add_action( 'acf/init', $plugin_admin, 'acf_register_groups' );
 		$this->loader->add_filter( 'acf/settings/show_admin', $plugin_admin, 'acf_show_admin' );
 	}
 
