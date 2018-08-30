@@ -3,6 +3,7 @@
         <custom-field action="translate">baseline</custom-field>
         <custom-field action="translate">location</custom-field>
         <custom-field action="translate">advantages</custom-field>
+        <custom-field action="translate">pitch</custom-field>
         <custom-field action="translate">duration</custom-field>
         <custom-field action="translate">short_description</custom-field>
         <custom-field action="translate">long_description</custom-field>
