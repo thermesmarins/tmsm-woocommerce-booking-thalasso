@@ -314,5 +314,6 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookRoomButtonLabel' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_AccommodationUrl' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackageRatesTable' );
+		$dynamic_tags->register_tag( 'Elementor_Tag_BookPackagePrice' );
 	}
 }

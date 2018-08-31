@@ -1,6 +1,7 @@
+* **New** - ACF, secondary description for custom taxonomies
+* **New** - Elementor Dynamic Tag: Book Package Price
 * **Tweak** - Make ACF field pitch translatable
 * **Tweak** - Make ACF field secondary_desc translatable
-* **New** - ACF, secondary description for custom taxonomies
 
 ### 1.1.1: August 30th, 2018
 * **Tweak** - Change the way ACF Fields are loaded (HPP replaced JSON)

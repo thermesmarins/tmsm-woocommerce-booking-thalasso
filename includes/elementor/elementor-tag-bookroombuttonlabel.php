@@ -28,7 +28,7 @@ class Elementor_Tag_BookRoomButtonLabel extends \Elementor\Core\DynamicTags\Tag 
 		if(empty($accommodation)){
 			return;
 		}
-		if(get_post_type($accommodation) !== 'package'){
+		if(get_post_type($accommodation) !== 'accommodation'){
 			return;
 		}
 
