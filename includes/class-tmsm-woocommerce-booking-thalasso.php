@@ -218,7 +218,10 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_action( 'wp_ajax_booking_start', $plugin_public, 'booking_start' );
 
 		// Elementor
-		$this->loader->add_action( 'elementor/dynamic_tags/register_tags', $plugin_public, 'elementor_tags_register', 1, 10 );
+		$this->loader->add_action( 'elementor/dynamic_tags/register_tags', $plugin_public, 'elementor_tags_register', 10, 1 );
+
+		// ACF
+		$this->loader->add_filter( 'acf/format_value/name=new', $plugin_public, 'acf_format_value_new', 200);
 	}
 
 	/**

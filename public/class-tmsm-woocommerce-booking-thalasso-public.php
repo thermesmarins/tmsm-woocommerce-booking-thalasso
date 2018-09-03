@@ -316,4 +316,17 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackageRatesTable' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookPackagePrice' );
 	}
+
+	/**
+	 * ACF Format Value New
+	 *
+	 * @param $value
+	 *
+	 * @return mixed
+	 */
+	public function acf_format_value_new( $value ){
+		$value = ' ';
+		return $value;
+	}
+
 }
