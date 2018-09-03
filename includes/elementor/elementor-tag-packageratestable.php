@@ -75,7 +75,16 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 
 				$defaultnights = $triptype_defaultnights;
 				$accommodation_type = get_field('accommodation_type', $accommodation->ID); // term object accommodation_type
+
 				if(!empty($accommodation_type)){
+
+					$accommodation_type_for_trip_type = get_field( 'accommodation_type', 'trip_type_'.$triptype->term_id);
+					// Trip Type is not related to accommodation type, exclude
+					if(!(is_array($accommodation_type_for_trip_type) && in_array($accommodation_type->term_id, $accommodation_type_for_trip_type))){
+						echo 'remove';
+						continue;
+					}
+
 					$accommodation_defaultnights = get_field('defaultnights', $accommodation_type->taxonomy . '_' . $accommodation_type->term_id);
 					if(!empty($accommodation_defaultnights)){
 						$defaultnights = $accommodation_defaultnights;

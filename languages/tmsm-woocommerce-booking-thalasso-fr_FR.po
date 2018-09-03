@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-08-03 08:58+0200\n"
-"PO-Revision-Date: 2018-08-03 09:01+0200\n"
+"POT-Creation-Date: 2018-09-03 13:56+0200\n"
+"PO-Revision-Date: 2018-09-03 13:56+0200\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language: fr\n"
@@ -395,6 +395,17 @@ msgstr "La produit a un hébergement"
 msgid "Accommodation URL"
 msgstr "URL de l’hébergement"
 
+#: includes/elementor/elementor-tag-bookpackageprice.php:12
+#, fuzzy
+#| msgid "Package Rates Table"
+msgid "Book Package Price Label"
+msgstr "Tableau de prix du forfait"
+
+#: includes/elementor/elementor-tag-bookpackageprice.php:52
+#, php-format
+msgid "Book %s"
+msgstr "Réserver %s"
+
 #: includes/elementor/elementor-tag-bookroombuttonlabel.php:12
 msgid "Book Room Button Label"
 msgstr "Libellé du bouton réservation de chambre"
@@ -411,19 +422,19 @@ msgstr "Réserver un appartement"
 msgid "Package Rates Table"
 msgstr "Tableau de prix du forfait"
 
-#: includes/elementor/elementor-tag-packageratestable.php:128
+#: includes/elementor/elementor-tag-packageratestable.php:109
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:91
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:139
 msgid "Book now"
 msgstr "Réserver"
 
-#: includes/elementor/elementor-tag-packageratestable.php:144
+#: includes/elementor/elementor-tag-packageratestable.php:125
 msgid "In hotel: Rates per person for 6 days in a double room, half board."
 msgstr ""
 "<b>En hôtel :</b> Prix pour 6 nuits par personne en chambre double. ½ "
 "pension."
 
-#: includes/elementor/elementor-tag-packageratestable.php:145
+#: includes/elementor/elementor-tag-packageratestable.php:126
 msgid ""
 "In Residence: Rates per person for 2 persons spa guests occupying the same "
 "apartment, including 6 treatments days and 7 nights from saturday to "
@@ -432,13 +443,13 @@ msgstr ""
 "<b>En résidence :</b> Prix par personne curiste occupant le même "
 "appartement, comprenant : 6 jours de soins et 7 nuits du samedi au samedi."
 
-#: includes/elementor/elementor-tag-packageratestable.php:151
+#: includes/elementor/elementor-tag-packageratestable.php:132
 msgid ""
 "Rates per person per day in a double room, half board (except Hotel du "
 "Louvre, breakfast only)."
 msgstr ""
-"Prix par jour et personne en chambre double en demi-pension (sauf à "
-"l’hôtel Le Louvre, petit déjeuner uniquement)."
+"Prix par jour et personne en chambre double en demi-pension (sauf à l’hôtel "
+"Le Louvre, petit déjeuner uniquement)."
 
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:241
 msgid "Package not found"

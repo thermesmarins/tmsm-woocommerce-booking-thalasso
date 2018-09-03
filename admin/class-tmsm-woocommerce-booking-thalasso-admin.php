@@ -1158,7 +1158,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 				'fields' => array(
 					array(
 						'key' => 'field_5b62f9d31fc44',
-						'label' => 'Nombre de nuits par défaut',
+						'label' => 'Nombre de nuits par défautt',
 						'name' => 'defaultnights',
 						'type' => 'number',
 						'instructions' => '',
@@ -1176,6 +1176,28 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 						'min' => '',
 						'max' => '',
 						'step' => '',
+					),
+					array(
+						'key' => 'field_5b8d22b6e78ea',
+						'label' => 'Type d’hébergement',
+						'name' => 'accommodation_type',
+						'type' => 'taxonomy',
+						'instructions' => '',
+						'required' => 1,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'taxonomy' => 'accommodation_type',
+						'field_type' => 'checkbox',
+						'add_term' => 1,
+						'save_terms' => 0,
+						'load_terms' => 0,
+						'return_format' => 'id',
+						'multiple' => 0,
+						'allow_null' => 0,
 					),
 				),
 				'location' => array(
