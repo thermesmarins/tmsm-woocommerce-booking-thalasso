@@ -1,8 +1,9 @@
+* **New** - Elementor Dynamic Tag: PackageRatesCards
 * **New** - ACF, secondary description for custom taxonomies
 * **New** - Elementor Dynamic Tag: Book Package Price
+* **New** - ACF new relation for Trip Type: Accommodation Type
 * **Tweak** - Make ACF field pitch translatable
 * **Tweak** - Make ACF field secondary_desc translatable
-* **New** - ACF new relation for Trip Type: Accommodation Type
 
 ### 1.1.1: August 30th, 2018
 * **Tweak** - Change the way ACF Fields are loaded (HPP replaced JSON)
@@ -17,7 +18,7 @@
 * **Fix** - Not all default nights were loading prices from resaweb
 * **Tweak** - ACF for Trip Type and Accommodation Type, new field defaultnights
 * **Fix** - Change accommodations orders: menuorder with menu_order
-* **Tweak** - Add capaiton to table PackageRatesTable
+* **Tweak** - Add caption to table PackageRatesTable
 * **Tweak** - Don't display rates if accommodation doesn't have resaweb
 
 ### 1.0.8: August 1st, 2018
