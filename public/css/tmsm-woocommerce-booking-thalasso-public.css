@@ -29,3 +29,8 @@
   padding: 10px;
   caption-side: bottom;
 }
+
+.tmsm-woocommerce-booking-thalasso-packageratescards{
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
