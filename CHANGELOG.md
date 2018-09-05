@@ -1,3 +1,4 @@
+### 1.1.2: September 5th, 2018
 * **New** - Elementor Dynamic Tag: PackageRatesCards
 * **New** - ACF, secondary description for custom taxonomies
 * **New** - Elementor Dynamic Tag: Book Package Price
