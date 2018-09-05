@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-09-03 13:56+0200\n"
+"POT-Creation-Date: 2018-09-05 11:57+0200\n"
 "PO-Revision-Date: 2014-10-24 21:08+0100\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
@@ -417,33 +417,49 @@ msgstr ""
 msgid "Book an apartment"
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratestable.php:12
-msgid "Package Rates Table"
+#: includes/elementor/elementor-tag-packageratescards.php:12
+msgid "Package Rates Cards"
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratestable.php:109
+#: includes/elementor/elementor-tag-packageratescards.php:71
+msgid "Pick your accommodation"
+msgstr ""
+
+#: includes/elementor/elementor-tag-packageratescards.php:121
+msgid "Know more about this accommodation"
+msgstr ""
+
+#: includes/elementor/elementor-tag-packageratescards.php:126
+#: includes/elementor/elementor-tag-packageratestable.php:118
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:91
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:139
 msgid "Book now"
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratestable.php:125
+#: includes/elementor/elementor-tag-packageratescards.php:141
+#: includes/elementor/elementor-tag-packageratestable.php:134
 msgid ""
 "In hotel: Rates per person for 6 days in a double room, half "
 "board."
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratestable.php:126
+#: includes/elementor/elementor-tag-packageratescards.php:142
+#: includes/elementor/elementor-tag-packageratestable.php:135
 msgid ""
 "In Residence: Rates per person for 2 persons spa guests occupying "
 "the same apartment, including 6 treatments days and 7 nights from "
 "saturday to saturday."
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratestable.php:132
+#: includes/elementor/elementor-tag-packageratescards.php:148
+#: includes/elementor/elementor-tag-packageratestable.php:141
 msgid ""
 "Rates per person per day in a double room, half board (except "
 "Hotel du Louvre, breakfast only)."
+msgstr ""
+
+#: includes/elementor/elementor-tag-packageratestable.php:12
+msgid "Package Rates Table"
 msgstr ""
 
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:241

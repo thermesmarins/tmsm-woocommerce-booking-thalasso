@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-09-03 13:56+0200\n"
-"PO-Revision-Date: 2018-09-03 13:56+0200\n"
+"POT-Creation-Date: 2018-09-05 11:57+0200\n"
+"PO-Revision-Date: 2018-09-05 11:59+0200\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language: fr\n"
@@ -396,10 +396,8 @@ msgid "Accommodation URL"
 msgstr "URL de l’hébergement"
 
 #: includes/elementor/elementor-tag-bookpackageprice.php:12
-#, fuzzy
-#| msgid "Package Rates Table"
 msgid "Book Package Price Label"
-msgstr "Tableau de prix du forfait"
+msgstr "Libellé du forfait : Réserver avec prix"
 
 #: includes/elementor/elementor-tag-bookpackageprice.php:52
 #, php-format
@@ -418,23 +416,34 @@ msgstr "Réserver"
 msgid "Book an apartment"
 msgstr "Réserver un appartement"
 
-#: includes/elementor/elementor-tag-packageratestable.php:12
-msgid "Package Rates Table"
-msgstr "Tableau de prix du forfait"
+#: includes/elementor/elementor-tag-packageratescards.php:12
+msgid "Package Rates Cards"
+msgstr "Cartes de prix du forfait"
 
-#: includes/elementor/elementor-tag-packageratestable.php:109
+#: includes/elementor/elementor-tag-packageratescards.php:71
+msgid "Pick your accommodation"
+msgstr "Choisissez votre hébergement"
+
+#: includes/elementor/elementor-tag-packageratescards.php:121
+msgid "Know more about this accommodation"
+msgstr "En savoir plus sur cet hébergement"
+
+#: includes/elementor/elementor-tag-packageratescards.php:126
+#: includes/elementor/elementor-tag-packageratestable.php:118
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:91
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:139
 msgid "Book now"
 msgstr "Réserver"
 
-#: includes/elementor/elementor-tag-packageratestable.php:125
+#: includes/elementor/elementor-tag-packageratescards.php:141
+#: includes/elementor/elementor-tag-packageratestable.php:134
 msgid "In hotel: Rates per person for 6 days in a double room, half board."
 msgstr ""
 "<b>En hôtel :</b> Prix pour 6 nuits par personne en chambre double. ½ "
 "pension."
 
-#: includes/elementor/elementor-tag-packageratestable.php:126
+#: includes/elementor/elementor-tag-packageratescards.php:142
+#: includes/elementor/elementor-tag-packageratestable.php:135
 msgid ""
 "In Residence: Rates per person for 2 persons spa guests occupying the same "
 "apartment, including 6 treatments days and 7 nights from saturday to "
@@ -443,13 +452,18 @@ msgstr ""
 "<b>En résidence :</b> Prix par personne curiste occupant le même "
 "appartement, comprenant : 6 jours de soins et 7 nuits du samedi au samedi."
 
-#: includes/elementor/elementor-tag-packageratestable.php:132
+#: includes/elementor/elementor-tag-packageratescards.php:148
+#: includes/elementor/elementor-tag-packageratestable.php:141
 msgid ""
 "Rates per person per day in a double room, half board (except Hotel du "
 "Louvre, breakfast only)."
 msgstr ""
 "Prix par jour et personne en chambre double en demi-pension (sauf à l’hôtel "
 "Le Louvre, petit déjeuner uniquement)."
+
+#: includes/elementor/elementor-tag-packageratestable.php:12
+msgid "Package Rates Table"
+msgstr "Tableau de prix du forfait"
 
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:241
 msgid "Package not found"
