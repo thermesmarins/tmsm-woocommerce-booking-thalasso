@@ -326,7 +326,9 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 	 * @return mixed
 	 */
 	public function acf_format_value_new( $value ){
-		$value = ' ';
+		if($value){
+			$value = ' ';
+		}
 		return $value;
 	}
 

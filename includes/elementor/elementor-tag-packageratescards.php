@@ -121,9 +121,9 @@ class Elementor_Tag_PackageRatesCards extends \Elementor\Core\DynamicTags\Tag {
 				$output .= '</a>';
 				$output .= '</p>';
 
-				$output .= '<a href="'.$package_resaweburl.'" class="'.$buttonclass.'">';
+				$output .= '<p><a href="'.$package_resaweburl.'" class="'.$buttonclass.'">';
 				$output .= __('Book now', 'tmsm-woocommerce-booking-thalasso');
-				$output .= '</a>';
+				$output .= '</a></p>';
 				$output .= '</div>';
 
 
