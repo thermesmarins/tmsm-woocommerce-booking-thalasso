@@ -311,11 +311,12 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 			'title' => __('TMSM WooCommerce Booking Thalasso Tags', 'tmsm-woocommerce-booking-thalasso')
 		] );
 
+		$dynamic_tags->register_tag( 'Elementor_Tag_BookAccommodationPackagePrice' );
+		$dynamic_tags->register_tag( 'Elementor_Tag_BookPackagePrice' );
+		$dynamic_tags->register_tag( 'Elementor_Tag_BookResawebUrl' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookRoomButtonLabel' );
-		$dynamic_tags->register_tag( 'Elementor_Tag_AccommodationUrl' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackageRatesTable' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackageRatesCards' );
-		$dynamic_tags->register_tag( 'Elementor_Tag_BookPackagePrice' );
 	}
 
 	/**

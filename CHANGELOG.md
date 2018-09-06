@@ -1,3 +1,6 @@
+### 1.1.3: September 6th, 2018
+* **New** - Elementor Dynamic Tag: Book Resaweb URL (contextual to Accommodation and/or Package)
+
 ### 1.1.2: September 5th, 2018
 * **New** - Elementor Dynamic Tag: PackageRatesCards
 * **New** - ACF, secondary description for custom taxonomies

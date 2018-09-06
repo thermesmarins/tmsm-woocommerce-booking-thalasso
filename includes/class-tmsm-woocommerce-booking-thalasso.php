@@ -103,11 +103,12 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		 * Elementor overrides
 		 */
 		if ( function_exists( '_is_elementor_installed' ) ) {
+			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookaccommodationpackageprice.php';
+			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookpackageprice.php';
+			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookresaweburl.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookroombuttonlabel.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-accommodationurl.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packageratestable.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packageratescards.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookpackageprice.php';
 		}
 
 		/**
