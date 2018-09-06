@@ -1,3 +1,6 @@
+### 1.1.4: September 6th, 2018
+* **New** - ACF for Package, new field accommodation
+
 ### 1.1.3: September 6th, 2018
 * **New** - Elementor Dynamic Tag: Book Resaweb URL (contextual to Accommodation and/or Package)
 
