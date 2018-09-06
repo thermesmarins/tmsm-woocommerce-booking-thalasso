@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-09-05 11:57+0200\n"
+"POT-Creation-Date: 2018-09-06 10:46+0200\n"
 "PO-Revision-Date: 2014-10-24 21:08+0100\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
@@ -392,17 +392,22 @@ msgstr ""
 msgid "Product has accommodation"
 msgstr ""
 
-#: includes/elementor/elementor-tag-accommodationurl.php:12
-msgid "Accommodation URL"
+#: includes/elementor/elementor-tag-bookaccommodationpackageprice.php:12
+msgid "Accommodation/Package: Book Label With Price"
+msgstr ""
+
+#: includes/elementor/elementor-tag-bookaccommodationpackageprice.php:94
+#: includes/elementor/elementor-tag-bookpackageprice.php:52
+#, php-format
+msgid "Book %s"
 msgstr ""
 
 #: includes/elementor/elementor-tag-bookpackageprice.php:12
 msgid "Book Package Price Label"
 msgstr ""
 
-#: includes/elementor/elementor-tag-bookpackageprice.php:52
-#, php-format
-msgid "Book %s"
+#: includes/elementor/elementor-tag-bookresaweburl.php:12
+msgid "Book Resaweb URL"
 msgstr ""
 
 #: includes/elementor/elementor-tag-bookroombuttonlabel.php:12
@@ -425,25 +430,25 @@ msgstr ""
 msgid "Pick your accommodation"
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratescards.php:121
+#: includes/elementor/elementor-tag-packageratescards.php:120
 msgid "Know more about this accommodation"
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratescards.php:126
+#: includes/elementor/elementor-tag-packageratescards.php:125
 #: includes/elementor/elementor-tag-packageratestable.php:118
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:91
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:139
 msgid "Book now"
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratescards.php:141
+#: includes/elementor/elementor-tag-packageratescards.php:140
 #: includes/elementor/elementor-tag-packageratestable.php:134
 msgid ""
 "In hotel: Rates per person for 6 days in a double room, half "
 "board."
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratescards.php:142
+#: includes/elementor/elementor-tag-packageratescards.php:141
 #: includes/elementor/elementor-tag-packageratestable.php:135
 msgid ""
 "In Residence: Rates per person for 2 persons spa guests occupying "
@@ -451,7 +456,7 @@ msgid ""
 "saturday to saturday."
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratescards.php:148
+#: includes/elementor/elementor-tag-packageratescards.php:147
 #: includes/elementor/elementor-tag-packageratestable.php:141
 msgid ""
 "Rates per person per day in a double room, half board (except "
