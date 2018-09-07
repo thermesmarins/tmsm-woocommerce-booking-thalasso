@@ -1,3 +1,7 @@
+### 1.1.5: September 7th, 2018
+* **New** - Elementor Custom Query "accommodationpackage_price"
+* **New** - Elementor Custom Query "package_discover"
+
 ### 1.1.4: September 6th, 2018
 * **New** - ACF for Package, new field accommodation
 
@@ -13,7 +17,7 @@
 * **Tweak** - Make ACF field secondary_desc translatable
 
 ### 1.1.1: August 30th, 2018
-* **Tweak** - Change the way ACF Fields are loaded (HPP replaced JSON)
+* **Tweak** - Change the way ACF Fields are loaded (PHP replaced JSON)
 * **New** - ACF for Package, new field pitch
 
 ### 1.1.0: August 28th, 2018

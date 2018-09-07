@@ -20,3 +20,5 @@ Requires Advanced Custom Fields Pro v5.3.7+
     * Discovery Type
     * Spa Treatment Type
 * ACF Fields for the 4 Custom Post Types
+* Elementor Custom Query "accommodationpackage_price"
+* Elementor Custom Query "accommodationpackage_price"

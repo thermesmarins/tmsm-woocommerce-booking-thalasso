@@ -104,7 +104,7 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		 */
 		if ( function_exists( '_is_elementor_installed' ) ) {
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-accommodationpackageprice.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookpackageprice.php';
+			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packageprice.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookresaweburl.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookroombuttonlabel.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packageratestable.php';
@@ -220,9 +220,12 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 
 		// Elementor
 		$this->loader->add_action( 'elementor/dynamic_tags/register_tags', $plugin_public, 'elementor_tags_register', 10, 1 );
+		$this->loader->add_action( 'elementor_pro/posts/query/accommodationpackage_price', $plugin_public, 'elementor_query_accommodationpackage_price', 10, 1);
+		$this->loader->add_action( 'elementor_pro/posts/query/package_discover', $plugin_public, 'elementor_query_package_discover', 10, 1);
 
 		// ACF
 		$this->loader->add_filter( 'acf/format_value/name=new', $plugin_public, 'acf_format_value_new', 200);
+
 	}
 
 	/**

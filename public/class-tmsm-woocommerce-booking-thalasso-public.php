@@ -312,11 +312,91 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 		] );
 
 		$dynamic_tags->register_tag( 'Elementor_Tag_AccommodationPackagePrice' );
-		$dynamic_tags->register_tag( 'Elementor_Tag_BookPackagePrice' );
+		$dynamic_tags->register_tag( 'Elementor_Tag_PackagePrice' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookResawebUrl' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookRoomButtonLabel' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackageRatesTable' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackageRatesCards' );
+	}
+
+	/**
+	 * Elementor Custom Query "accommodationpackage_price"
+	 *
+	 * @param WP_Query $query
+	 *
+	 * @return mixed
+	 */
+	function elementor_query_accommodationpackage_price( $query ) {
+
+		$package = get_post();
+
+		if(get_post_type($package) !== 'package'){
+			return;
+		}
+
+		if(!function_exists('get_field')){
+			return;
+		}
+
+		// Select only accommodation with resaweb_url
+		$meta_query[] = array (
+			'key'	=> 'resaweb_url',
+			'value'	=> 'http',
+			'compare'	=> 'LIKE',
+		);
+		$query->set( 'meta_query', $meta_query );
+
+		$accommodations_relation = get_field('accommodation_relation', $package->ID);
+
+		if(!empty($accommodations_relation)){
+			$query->set( 'post__in', $accommodations_relation );
+		}
+
+	}
+
+	/**
+	 * Elementor Custom Query "package_discover"
+	 *
+	 * @param WP_Query $query
+	 *
+	 * @return mixed
+	 */
+	function elementor_query_package_discover( $query ) {
+
+		$package = get_post();
+
+		if(get_post_type($package) !== 'package'){
+			return;
+		}
+
+		if(!function_exists('get_field')){
+			return;
+		}
+
+		$triptype = get_field('trip_type', $package->ID);
+
+		$tax_query = $query->get( 'tax_query' );
+
+		// Select packages only in the same packagetype
+		$packagetype = get_field( 'package_type', $package->ID );
+		if ( ! empty( $packagetype ) ) {
+			$packagetype_first = array_shift( array_values( $packagetype ) );
+			$tax_query[]       = [
+				'taxonomy' => 'package_type',
+				'terms'    => $packagetype_first->term_id,
+			];
+		} // Select packages only in the same triptype
+		else {
+			if ( ! empty( $triptype ) ) {
+				$tax_query[] = [
+					'taxonomy' => 'trip_type',
+					'terms'    => $triptype->term_id,
+				];
+			}
+		}
+
+		$query->set( 'tax_query', $tax_query );
+
 	}
 
 	/**

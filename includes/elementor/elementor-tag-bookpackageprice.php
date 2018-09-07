@@ -2,14 +2,14 @@
 if(!class_exists('\Elementor\Core\DynamicTags\Tag')){
 	die();
 }
-class Elementor_Tag_BookPackagePrice extends \Elementor\Core\DynamicTags\Tag {
+class Elementor_Tag_PackagePrice extends \Elementor\Core\DynamicTags\Tag {
 
 	public function get_name() {
-		return 'tmsm-woocommerce-booking-thalasso-bookpackageprice';
+		return 'tmsm-woocommerce-booking-thalasso-packageprice';
 	}
 
 	public function get_title() {
-		return __( 'Book Package Price Label', 'tmsm-woocommerce-booking-thalasso' );
+		return __( 'Package Price', 'tmsm-woocommerce-booking-thalasso' );
 	}
 
 	public function get_group() {
@@ -49,7 +49,7 @@ class Elementor_Tag_BookPackagePrice extends \Elementor\Core\DynamicTags\Tag {
 
 		$shortcode = '[resaweb_load package_id="'.$package_idresaweb.'" lang="'.$lang.'" nights="'.$triptype_defaultnights.'"]';
 		$shortcode .= '[resaweb_price from="1" hotel_id="BEST" package_id="'.$package_idresaweb.'" lang="'.$lang.'"]';
-		$output .= sprintf(__('Book %s', 'tmsm-woocommerce-booking-thalasso'), do_shortcode($shortcode));
+		$output .= do_shortcode($shortcode);
 
 		echo $output;
 	}

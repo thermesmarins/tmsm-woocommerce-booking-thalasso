@@ -1270,7 +1270,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 					array(
 						'key' => 'field_5b9147d82987f',
 						'label' => 'Hébergements disponibles',
-						'name' => 'accommodation',
+						'name' => 'accommodation_relation',
 						'type' => 'post_object',
 						'instructions' => '',
 						'required' => 1,
@@ -1287,7 +1287,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 						),
 						'allow_null' => 0,
 						'multiple' => 1,
-						'return_format' => 'object',
+						'return_format' => 'id',
 						'ui' => 1,
 					),
 					array(
