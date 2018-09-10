@@ -1448,7 +1448,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 						),
 						'default_value' => '',
 						'tabs' => 'visual',
-						'toolbar' => 'basic',
+						'toolbar' => 'full',
 						'media_upload' => 0,
 						'delay' => 0,
 					),

@@ -1,3 +1,4 @@
+* **Tweak** - ACF for Package, field advantages as full editor
 * **Tweak** - Elementor Dynamic tags refactoring
 
 ### 1.1.5: September 7th, 2018
