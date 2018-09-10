@@ -306,12 +306,11 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
-			'rewrite'           => array( 'slug' => 'trip-type' ),
+			'rewrite'           => array( 'slug' => 'trip-type', 'with_front' => false),
 		);
 
 		register_taxonomy( 'trip_type', array( 'package' ), $args );
 	}
-
 
 	/**
 	 * Creates a new custom post type: discovery
@@ -674,6 +673,51 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	 */
 	public function acf_register_groups(){
 		if( function_exists('acf_add_local_field_group') ):
+
+			acf_add_local_field_group(array(
+				'key' => 'group_5b92821712faa',
+				'title' => 'Accommodation Type',
+				'fields' => array(
+					array(
+						'key' => 'field_5b92821b40a42',
+						'label' => 'Nombre de nuits par défaut',
+						'name' => 'defaultnights',
+						'type' => 'number',
+						'instructions' => '',
+						'required' => 1,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'min' => '',
+						'max' => '',
+						'step' => '',
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'taxonomy',
+							'operator' => '==',
+							'value' => 'accommodation_type',
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'default',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => 1,
+				'description' => '',
+			));
 
 			acf_add_local_field_group(array(
 				'key' => 'group_5b59b8de56b2e',
@@ -1270,7 +1314,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 					array(
 						'key' => 'field_5b9147d82987f',
 						'label' => 'Hébergements disponibles',
-						'name' => 'accommodation_relation',
+						'name' => 'accommodation',
 						'type' => 'post_object',
 						'instructions' => '',
 						'required' => 1,

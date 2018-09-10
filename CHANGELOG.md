@@ -1,3 +1,5 @@
+* **Tweak** - Elementor Dynamic tags refactoring
+
 ### 1.1.5: September 7th, 2018
 * **New** - Elementor Custom Query "accommodationpackage_price"
 * **New** - Elementor Custom Query "package_discover"
