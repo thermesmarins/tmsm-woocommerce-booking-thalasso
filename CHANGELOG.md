@@ -1,5 +1,6 @@
 * **Tweak** - ACF for Package, field advantages as full editor
 * **Tweak** - Elementor Dynamic tags refactoring
+* **Fix** - Field accommodation relation in Elementor Custom Query "accommodationpackage_price"
 
 ### 1.1.5: September 7th, 2018
 * **New** - Elementor Custom Query "accommodationpackage_price"

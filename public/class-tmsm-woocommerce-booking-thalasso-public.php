@@ -346,7 +346,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 		);
 		$query->set( 'meta_query', $meta_query );
 
-		$accommodations_relation = get_field('accommodation_relation', $package->ID);
+		$accommodations_relation = get_field('accommodation', $package->ID);
 
 		if(!empty($accommodations_relation)){
 			$query->set( 'post__in', $accommodations_relation );
