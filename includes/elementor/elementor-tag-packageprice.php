@@ -36,6 +36,7 @@ class Elementor_Tag_PackagePrice extends \Elementor\Core\DynamicTags\Tag {
 
 		$package_idresaweb = absint(esc_html(get_field('id_resaweb', $package->ID)));
 		$package_codename = esc_html(get_field('codename', $package->ID));
+		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) );
 
 		$triptype = get_field('trip_type', $package->ID); // term object trip_type
 		$triptype_defaultnights = null;
@@ -46,8 +47,13 @@ class Elementor_Tag_PackagePrice extends \Elementor\Core\DynamicTags\Tag {
 		if(empty($triptype_defaultnights)){
 			return;
 		}
+		$defaultnights = $triptype_defaultnights;
 
-		$shortcode = '[resaweb_load package_id="'.$package_idresaweb.'" lang="'.$lang.'" nights="'.$triptype_defaultnights.'"]';
+		if($defaultnights < $package_daysmin){
+			$defaultnights = $package_daysmin;
+		}
+
+		$shortcode = '[resaweb_load package_id="'.$package_idresaweb.'" lang="'.$lang.'" nights="'.$defaultnights.'"]';
 		$shortcode .= '[resaweb_price from="1" hotel_id="BEST" package_id="'.$package_idresaweb.'" lang="'.$lang.'"]';
 		$output .= do_shortcode($shortcode);
 

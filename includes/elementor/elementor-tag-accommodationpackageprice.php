@@ -47,6 +47,7 @@ class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTag
 		$package_idresaweb = absint( esc_html( get_field( 'id_resaweb', $package->ID ) ) );
 		$package_codename  = esc_html( get_field( 'codename', $package->ID ) );
 		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) );
+		$package_daysmax  = esc_html( get_field( 'daysmax', $package->ID ) );
 		$accommodation_codename  = esc_html( get_field( 'codename', $accommodation->ID ) );
 
 		$triptype = get_field('trip_type', $package->ID); // term object trip_type
@@ -63,10 +64,6 @@ class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTag
 		$defaultnights = $triptype_defaultnights;
 		$accommodation_type = get_field('accommodation_type', $accommodation->ID); // term object accommodation_type
 
-		if($defaultnights < $package_daysmin){
-			$defaultnights = $package_daysmin;
-		}
-
 		if(!empty($accommodation_type)){
 
 			$accommodation_type_for_trip_type = get_field( 'accommodation_type', 'trip_type_'.$triptype->term_id);
@@ -75,11 +72,15 @@ class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTag
 				//continue;
 			}
 
-
 			$accommodation_defaultnights = get_field('defaultnights', $accommodation_type->taxonomy . '_' . $accommodation_type->term_id);
 			if(!empty($accommodation_defaultnights)){
 				$defaultnights = $accommodation_defaultnights;
 			}
+
+		}
+
+		if($defaultnights < $package_daysmin || $defaultnights > $package_daysmax){
+			$defaultnights = $package_daysmin;
 		}
 		if(!in_array($defaultnights, $defaultnights_toload)){
 			$defaultnights_toload[] = $defaultnights;
