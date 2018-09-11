@@ -174,6 +174,7 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_package' );
 		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_discovery' );
 		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_spatreatment' );
+		$this->loader->add_action( 'pre_get_posts', $plugin_admin, 'pre_get_posts' );
 
 		// Taxonomies
 		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_accommodationtype' );

@@ -478,6 +478,20 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	}
 
 	/**
+	 * Order package/accommodation/spatreatment/discovery by order_menu
+	 *
+	 * @param WP_Query $query
+	 */
+	function pre_get_posts( $query ){
+
+		if ( $query->is_main_query() && in_array( $query->get( 'post_type' ), [ 'package', 'accommodation', 'spatreatment', 'discovery' ] ) ) {
+			$query->set( 'orderby', 'menu_order' );
+			$query->set( 'order', 'ASC' );
+		}
+
+	}
+
+	/**
 	 * Creates a new custom taxonomy: spatreatment_type
 	 *
 	 * @since 	1.0.1
