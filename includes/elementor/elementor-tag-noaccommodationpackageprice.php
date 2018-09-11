@@ -2,14 +2,14 @@
 if(!class_exists('\Elementor\Core\DynamicTags\Tag')){
 	die();
 }
-class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTags\Tag {
+class Elementor_Tag_NoAccommodationPackagePrice extends \Elementor\Core\DynamicTags\Tag {
 
 	public function get_name() {
-		return 'tmsm-woocommerce-booking-thalasso-accommodationpackageprice';
+		return 'tmsm-woocommerce-booking-thalasso-noaccommodationpackageprice';
 	}
 
 	public function get_title() {
-		return __( 'Accommodation/Package Price', 'tmsm-woocommerce-booking-thalasso' );
+		return __( 'NoAccommodation/Package Price', 'tmsm-woocommerce-booking-thalasso' );
 	}
 
 	public function get_group() {
@@ -33,21 +33,12 @@ class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTag
 			return;
 		}
 
-		// Accommodation is in the loop
-		$accommodation = get_post();
-		if(empty($accommodation)){
-			return;
-		}
-		if(get_post_type($accommodation) !== 'accommodation'){
-			return;
-		}
-
 		$lang = esc_html((function_exists('pll_current_language') ? pll_current_language() : substr(get_locale(),0, 2)));
 
 		$package_idresaweb = absint( esc_html( get_field( 'id_resaweb', $package->ID ) ) );
 		$package_codename  = esc_html( get_field( 'codename', $package->ID ) );
 		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) );
-		$accommodation_codename  = esc_html( get_field( 'codename', $accommodation->ID ) );
+		$accommodation_codename  = 'TMS';
 
 		$triptype = get_field('trip_type', $package->ID); // term object trip_type
 		$triptype_defaultnights = null;
@@ -60,27 +51,12 @@ class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTag
 		}
 
 		$defaultnights_toload = [];
-		$defaultnights = $triptype_defaultnights;
-		$accommodation_type = get_field('accommodation_type', $accommodation->ID); // term object accommodation_type
+		$defaultnights = 6;
 
 		if($defaultnights < $package_daysmin){
 			$defaultnights = $package_daysmin;
 		}
 
-		if(!empty($accommodation_type)){
-
-			$accommodation_type_for_trip_type = get_field( 'accommodation_type', 'trip_type_'.$triptype->term_id);
-			// Trip Type is not related to accommodation type, exclude
-			if(!(is_array($accommodation_type_for_trip_type) && in_array($accommodation_type->term_id, $accommodation_type_for_trip_type))){
-				//continue;
-			}
-
-
-			$accommodation_defaultnights = get_field('defaultnights', $accommodation_type->taxonomy . '_' . $accommodation_type->term_id);
-			if(!empty($accommodation_defaultnights)){
-				$defaultnights = $accommodation_defaultnights;
-			}
-		}
 		if(!in_array($defaultnights, $defaultnights_toload)){
 			$defaultnights_toload[] = $defaultnights;
 		}
@@ -92,8 +68,6 @@ class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTag
 		}
 
 		$output .= do_shortcode($shortcode);
-
-
 
 		echo $output;
 	}

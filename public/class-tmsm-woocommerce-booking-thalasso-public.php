@@ -311,6 +311,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 			'title' => __('TMSM WooCommerce Booking Thalasso Tags', 'tmsm-woocommerce-booking-thalasso')
 		] );
 
+		$dynamic_tags->register_tag( 'Elementor_Tag_NoAccommodationPackagePrice' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_AccommodationPackagePrice' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackagePrice' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookResawebUrl' );

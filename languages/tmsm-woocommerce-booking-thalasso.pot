@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-09-10 15:40+0200\n"
+"POT-Creation-Date: 2018-09-11 11:36+0200\n"
 "PO-Revision-Date: 2014-10-24 21:08+0100\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:89
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:659
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:673
 msgid "Accommodation"
 msgstr ""
 
@@ -168,7 +168,7 @@ msgid "Accommodation Types"
 msgstr ""
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:190
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:634
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:648
 msgid "Package"
 msgstr ""
 
@@ -330,65 +330,65 @@ msgstr ""
 msgid "Spa Treatments"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:489
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:503
 msgctxt "taxonomy general name"
 msgid "Spa Treatment Types"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:490
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:504
 msgctxt "taxonomy singular name"
 msgid "Spa Treatment Type"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:491
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:505
 msgid "Search Spa Treatment Type"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:492
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:506
 msgid "All Spa Treatment Types"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:493
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:507
 msgid "Parent Spa Treatment Type"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:494
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:508
 msgid "Parent Spa Treatment Type:"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:495
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:509
 msgid "Edit Spa Treatment Type"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:496
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:510
 msgid "Update Spa Treatment Type"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:497
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:511
 msgid "Add New Spa Treatment Type"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:498
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:512
 msgid "New Spa Treatment Type"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:499
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:513
 msgid "Spa Treatment Types"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:527
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:528
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:547
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:602
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:541
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:542
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:561
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:616
 msgid "Bookable"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:628
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:653
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:642
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:667
 msgid "Select"
 msgstr ""
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:644
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:658
 msgid "Product has accommodation"
 msgstr ""
 
@@ -410,6 +410,10 @@ msgstr ""
 
 #: includes/elementor/elementor-tag-bookroombuttonlabel.php:42
 msgid "Book an apartment"
+msgstr ""
+
+#: includes/elementor/elementor-tag-noaccommodationpackageprice.php:12
+msgid "NoAccommodation/Package Price"
 msgstr ""
 
 #: includes/elementor/elementor-tag-packageprice.php:12

@@ -1,7 +1,8 @@
+* **New** - Order package/accommodation/spatreatment/discovery by order_menu
+* **New** - Elementor Dynamic Tag: No Accommodation / Package Price
 * **Tweak** - ACF for Package, field advantages as full editor
 * **Tweak** - Elementor Dynamic tags refactoring
 * **Fix** - Field accommodation relation in Elementor Custom Query "accommodationpackage_price"
-* **New** - Order package/accommodation/spatreatment/discovery by order_menu
 
 ### 1.1.5: September 7th, 2018
 * **New** - Elementor Custom Query "accommodationpackage_price"
