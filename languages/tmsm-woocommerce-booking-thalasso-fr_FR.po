@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-09-11 11:36+0200\n"
-"PO-Revision-Date: 2018-09-11 11:37+0200\n"
+"POT-Creation-Date: 2018-09-11 12:01+0200\n"
+"PO-Revision-Date: 2018-09-11 12:01+0200\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language: fr\n"
@@ -468,11 +468,15 @@ msgstr ""
 msgid "Package Rates Table"
 msgstr "Tableau de prix du forfait"
 
+#: includes/elementor/elementor-tag-resaweburlnoaccommodation.php:12
+msgid "Resaweb URL No Accommodation"
+msgstr "URL Resaweb sans hébergement"
+
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:241
 msgid "Package not found"
 msgstr "Forfait non trouvé"
 
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:311
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:309
 msgid "TMSM WooCommerce Booking Thalasso Tags"
 msgstr "TMSM WooCommerce Booking Thalasso Tags"
 

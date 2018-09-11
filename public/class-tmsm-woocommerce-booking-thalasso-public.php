@@ -249,8 +249,6 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 			'bookinghasaccommodation' => $bookinghasaccommodation,
 			'pages' => $pages,
 			'posts' => $posts,
-			'ccc' => 'ddd',
-			111 => 222,
 		];
 
 		if(!empty($results)){
@@ -315,6 +313,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 		$dynamic_tags->register_tag( 'Elementor_Tag_AccommodationPackagePrice' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackagePrice' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookResawebUrl' );
+		$dynamic_tags->register_tag( 'Elementor_Tag_ResawebUrlNoAccommodation' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookRoomButtonLabel' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackageRatesTable' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackageRatesCards' );
