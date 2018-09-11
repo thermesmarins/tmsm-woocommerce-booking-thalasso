@@ -1,3 +1,4 @@
+### 1.1.6: September 11th, 2018
 * **New** - Order package/accommodation/spatreatment/discovery by order_menu
 * **New** - Elementor Dynamic Tag: No Accommodation / Package Price
 * **Tweak** - ACF for Package, field advantages as full editor
