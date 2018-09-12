@@ -312,6 +312,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 		$dynamic_tags->register_tag( 'Elementor_Tag_NoAccommodationPackagePrice' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_AccommodationPackagePrice' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_PackagePrice' );
+		$dynamic_tags->register_tag( 'Elementor_Tag_PackagePriceExplanation' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookResawebUrl' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_ResawebUrlNoAccommodation' );
 		$dynamic_tags->register_tag( 'Elementor_Tag_BookRoomButtonLabel' );

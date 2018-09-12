@@ -1,4 +1,5 @@
 * **New** - Elementor Dynamic Tag: Resaweb URL No Accommodation
+* **New** - Elementor Dynamic Tag: Package Price Explanation
 
 ### 1.1.6: September 11th, 2018
 * **New** - Order package/accommodation/spatreatment/discovery by order_menu

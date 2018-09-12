@@ -66,7 +66,7 @@ class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTag
 
 		if(!empty($accommodation_type)){
 
-			$accommodation_type_for_trip_type = get_field( 'accommodation_type', 'trip_type_'.$triptype->term_id);
+			$accommodation_type_for_trip_type = get_field( 'accommodation_type', $triptype->taxonomy . '_'.$triptype->term_id);
 			// Trip Type is not related to accommodation type, exclude
 			if(!(is_array($accommodation_type_for_trip_type) && in_array($accommodation_type->term_id, $accommodation_type_for_trip_type))){
 				//continue;
