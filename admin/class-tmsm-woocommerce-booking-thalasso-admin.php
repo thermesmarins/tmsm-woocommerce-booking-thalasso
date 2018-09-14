@@ -485,8 +485,10 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	function pre_get_posts( $query ){
 
 		if ( $query->is_main_query() && in_array( $query->get( 'post_type' ), [ 'package', 'accommodation', 'spatreatment', 'discovery' ] ) ) {
-			$query->set( 'orderby', 'menu_order' );
-			$query->set( 'order', 'ASC' );
+			if(empty($query->get( 'orderby'))){
+				$query->set( 'orderby', 'menu_order' );
+				$query->set( 'order', 'ASC' );
+			}
 		}
 
 	}
