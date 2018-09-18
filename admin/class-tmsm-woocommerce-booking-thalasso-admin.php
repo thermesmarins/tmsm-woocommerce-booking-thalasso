@@ -207,7 +207,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 		$opts['show_in_menu']                           = true;
 		$opts['show_in_nav_menu']                       = true;
 		$opts['show_ui']                                = true;
-		$opts['supports']                               = array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt' );
+		$opts['supports']                               = array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt', 'comments' );
 		$opts['taxonomies']                             = array();
 		$opts['capabilities']['delete_others_posts']    = "delete_others_posts";
 		$opts['capabilities']['delete_post']            = "delete_post";
