@@ -33,7 +33,7 @@ class Elementor_Tag_ResawebUrlNoAccommodation extends \Elementor\Core\DynamicTag
 			$package = $post;
 		}
 
-		$noaccommodation_resaweburl = 'thalasso-sans-hebergement';
+		$noaccommodation_resaweburl = __( 'https://reservation.thalassotherapy.com/thalasso-sans-hebergement', 'tmsm-woocommerce-booking-thalasso' );
 		$package_codename  = esc_html( get_field( 'codename', $package->ID ) );
 
 		if(empty($package)){
