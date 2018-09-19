@@ -106,6 +106,46 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 	}
 
 	/**
+	 * Filters the permalink for custom post type accommodation
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param string  $post_link The post's permalink.
+	 * @param WP_Post $post      The post in question.
+	 * @param bool    $leavename Whether to keep the post name.
+	 * @param bool    $sample    Is it a sample permalink.
+	 *
+	 * @return string
+	 */
+	public function post_type_link_accommodation( $post_link, $post, $leavename, $sample){
+		if ( get_post_type( $post ) === 'accommodation' && function_exists( 'get_field' ) ) {
+			$resaweb_url = get_field( 'resaweb_url', $post->ID );
+			if ( ! empty( $resaweb_url ) ) {
+				$post_link = $resaweb_url;
+			}
+		}
+
+		return $post_link;
+	}
+
+	/**
+	 * Redirect before displaying template for accommodation
+	 */
+	public function template_redirect_accommodation( ){
+		global $post;
+
+		if( is_singular( 'accommodation' ) )
+		{
+			if ( get_post_type( $post ) === 'accommodation' && function_exists( 'get_field' ) ) {
+				$resaweb_url = get_field( 'resaweb_url', $post->ID );
+				if ( ! empty( $resaweb_url ) ) {
+					wp_redirect( $resaweb_url );
+				}
+			}
+		}
+	}
+
+	/**
 	 *  WooCommerce Before Add To Cart Button
 	 */
 	public function woocommerce_before_add_to_cart_form(){

@@ -214,6 +214,9 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		$this->loader->add_filter( 'post_type_link', $plugin_public, 'post_type_link_accommodation', 50, 4 );
+		$this->loader->add_action( 'template_redirect', $plugin_public, 'template_redirect_accommodation' );
+
 		// WooCommerce Button Booking
 		$this->loader->add_action( 'woocommerce_before_add_to_cart_button', $plugin_public, 'woocommerce_before_add_to_cart_form' );
 		$this->loader->add_action( 'woocommerce_after_add_to_cart_button', $plugin_public, 'woocommerce_after_add_to_cart_form' );
