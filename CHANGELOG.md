@@ -3,6 +3,7 @@
 * **Fix** - Order package/accommodation/spatreatment/discovery by order_menu
 * **Tweak** - Allow comments for Package CPT
 * **New** - Accommodation CPT: redirect to resaweb_url
+* **New** - Body class for CPT without urls, to allow hiding parts of the single page
 
 ### 1.1.6: September 11th, 2018
 * **New** - Order package/accommodation/spatreatment/discovery by order_menu
