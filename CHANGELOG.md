@@ -1,3 +1,5 @@
+* **New** - Elementor Dynamic Tag: Criteo Product ID
+
 ### 1.1.7: September 20th, 2018
 * **New** - Elementor Dynamic Tag: Resaweb URL No Accommodation
 * **New** - Elementor Dynamic Tag: Package Price Explanation
