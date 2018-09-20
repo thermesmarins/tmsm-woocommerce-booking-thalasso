@@ -688,6 +688,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 	 * ACF Register Groups
 	 */
 	public function acf_register_groups(){
+
 		if( function_exists('acf_add_local_field_group') ):
 
 			acf_add_local_field_group(array(
@@ -1266,6 +1267,46 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 							'param' => 'taxonomy',
 							'operator' => '==',
 							'value' => 'trip_type',
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'seamless',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => 1,
+				'description' => '',
+			));
+
+			acf_add_local_field_group(array(
+				'key' => 'group_5ba3bef36c906',
+				'title' => 'Vidéo',
+				'fields' => array(
+					array(
+						'key' => 'field_5ba3bf400a771',
+						'label' => 'Vidéo',
+						'name' => 'video',
+						'type' => 'url',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'post_type',
+							'operator' => '==',
+							'value' => 'discovery',
 						),
 					),
 				),
@@ -1982,6 +2023,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 			));
 
 		endif;
+
 	}
 
 	/**
