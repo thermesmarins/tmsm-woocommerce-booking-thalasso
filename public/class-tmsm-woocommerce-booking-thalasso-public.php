@@ -146,90 +146,14 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 	}
 
 	/**
-	 * Body class
+	 * Item class (for single and archive)
 	 *
 	 * @param array $classes
 	 *
 	 * @return array
 	 */
-	public function body_class($classes){
-		global $post;
+	private function item_class($classes){
 
-		if( is_singular( 'spatreatment' ) )
-		{
-			if ( get_post_type( $post ) === 'spatreatment' && function_exists( 'get_field' ) ) {
-
-				$booking_url = get_field( 'booking_url', $post->ID );
-				if ( empty( $booking_url) ) {
-					$classes[] = 'spatreatment-no-bookingurl';
-				}
-
-				$gift_url = get_field( 'gift_url', $post->ID );
-				if ( empty( $gift_url) ) {
-					$classes[] = 'spatreatment-no-gifturl';
-				}
-
-			}
-		}
-
-		if( is_singular( 'package' ) )
-		{
-			if ( get_post_type( $post ) === 'package' && function_exists( 'get_field' ) ) {
-
-				$codename = get_field( 'codename', $post->ID );
-				if ( empty( $booking_url) ) {
-					$classes[] = 'package-no-codename';
-				}
-
-			}
-		}
-
-		if( is_singular( 'discovery' ) )
-		{
-			if ( get_post_type( $post ) === 'discovery' && function_exists( 'get_field' ) ) {
-
-				$booking_url = get_field( 'booking_url', $post->ID );
-				if ( empty( $booking_url) ) {
-					$classes[] = 'discovery-no-bookingurl';
-				}
-
-				$gift_url = get_field( 'gift_url', $post->ID );
-				if ( empty( $gift_url) ) {
-					$classes[] = 'discovery-no-gifturl';
-				}
-
-			}
-		}
-
-		if( is_singular( 'accommodation' ) )
-		{
-			if ( get_post_type( $post ) === 'accommodation' && function_exists( 'get_field' ) ) {
-
-				$availpro_url = get_field( 'availpro_url', $post->ID );
-				if ( empty( $availpro_url) ) {
-					$classes[] = 'accommodation-no-availprourl';
-				}
-
-				$resaweb_url = get_field( 'resaweb_url', $post->ID );
-				if ( empty( $resaweb_url) ) {
-					$classes[] = 'accommodation-no-resaweburl';
-				}
-
-			}
-		}
-
-
-		return $classes;
-	}
-
-	/**
-	 * Post class
-	 *
-	 * @param array $classes
-	 *
-	 * @return array
-	 */
-	public function post_class($classes){
 		global $post;
 
 		if ( get_post_type( $post ) === 'spatreatment' && function_exists( 'get_field' ) ) {
@@ -278,6 +202,28 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 		}
 
 		return $classes;
+	}
+
+	/**
+	 * Body class
+	 *
+	 * @param array $classes
+	 *
+	 * @return array
+	 */
+	public function body_class($classes){
+		return self::item_class($classes);
+	}
+
+	/**
+	 * Post class
+	 *
+	 * @param array $classes
+	 *
+	 * @return array
+	 */
+	public function post_class($classes){
+		return self::item_class($classes);
 	}
 
 	/**

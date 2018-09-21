@@ -1,3 +1,5 @@
+* **Tweak** - Refactoring post/body classes
+
 ### 1.1.8: September 21th, 2018
 * **New** - Elementor Dynamic Tag: Criteo Product ID
 * **New** - ACF for Discovery: new field video
