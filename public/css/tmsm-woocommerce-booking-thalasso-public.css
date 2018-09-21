@@ -34,3 +34,14 @@
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 }
+
+.spatreatment-no-bookingurl .hide-spatreatment-no-bookingurl,
+.spatreatment-no-gifturl .hide-spatreatment-no-gifturl,
+.discovery-no-gifturl .hide-discovery-no-gifturl,
+.discovery-no-bookingurl .hide-discovery-no-bookingurl,
+.accommodation-no-resaweburl .hide-accommodation-no-resaweburl,
+.accommodation-no-availprourl .hide-accommodation-no-availprourl
+{
+  display:none;
+}
+

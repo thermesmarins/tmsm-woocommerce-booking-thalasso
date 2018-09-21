@@ -1,6 +1,8 @@
+### 1.1.8: September 21th, 2018
 * **New** - Elementor Dynamic Tag: Criteo Product ID
 * **New** - ACF for Discovery: new field video
 * **New** - Post class for CPT without urls, to allow hiding parts of the archive page (loop)
+* **New** - CSS classes to hide buttons when no url
 
 ### 1.1.7: September 20th, 2018
 * **New** - Elementor Dynamic Tag: Resaweb URL No Accommodation
