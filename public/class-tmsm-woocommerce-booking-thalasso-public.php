@@ -157,7 +157,6 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 
 		if( is_singular( 'spatreatment' ) )
 		{
-
 			if ( get_post_type( $post ) === 'spatreatment' && function_exists( 'get_field' ) ) {
 
 				$booking_url = get_field( 'booking_url', $post->ID );
@@ -175,7 +174,6 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 
 		if( is_singular( 'package' ) )
 		{
-
 			if ( get_post_type( $post ) === 'package' && function_exists( 'get_field' ) ) {
 
 				$codename = get_field( 'codename', $post->ID );
@@ -188,7 +186,6 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 
 		if( is_singular( 'discovery' ) )
 		{
-
 			if ( get_post_type( $post ) === 'discovery' && function_exists( 'get_field' ) ) {
 
 				$booking_url = get_field( 'booking_url', $post->ID );
@@ -206,7 +203,6 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 
 		if( is_singular( 'accommodation' ) )
 		{
-
 			if ( get_post_type( $post ) === 'discovery' && function_exists( 'get_field' ) ) {
 
 				$availpro_url = get_field( 'availpro_url', $post->ID );

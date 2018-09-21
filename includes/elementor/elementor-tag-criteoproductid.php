@@ -30,7 +30,7 @@ class Elementor_Tag_CriteoProductID extends \Elementor\Core\DynamicTags\Tag {
 			if ( function_exists( 'get_field' ) ) {
 				$package_codename = esc_html( get_field( 'codename', $post->ID ) );
 
-				$ouput = '<script type="text/javascript">CriteoProductIDList.push(\'' . $package_codename . '\');</script>';
+				$output .= '<script type="text/javascript">CriteoProductIDList.push(\'' . $package_codename . '\');</script>';
 			}
 
 		}
