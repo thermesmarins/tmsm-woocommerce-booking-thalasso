@@ -1374,7 +1374,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 						'name' => 'accommodation',
 						'type' => 'post_object',
 						'instructions' => '',
-						'required' => 1,
+						'required' => 0,
 						'conditional_logic' => 0,
 						'wrapper' => array(
 							'width' => '50',
@@ -1384,8 +1384,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 						'post_type' => array(
 							0 => 'accommodation',
 						),
-						'taxonomy' => array(
-						),
+						'taxonomy' => '',
 						'allow_null' => 0,
 						'multiple' => 1,
 						'return_format' => 'id',
