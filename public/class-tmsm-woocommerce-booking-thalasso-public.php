@@ -170,7 +170,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 
 		if ( get_post_type( $post ) === 'package' && function_exists( 'get_field' ) ) {
 			$codename = get_field( 'codename', $post->ID );
-			if ( empty( $booking_url) ) {
+			if ( empty( $codename) ) {
 				$classes[] = 'package-no-codename';
 			}
 
