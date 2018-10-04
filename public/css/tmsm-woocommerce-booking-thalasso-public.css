@@ -35,6 +35,10 @@
   grid-row-gap: 30px;
 }
 
+.triptype-week-end .hide-triptype-week-end,
+.triptype-sejours .hide-triptype-sejours,
+.triptype-thalasso-packages	.hide-triptype-thalasso-packages,
+.triptype-short-breaks .hide-triptype-short-breaks,
 .spatreatment-no-bookingurl .hide-spatreatment-no-bookingurl,
 .spatreatment-no-gifturl .hide-spatreatment-no-gifturl,
 .package-no-codename .hide-package-no-codename,

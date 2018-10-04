@@ -173,6 +173,11 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 			if ( empty( $booking_url) ) {
 				$classes[] = 'package-no-codename';
 			}
+
+			$triptype = get_field( 'trip_type', $post->ID );
+			if ( ! empty( $triptype ) ) {
+				$classes[] = 'triptype-' . $triptype->slug;
+			}
 		}
 
 		if ( get_post_type( $post ) === 'discovery' && function_exists( 'get_field' ) ) {
