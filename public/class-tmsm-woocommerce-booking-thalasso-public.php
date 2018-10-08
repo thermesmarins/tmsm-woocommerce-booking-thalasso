@@ -123,6 +123,12 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 			if ( ! empty( $resaweb_url ) ) {
 				$post_link = $resaweb_url;
 			}
+			else{
+				$website_url = get_field( 'website_url', $post->ID );
+				if ( ! empty( $website_url ) ) {
+					$post_link = $website_url;
+				}
+			}
 		}
 
 		return $post_link;

@@ -1,6 +1,7 @@
 * **Tweak** - Refactoring post/body classes
 * **Tweak** - Package price with option to select accommodation, for best or without accommodation
 * **Tweak** - Package field "package available" not required
+* **Tweak** - Accommodation permalink to website_url by default
 
 ### 1.1.8: September 21th, 2018
 * **New** - Elementor Dynamic Tag: Criteo Product ID
