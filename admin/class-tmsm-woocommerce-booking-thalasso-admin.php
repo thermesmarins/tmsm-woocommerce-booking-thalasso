@@ -106,7 +106,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 		$opts['show_in_menu']                           = true;
 		$opts['show_in_nav_menu']                       = true;
 		$opts['show_ui']                                = true;
-		$opts['supports']                               = array( 'title', 'editor', 'thumbnail', 'page-attributes' );
+		$opts['supports']                               = array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt' );
 		$opts['taxonomies']                             = array();
 		$opts['capabilities']['delete_others_posts']    = "delete_others_posts";
 		$opts['capabilities']['delete_post']            = "delete_post";
@@ -2008,14 +2008,8 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 				'label_placement' => 'top',
 				'instruction_placement' => 'field',
 				'hide_on_screen' => array(
-					0 => 'discussion',
-					1 => 'comments',
-					2 => 'revisions',
-					3 => 'author',
-					4 => 'format',
-					5 => 'categories',
-					6 => 'tags',
-					7 => 'send-trackbacks',
+					0 => 'categories',
+					1 => 'tags',
 				),
 				'active' => 1,
 				'description' => '',

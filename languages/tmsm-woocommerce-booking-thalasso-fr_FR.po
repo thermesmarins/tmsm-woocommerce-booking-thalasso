@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-09-12 10:23+0200\n"
-"PO-Revision-Date: 2018-09-12 10:26+0200\n"
+"POT-Creation-Date: 2018-10-10 16:38+0200\n"
+"PO-Revision-Date: 2018-10-10 16:40+0200\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language: fr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:89
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:673
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:675
 msgid "Accommodation"
 msgstr "Hébergement"
 
@@ -167,7 +167,7 @@ msgid "Accommodation Types"
 msgstr "Types d’hébergement"
 
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:190
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:648
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:650
 msgid "Package"
 msgstr "Forfait"
 
@@ -329,65 +329,65 @@ msgstr "Soin Spa"
 msgid "Spa Treatments"
 msgstr "Soins Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:503
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:505
 msgctxt "taxonomy general name"
 msgid "Spa Treatment Types"
 msgstr "Types de soin Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:504
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:506
 msgctxt "taxonomy singular name"
 msgid "Spa Treatment Type"
 msgstr "Type de soin Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:505
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:507
 msgid "Search Spa Treatment Type"
 msgstr "Rechercher les types de soin Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:506
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:508
 msgid "All Spa Treatment Types"
 msgstr "Tous les types de soin Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:507
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:509
 msgid "Parent Spa Treatment Type"
 msgstr "Type de soin Spa parent"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:508
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:510
 msgid "Parent Spa Treatment Type:"
 msgstr "Type de soin Spa parent :"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:509
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:511
 msgid "Edit Spa Treatment Type"
 msgstr "Modifier le type de soin Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:510
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:512
 msgid "Update Spa Treatment Type"
 msgstr "Mettre à jour le type de soin Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:511
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:513
 msgid "Add New Spa Treatment Type"
 msgstr "Ajouter un type de soin Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:512
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:514
 msgid "New Spa Treatment Type"
 msgstr "Nouveau type de soin Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:513
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:515
 msgid "Spa Treatment Types"
 msgstr "Types de soin Spa"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:541
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:542
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:561
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:616
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:543
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:544
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:563
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:618
 msgid "Bookable"
 msgstr "Réservable"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:642
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:667
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:644
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:669
 msgid "Select"
 msgstr "Choisir"
 
-#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:658
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:660
 msgid "Product has accommodation"
 msgstr "La produit a un hébergement"
 
@@ -411,38 +411,64 @@ msgstr "Réserver une chambre"
 msgid "Book an apartment"
 msgstr "Réserver un appartement"
 
+#: includes/elementor/elementor-tag-criteoproductid.php:12
+msgid "Criteo Product ID"
+msgstr "ID produit Criteo"
+
 #: includes/elementor/elementor-tag-noaccommodationpackageprice.php:12
 msgid "NoAccommodation/Package Price"
 msgstr "Prix Sans hébergement/Forfait"
 
-#: includes/elementor/elementor-tag-packageprice.php:12
+#: includes/elementor/elementor-tag-packageprice.php:17
 msgid "Package Price"
 msgstr "Prix du forfait"
+
+#: includes/elementor/elementor-tag-packageprice.php:42
+#, php-format
+msgid "Price for: %s"
+msgstr "Prix pour : %s"
+
+#: includes/elementor/elementor-tag-packageprice.php:52
+msgid "Best Price With Accommodation"
+msgstr "Meilleur prix avec hébergement"
+
+#: includes/elementor/elementor-tag-packageprice.php:53
+msgid "Price Without accommodation"
+msgstr "Prix sans hébergement"
+
+#: includes/elementor/elementor-tag-packageprice.php:64
+msgid "Price"
+msgstr "Prix"
+
+#: includes/elementor/elementor-tag-packageprice.php:74
+msgid "From Label"
+msgstr "Libellé à partir de"
+
+#: includes/elementor/elementor-tag-packageprice.php:77
+msgid "Without From Label"
+msgstr "Sans le libellé à partir de"
+
+#: includes/elementor/elementor-tag-packageprice.php:78
+msgid "With From Label"
+msgstr "Avec le libellé à partir de"
+
+#: includes/elementor/elementor-tag-packageprice.php:87
+msgid "Instead Price"
+msgstr "Prix au lieu de"
+
+#: includes/elementor/elementor-tag-packageprice.php:90
+msgid "Without Instead Price"
+msgstr "Sans le prix au lieu de"
+
+#: includes/elementor/elementor-tag-packageprice.php:91
+msgid "With Instead Price"
+msgstr "Avec le prix au lieu de"
 
 #: includes/elementor/elementor-tag-packagepriceexplanation.php:12
 msgid "Package Price Explanation"
 msgstr "Explication du prix du forfait"
 
 #: includes/elementor/elementor-tag-packagepriceexplanation.php:53
-#: includes/elementor/elementor-tag-packageratescards.php:140
-#: includes/elementor/elementor-tag-packageratestable.php:138
-msgid "In hotel: Rates per person for 6 days in a double room, half board."
-msgstr ""
-"<b>En hôtel :</b> Prix pour 6 nuits par personne en chambre double. ½ "
-"pension."
-
-#: includes/elementor/elementor-tag-packagepriceexplanation.php:54
-#: includes/elementor/elementor-tag-packageratescards.php:141
-#: includes/elementor/elementor-tag-packageratestable.php:139
-msgid ""
-"In Residence: Rates per person for 2 persons spa guests occupying the same "
-"apartment, including 6 treatments days and 7 nights from saturday to "
-"saturday."
-msgstr ""
-"<b>En résidence :</b> Prix par personne curiste occupant le même "
-"appartement, comprenant : 6 jours de soins et 7 nuits du samedi au samedi."
-
-#: includes/elementor/elementor-tag-packagepriceexplanation.php:57
 #, php-format
 msgid ""
 "Rates per person per day in a double room, half board (except Hotel du "
@@ -454,8 +480,27 @@ msgstr[0] ""
 "Prix par jour et personne en chambre double en demi-pension (sauf à l’Hôtel "
 "du Louvre, petit déjeuner uniquement)."
 msgstr[1] ""
-"Prix pour %s jours et par personne en chambre double en demi-pension (sauf "
-"à l’Hôtel du Louvre, petit déjeuner uniquement)."
+"Prix pour %s jours et par personne en chambre double en demi-pension (sauf à "
+"l’Hôtel du Louvre, petit déjeuner uniquement)."
+
+#: includes/elementor/elementor-tag-packagepriceexplanation.php:56
+#: includes/elementor/elementor-tag-packageratescards.php:140
+#: includes/elementor/elementor-tag-packageratestable.php:138
+msgid "In hotel: Rates per person for 6 days in a double room, half board."
+msgstr ""
+"<b>En hôtel :</b> Prix pour 6 nuits par personne en chambre double. ½ "
+"pension."
+
+#: includes/elementor/elementor-tag-packagepriceexplanation.php:57
+#: includes/elementor/elementor-tag-packageratescards.php:141
+#: includes/elementor/elementor-tag-packageratestable.php:139
+msgid ""
+"In Residence: Rates per person for 2 persons spa guests occupying the same "
+"apartment, including 6 treatments days and 7 nights from saturday to "
+"saturday."
+msgstr ""
+"<b>En résidence :</b> Prix par personne curiste occupant le même "
+"appartement, comprenant : 6 jours de soins et 7 nuits du samedi au samedi."
 
 #: includes/elementor/elementor-tag-packageratescards.php:12
 msgid "Package Rates Cards"
@@ -472,7 +517,7 @@ msgstr "En savoir plus sur cet hébergement"
 #: includes/elementor/elementor-tag-packageratescards.php:125
 #: includes/elementor/elementor-tag-packageratestable.php:122
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:91
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:139
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:271
 msgid "Book now"
 msgstr "Réserver"
 
@@ -493,11 +538,15 @@ msgstr "Tableau de prix du forfait"
 msgid "Resaweb URL No Accommodation"
 msgstr "URL Resaweb sans hébergement"
 
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:241
+#: includes/elementor/elementor-tag-resaweburlnoaccommodation.php:36
+msgid "https://reservation.thalassotherapy.com/thalasso-sans-hebergement"
+msgstr "https://reservation.thalassotherapie.com/thalasso-sans-hebergement"
+
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:373
 msgid "Package not found"
 msgstr "Forfait non trouvé"
 
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:309
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:441
 msgid "TMSM WooCommerce Booking Thalasso Tags"
 msgstr "TMSM WooCommerce Booking Thalasso Tags"
 
