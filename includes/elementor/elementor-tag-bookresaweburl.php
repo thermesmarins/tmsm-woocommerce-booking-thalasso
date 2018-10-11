@@ -40,8 +40,13 @@ class Elementor_Tag_BookResawebUrl extends \Elementor\Core\DynamicTags\Tag {
 			$accommodation = $post;
 		}
 
-		$accommodation_resaweburl = get_field('resaweb_url', $accommodation->ID);
-		$package_codename  = esc_html( get_field( 'codename', $package->ID ) );
+		if(!empty($package)){
+			$package_codename  = esc_html( get_field( 'codename', $package->ID ) );
+		}
+
+		if(!empty($accommodation)){
+			$accommodation_resaweburl = get_field('resaweb_url', $accommodation->ID);
+		}
 
 		if(empty($accommodation_resaweburl)){
 			$output = get_permalink( $accommodation->ID );
