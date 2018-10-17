@@ -1,3 +1,5 @@
+* Body class only on single
+
 ### 1.1.9: October 17th, 2018
 * **Tweak** - Refactoring post/body classes
 * **Tweak** - Package price with option to select accommodation, for best or without accommodation

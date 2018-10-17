@@ -223,7 +223,12 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 	 * @return array
 	 */
 	public function body_class($classes){
-		return self::item_class($classes);
+		if(is_single()){
+			return self::item_class($classes);
+		}
+		else{
+			return $classes;
+		}
 	}
 
 	/**
