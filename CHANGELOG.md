@@ -1,3 +1,5 @@
+* Add phone to discovery button
+
 ### 1.1.10: October 18th, 2018
 * **New** - Elementor Dynamic Tag: Book Room Button Label
 * **Fix** - Body class only on single
