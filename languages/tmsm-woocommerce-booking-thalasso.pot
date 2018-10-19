@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-10-10 16:38+0200\n"
+"POT-Creation-Date: 2018-10-19 08:38+0200\n"
 "PO-Revision-Date: 2014-10-24 21:08+0100\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
@@ -396,6 +396,22 @@ msgstr ""
 msgid "Accommodation/Package Price"
 msgstr ""
 
+#: includes/elementor/elementor-tag-bookdiscoverybuttonlabel.php:12
+msgid "Book Discovery Button Label"
+msgstr ""
+
+#: includes/elementor/elementor-tag-bookdiscoverybuttonlabel.php:39
+#: includes/elementor/elementor-tag-packageratescards.php:125
+#: includes/elementor/elementor-tag-packageratestable.php:122
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:91
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:276
+msgid "Book now"
+msgstr ""
+
+#: includes/elementor/elementor-tag-bookdiscoverybuttonlabel.php:42
+msgid "Book at +33 299 407 500"
+msgstr ""
+
 #: includes/elementor/elementor-tag-bookresaweburl.php:12
 msgid "Book Resaweb URL"
 msgstr ""
@@ -509,13 +525,6 @@ msgstr ""
 msgid "Know more about this accommodation"
 msgstr ""
 
-#: includes/elementor/elementor-tag-packageratescards.php:125
-#: includes/elementor/elementor-tag-packageratestable.php:122
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:91
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:271
-msgid "Book now"
-msgstr ""
-
 #: includes/elementor/elementor-tag-packageratescards.php:147
 #: includes/elementor/elementor-tag-packageratestable.php:145
 msgid ""
@@ -536,10 +545,10 @@ msgid ""
 "https://reservation.thalassotherapy.com/thalasso-sans-hebergement"
 msgstr ""
 
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:373
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:378
 msgid "Package not found"
 msgstr ""
 
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:441
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:446
 msgid "TMSM WooCommerce Booking Thalasso Tags"
 msgstr ""

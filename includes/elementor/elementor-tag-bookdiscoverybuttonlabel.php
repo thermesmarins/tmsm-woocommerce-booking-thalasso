@@ -39,7 +39,7 @@ class Elementor_Tag_BookDiscoveryButtonLabel extends \Elementor\Core\DynamicTags
 			$output .= __('Book now', 'tmsm-woocommerce-booking-thalasso');
 		}
 		else{
-			$output .= '📞 ' .__('Book at +33 299 407 523', 'tmsm-woocommerce-booking-thalasso');
+			$output .= __('Book at +33 299 407 500', 'tmsm-woocommerce-booking-thalasso');
 		}
 
 		echo wp_kses_post($output);

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-10-10 16:38+0200\n"
-"PO-Revision-Date: 2018-10-10 16:40+0200\n"
+"POT-Creation-Date: 2018-10-19 08:38+0200\n"
+"PO-Revision-Date: 2018-10-19 08:38+0200\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language: fr\n"
@@ -395,6 +395,22 @@ msgstr "La produit a un hébergement"
 msgid "Accommodation/Package Price"
 msgstr "Prix Hébergement/Forfait"
 
+#: includes/elementor/elementor-tag-bookdiscoverybuttonlabel.php:12
+msgid "Book Discovery Button Label"
+msgstr "Libellé du bouton réservation de découverte"
+
+#: includes/elementor/elementor-tag-bookdiscoverybuttonlabel.php:39
+#: includes/elementor/elementor-tag-packageratescards.php:125
+#: includes/elementor/elementor-tag-packageratestable.php:122
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:91
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:276
+msgid "Book now"
+msgstr "Réserver maintenant"
+
+#: includes/elementor/elementor-tag-bookdiscoverybuttonlabel.php:42
+msgid "Book at +33 299 407 500"
+msgstr "Réserver au 02 99 40 75 00"
+
 #: includes/elementor/elementor-tag-bookresaweburl.php:12
 msgid "Book Resaweb URL"
 msgstr "URL pour réserver sur Résaweb"
@@ -514,13 +530,6 @@ msgstr "Choisissez votre hébergement"
 msgid "Know more about this accommodation"
 msgstr "En savoir plus sur cet hébergement"
 
-#: includes/elementor/elementor-tag-packageratescards.php:125
-#: includes/elementor/elementor-tag-packageratestable.php:122
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:91
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:271
-msgid "Book now"
-msgstr "Réserver"
-
 #: includes/elementor/elementor-tag-packageratescards.php:147
 #: includes/elementor/elementor-tag-packageratestable.php:145
 msgid ""
@@ -542,13 +551,16 @@ msgstr "URL Resaweb sans hébergement"
 msgid "https://reservation.thalassotherapy.com/thalasso-sans-hebergement"
 msgstr "https://reservation.thalassotherapie.com/thalasso-sans-hebergement"
 
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:373
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:378
 msgid "Package not found"
 msgstr "Forfait non trouvé"
 
-#: public/class-tmsm-woocommerce-booking-thalasso-public.php:441
+#: public/class-tmsm-woocommerce-booking-thalasso-public.php:446
 msgid "TMSM WooCommerce Booking Thalasso Tags"
 msgstr "TMSM WooCommerce Booking Thalasso Tags"
+
+#~ msgid "📞 Book by phone"
+#~ msgstr "Réserver par téléphone"
 
 #~ msgid "Book %s"
 #~ msgstr "Réserver %s"
