@@ -1,4 +1,5 @@
-* Add phone to discovery button
+* **New** - Add phone to discovery button
+* **New** - Elementor Dynamic Tag: Spa Treatment Price Per Person
 
 ### 1.1.10: October 18th, 2018
 * **New** - Elementor Dynamic Tag: Book Room Button Label

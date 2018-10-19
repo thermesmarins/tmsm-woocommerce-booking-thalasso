@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-10-19 08:38+0200\n"
+"POT-Creation-Date: 2018-10-19 14:08+0200\n"
 "PO-Revision-Date: 2014-10-24 21:08+0100\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
@@ -543,6 +543,15 @@ msgstr ""
 #: includes/elementor/elementor-tag-resaweburlnoaccommodation.php:36
 msgid ""
 "https://reservation.thalassotherapy.com/thalasso-sans-hebergement"
+msgstr ""
+
+#: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:12
+msgid "Discovery Price Per Person"
+msgstr ""
+
+#: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:47
+#, php-format
+msgid "%s per person"
 msgstr ""
 
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:378
