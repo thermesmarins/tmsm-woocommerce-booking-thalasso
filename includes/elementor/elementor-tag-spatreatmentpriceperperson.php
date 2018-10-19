@@ -9,7 +9,7 @@ class Elementor_Tag_SpaTreatmentPricePerPerson extends \Elementor\Core\DynamicTa
 	}
 
 	public function get_title() {
-		return __( 'Discovery Price Per Person', 'tmsm-woocommerce-booking-thalasso' );
+		return __( 'Spa Treatment Price Per Person', 'tmsm-woocommerce-booking-thalasso' );
 	}
 
 	public function get_group() {
@@ -23,32 +23,35 @@ class Elementor_Tag_SpaTreatmentPricePerPerson extends \Elementor\Core\DynamicTa
 	public function render() {
 		$output = '';
 
-		$discovery = get_post();
+		$spatreatment = get_post();
 
-		if(empty($discovery)){
+		if(empty($spatreatment)){
 			return;
 		}
-		if(get_post_type($discovery) !== 'discovery'){
+		if(get_post_type($spatreatment) !== 'spatreatment'){
 			return;
 		}
 
-		$discovery_price  = esc_html( get_field( 'price', $discovery->ID ) );
-		$discovery_persons  = esc_html( get_field( 'persons', $discovery->ID ) );
+		$spatreatment_price  = esc_html( get_field( 'price', $spatreatment->ID ) );
+		$spatreatment_persons  = esc_html( get_field( 'persons', $spatreatment->ID ) );
 
-		$price = $discovery_price;
+		$price = $spatreatment_price;
 
-		if(!empty($discovery_persons) && $discovery_persons > 1){
-			$price = $discovery_price / $discovery_persons;
+		if(!empty($price)){
+			if(!empty($spatreatment_persons) && $spatreatment_persons > 1){
+				$price = $spatreatment_price / $spatreatment_persons;
+			}
+
+			$price_formatted = sprintf( __( '€%s', 'tmsm-woocommerce-booking-thalasso' ), number_format_i18n( $price ) );
+
+			if(!empty($spatreatment_persons) && $spatreatment_persons > 1){
+				$output = sprintf( __( '%s <small>per person</small>', 'tmsm-woocommerce-booking-thalasso' ), $price_formatted );
+			}
+			else{
+				$output = $price_formatted;
+			}
 		}
 
-		$price_formatted = money_format( '%.2n', $price );
-
-		if(!empty($discovery_persons) && $discovery_persons > 1){
-			$output = sprintf( __( '%s per person', 'tmsm-woocommerce-booking-thalasso' ), $price_formatted );
-		}
-		else{
-			$output = $price_formatted;
-		}
 
 		echo $output;
 	}

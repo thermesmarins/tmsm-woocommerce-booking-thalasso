@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-10-19 14:08+0200\n"
-"PO-Revision-Date: 2018-10-19 14:08+0200\n"
+"POT-Creation-Date: 2018-10-19 14:45+0200\n"
+"PO-Revision-Date: 2018-10-19 14:45+0200\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language: fr\n"
@@ -552,13 +552,18 @@ msgid "https://reservation.thalassotherapy.com/thalasso-sans-hebergement"
 msgstr "https://reservation.thalassotherapie.com/thalasso-sans-hebergement"
 
 #: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:12
-msgid "Discovery Price Per Person"
-msgstr "Découverte prix par personne"
+msgid "Spa Treatment Price Per Person"
+msgstr "Soin spa prix par personne"
 
-#: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:47
+#: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:45
 #, php-format
-msgid "%s per person"
-msgstr "%s par personne"
+msgid "€%s"
+msgstr "%s €"
+
+#: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:48
+#, php-format
+msgid "%s <small>per person</small>"
+msgstr "%s <small>par personne</small>"
 
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:378
 msgid "Package not found"
@@ -567,6 +572,9 @@ msgstr "Forfait non trouvé"
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:446
 msgid "TMSM WooCommerce Booking Thalasso Tags"
 msgstr "TMSM WooCommerce Booking Thalasso Tags"
+
+#~ msgid "Discovery Price Per Person"
+#~ msgstr "Découverte prix par personne"
 
 #~ msgid "📞 Book by phone"
 #~ msgstr "Réserver par téléphone"

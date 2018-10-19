@@ -1,3 +1,6 @@
+* **Fix** - Format Spa Treatment Price
+* **Tweak** - Instructions for Spa Treatment Price field
+
 ### 1.1.11: October 19th, 2018
 * **New** - Add phone to discovery button
 * **New** - Elementor Dynamic Tag: Spa Treatment Price Per Person
