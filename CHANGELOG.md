@@ -1,5 +1,6 @@
 * **Fix** - Format Spa Treatment Price
 * **Tweak** - Instructions for Spa Treatment Price field
+* **Fix** - Check accommodation var before calling it
 
 ### 1.1.11: October 19th, 2018
 * **New** - Add phone to discovery button

@@ -47,6 +47,9 @@ class Elementor_Tag_BookResawebUrl extends \Elementor\Core\DynamicTags\Tag {
 		if(!empty($accommodation)){
 			$accommodation_resaweburl = get_field('resaweb_url', $accommodation->ID);
 		}
+		else{
+			return;
+		}
 
 		if(empty($accommodation_resaweburl)){
 			$output = get_permalink( $accommodation->ID );
