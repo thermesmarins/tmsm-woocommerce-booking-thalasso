@@ -521,7 +521,8 @@ class Tmsm_Woocommerce_Booking_Thalasso_Public {
 		// Select packages only in the same packagetype
 		$packagetype = get_field( 'package_type', $package->ID );
 		if ( ! empty( $packagetype ) ) {
-			$packagetype_first = array_shift( array_values( $packagetype ) );
+			$packagetype_values = array_values( $packagetype );
+			$packagetype_first = array_shift( $packagetype_values );
 			$tax_query[]       = [
 				'taxonomy' => 'package_type',
 				'terms'    => $packagetype_first->term_id,
