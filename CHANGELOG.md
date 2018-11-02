@@ -1,3 +1,4 @@
+### 1.1.12: November 2nd, 2018
 * **Fix** - Format Spa Treatment Price
 * **Tweak** - Instructions for Spa Treatment Price field
 * **Fix** - Check accommodation var before calling it
