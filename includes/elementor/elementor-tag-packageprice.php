@@ -140,7 +140,7 @@ class Elementor_Tag_PackagePrice extends \Elementor\Core\DynamicTags\Tag {
 			$defaultnights = $package_daysmin;
 		}
 
-		$shortcode = '[resaweb_load package_id="'.$package_idresaweb.'" lang="'.$lang.'" nights="'.$defaultnights.'"]';
+		$shortcode = '[resaweb_load package_id="'.$package_idresaweb.'" lang="'.$lang.'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).'"]';
 		$shortcode .= '[resaweb_price from="'.$from.'" instead="'.$instead.'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).' hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" lang="'.$lang.'"]';
 		$output .= do_shortcode($shortcode);
 

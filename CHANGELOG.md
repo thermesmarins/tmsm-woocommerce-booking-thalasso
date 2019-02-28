@@ -1,3 +1,5 @@
+* **Fix** - Resaweb package price should have default nights number of accommodation
+
 ### 1.1.12: November 2nd, 2018
 * **Fix** - Format Spa Treatment Price
 * **Tweak** - Instructions for Spa Treatment Price field
