@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2018-10-19 14:45+0200\n"
-"PO-Revision-Date: 2018-10-19 14:45+0200\n"
+"POT-Creation-Date: 2019-03-29 14:48+0100\n"
+"PO-Revision-Date: 2019-03-29 14:48+0100\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language: fr\n"
@@ -548,8 +548,9 @@ msgid "Resaweb URL No Accommodation"
 msgstr "URL Resaweb sans hébergement"
 
 #: includes/elementor/elementor-tag-resaweburlnoaccommodation.php:36
-msgid "https://reservation.thalassotherapy.com/thalasso-sans-hebergement"
-msgstr "https://reservation.thalassotherapie.com/thalasso-sans-hebergement"
+msgid "https://reservation.thalasso-saintmalo.com/en/thalasso-sans-hebergement"
+msgstr ""
+"https://reservation.thalasso-saintmalo.com/fr/thalasso-sans-hebergement"
 
 #: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:12
 msgid "Spa Treatment Price Per Person"
