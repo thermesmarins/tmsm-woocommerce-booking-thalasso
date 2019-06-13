@@ -142,7 +142,7 @@ class Elementor_Tag_PackageRatesTable extends \Elementor\Core\DynamicTags\Tag {
 					case 'court-sejour':
 					case 'escapade':
 					case 'short-breaks':
-					$output .= __('Rates per person per day in a double room, half board (except Hotel du Louvre, breakfast only).','tmsm-woocommerce-booking-thalasso').'<br/>';
+					$output .= __('Rates per person per day in a double room, half board (except Hotel des Marins, breakfast only).','tmsm-woocommerce-booking-thalasso').'<br/>';
 					default:
 				}
 				$output .= '</caption>';

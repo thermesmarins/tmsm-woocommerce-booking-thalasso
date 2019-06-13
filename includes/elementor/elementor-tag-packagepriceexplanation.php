@@ -50,7 +50,7 @@ class Elementor_Tag_PackagePriceExplanation extends \Elementor\Core\DynamicTags\
 		}
 
 		if($defaultnights < 6){
-			$output .= sprintf(_n( 'Rates per person per day in a double room, half board (except Hotel du Louvre, breakfast only', 'Rates per person for %s days in a double room, half board (except Hotel du Louvre), breakfast only', $defaultnights, 'tmsm-woocommerce-booking-thalasso' ), number_format_i18n( $defaultnights ));
+			$output .= sprintf(_n( 'Rates per person per day in a double room, half board (except Hotel des Marins, breakfast only)', 'Rates per person for %s days in a double room, half board (except Hotel des Marins), breakfast only', $defaultnights, 'tmsm-woocommerce-booking-thalasso' ), number_format_i18n( $defaultnights ));
 		}
 		elseif($defaultnights == 6){
 			$output .= __('In hotel: Rates per person for 6 days in a double room, half board.','tmsm-woocommerce-booking-thalasso').'<br/>';

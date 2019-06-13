@@ -1,3 +1,5 @@
+* **Tweak** - Update Louvre renamed des Marins
+
 ### 1.1.13: March 29th, 2019
 * **Fix** - Resaweb package price should have default nights number of accommodation
 * **Fix** - Change thalasso domain
