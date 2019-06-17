@@ -1,3 +1,4 @@
+### 1.1.16: June 17th, 2019
 * **Fix** - Remove wc_price() dependency
 
 ### 1.1.15: June 17th, 2019
