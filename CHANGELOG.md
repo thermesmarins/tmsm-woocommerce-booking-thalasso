@@ -1,3 +1,5 @@
+* **Fix** - Remove wc_price() dependency
+
 ### 1.1.15: June 17th, 2019
 * **New** - ACF for Discovery: new field sale price
 

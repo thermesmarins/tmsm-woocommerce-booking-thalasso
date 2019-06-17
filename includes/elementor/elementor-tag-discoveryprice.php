@@ -55,10 +55,10 @@ class Elementor_Tag_DiscoveryPrice extends \Elementor\Core\DynamicTags\Tag {
 		$discovery_idresaweb = absint(esc_html(get_field('id_resaweb', $discovery->ID)));
 
 		if(!empty($pdiscovery_pricesale)){
-			echo sprintf(__('From %s instead of %s','tmsm-woocommerce-booking-thalasso'), '<span class="pricevalue">'.wc_price($pdiscovery_pricesale, ['decimals' => 0]).'</span>', '<del>'.wc_price($pdiscovery_price, ['decimals' => 0]).'</del>');
+			echo sprintf(__('From %s instead of %s','tmsm-woocommerce-booking-thalasso'), '<span class="pricevalue">'.sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_pricesale)).'</span>', '<del>'.sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_price )).'</del>');
 		}
 		else{
-			echo '<span class="pricevalue">'.wc_price($pdiscovery_price, ['decimals' => 0]).'</span>';
+			echo '<span class="pricevalue">'.money_format( '%!.0n', $pdiscovery_price).'</span>';
 		}
 
 		echo $output;
