@@ -732,7 +732,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 				'label_placement' => 'top',
 				'instruction_placement' => 'label',
 				'hide_on_screen' => '',
-				'active' => 1,
+				'active' => true,
 				'description' => '',
 			));
 
@@ -749,18 +749,39 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 						'required' => 1,
 						'conditional_logic' => 0,
 						'wrapper' => array(
-							'width' => '50',
+							'width' => '30',
 							'class' => '',
 							'id' => '',
 						),
 						'taxonomy' => 'discovery_type',
 						'field_type' => 'checkbox',
-						'allow_null' => 0,
 						'add_term' => 0,
 						'save_terms' => 1,
 						'load_terms' => 1,
 						'return_format' => 'object',
 						'multiple' => 0,
+						'allow_null' => 0,
+					),
+					array(
+						'key' => 'field_5b59b982258be',
+						'label' => 'ID Resaweb',
+						'name' => 'id_resaweb',
+						'type' => 'number',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '20',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'min' => '',
+						'max' => '',
+						'step' => '',
 					),
 					array(
 						'key' => 'field_5b5f11f7a55dc',
@@ -803,23 +824,23 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 						'step' => '',
 					),
 					array(
-						'key' => 'field_5b59b982258be',
-						'label' => 'ID Resaweb',
-						'name' => 'id_resaweb',
+						'key' => 'field_5d07821adbbb1',
+						'label' => 'Prix promo',
+						'name' => 'price_sale',
 						'type' => 'number',
 						'instructions' => '',
 						'required' => 0,
 						'conditional_logic' => 0,
 						'wrapper' => array(
-							'width' => '20',
+							'width' => '13',
 							'class' => '',
 							'id' => '',
 						),
 						'default_value' => '',
 						'placeholder' => '',
 						'prepend' => '',
-						'append' => '',
-						'min' => '',
+						'append' => 'en € TTC',
+						'min' => 0,
 						'max' => '',
 						'step' => '',
 					),
@@ -924,7 +945,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 					6 => 'tags',
 					7 => 'send-trackbacks',
 				),
-				'active' => 1,
+				'active' => true,
 				'description' => '',
 			));
 
@@ -1138,7 +1159,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 					6 => 'tags',
 					7 => 'send-trackbacks',
 				),
-				'active' => 1,
+				'active' => true,
 				'description' => '',
 			));
 
@@ -1209,7 +1230,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 				'label_placement' => 'top',
 				'instruction_placement' => 'label',
 				'hide_on_screen' => '',
-				'active' => 1,
+				'active' => true,
 				'description' => '',
 			));
 
@@ -1276,7 +1297,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 				'label_placement' => 'top',
 				'instruction_placement' => 'label',
 				'hide_on_screen' => '',
-				'active' => 1,
+				'active' => true,
 				'description' => '',
 			));
 
@@ -1316,7 +1337,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 				'label_placement' => 'top',
 				'instruction_placement' => 'label',
 				'hide_on_screen' => '',
-				'active' => 1,
+				'active' => true,
 				'description' => '',
 			));
 
@@ -1631,7 +1652,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 					4 => 'tags',
 					5 => 'send-trackbacks',
 				),
-				'active' => 1,
+				'active' => true,
 				'description' => '',
 			));
 
@@ -2015,7 +2036,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin {
 					4 => 'tags',
 					5 => 'send-trackbacks',
 				),
-				'active' => 1,
+				'active' => true,
 				'description' => '',
 			));
 

@@ -107,6 +107,7 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-accommodationpackageprice.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-criteoproductid.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packageprice.php';
+			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-discoveryprice.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packagepriceexplanation.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookresaweburl.php';
 			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-resaweburlnoaccommodation.php';

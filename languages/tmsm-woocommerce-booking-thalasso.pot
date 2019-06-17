@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2019-03-29 14:48+0100\n"
+"POT-Creation-Date: 2019-06-17 15:00+0200\n"
 "PO-Revision-Date: 2014-10-24 21:08+0100\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
@@ -432,6 +432,15 @@ msgstr ""
 msgid "Criteo Product ID"
 msgstr ""
 
+#: includes/elementor/elementor-tag-discoveryprice.php:17
+msgid "Discovery Price"
+msgstr ""
+
+#: includes/elementor/elementor-tag-discoveryprice.php:59
+#, php-format
+msgid "From %s instead of %s"
+msgstr ""
+
 #: includes/elementor/elementor-tag-noaccommodationpackageprice.php:12
 msgid "NoAccommodation/Package Price"
 msgstr ""
@@ -489,10 +498,10 @@ msgstr ""
 #, php-format
 msgid ""
 "Rates per person per day in a double room, half board (except "
-"Hotel du Louvre, breakfast only"
+"Hotel des Marins, breakfast only)"
 msgid_plural ""
 "Rates per person for %s days in a double room, half board (except "
-"Hotel du Louvre), breakfast only"
+"Hotel des Marins), breakfast only"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -529,7 +538,7 @@ msgstr ""
 #: includes/elementor/elementor-tag-packageratestable.php:145
 msgid ""
 "Rates per person per day in a double room, half board (except "
-"Hotel du Louvre, breakfast only)."
+"Hotel des Marins, breakfast only)."
 msgstr ""
 
 #: includes/elementor/elementor-tag-packageratestable.php:12

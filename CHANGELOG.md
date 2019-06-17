@@ -1,3 +1,5 @@
+* **New** - ACF for Discovery: new field sale price
+
 ### 1.1.14: June 13th, 2019
 * **Tweak** - Update Louvre renamed des Marins
 

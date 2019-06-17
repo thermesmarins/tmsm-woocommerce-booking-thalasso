@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2019-03-29 14:48+0100\n"
-"PO-Revision-Date: 2019-03-29 14:48+0100\n"
+"POT-Creation-Date: 2019-06-17 15:00+0200\n"
+"PO-Revision-Date: 2019-06-17 15:01+0200\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language: fr\n"
@@ -431,6 +431,15 @@ msgstr "Réserver un appartement"
 msgid "Criteo Product ID"
 msgstr "ID produit Criteo"
 
+#: includes/elementor/elementor-tag-discoveryprice.php:17
+msgid "Discovery Price"
+msgstr "Prix Découverte"
+
+#: includes/elementor/elementor-tag-discoveryprice.php:59
+#, php-format
+msgid "From %s instead of %s"
+msgstr "À partir de %s au lieu de %s"
+
 #: includes/elementor/elementor-tag-noaccommodationpackageprice.php:12
 msgid "NoAccommodation/Package Price"
 msgstr "Prix Sans hébergement/Forfait"
@@ -487,17 +496,17 @@ msgstr "Explication du prix du forfait"
 #: includes/elementor/elementor-tag-packagepriceexplanation.php:53
 #, php-format
 msgid ""
-"Rates per person per day in a double room, half board (except Hotel du "
-"Louvre, breakfast only"
+"Rates per person per day in a double room, half board (except Hotel des "
+"Marins, breakfast only)"
 msgid_plural ""
-"Rates per person for %s days in a double room, half board (except Hotel du "
-"Louvre), breakfast only"
+"Rates per person for %s days in a double room, half board (except Hotel des "
+"Marins), breakfast only"
 msgstr[0] ""
-"Prix par jour et personne en chambre double en demi-pension (sauf à l’Hôtel "
-"du Louvre, petit déjeuner uniquement)."
+"Prix par jour et personne en chambre double en demi-pension (sauf à l’hôtel "
+"des Marins, petit déjeuner uniquement)."
 msgstr[1] ""
-"Prix pour %s jours et par personne en chambre double en demi-pension (sauf à "
-"l’Hôtel du Louvre, petit déjeuner uniquement)."
+"Prix par jour et personne en chambre double pour %s jours en demi-pension "
+"(sauf à l’hôtel des Marins, petit déjeuner uniquement)."
 
 #: includes/elementor/elementor-tag-packagepriceexplanation.php:56
 #: includes/elementor/elementor-tag-packageratescards.php:140
@@ -533,11 +542,11 @@ msgstr "En savoir plus sur cet hébergement"
 #: includes/elementor/elementor-tag-packageratescards.php:147
 #: includes/elementor/elementor-tag-packageratestable.php:145
 msgid ""
-"Rates per person per day in a double room, half board (except Hotel du "
-"Louvre, breakfast only)."
+"Rates per person per day in a double room, half board (except Hotel des "
+"Marins, breakfast only)."
 msgstr ""
 "Prix par jour et personne en chambre double en demi-pension (sauf à l’hôtel "
-"Le Louvre, petit déjeuner uniquement)."
+"des Marins, petit déjeuner uniquement)."
 
 #: includes/elementor/elementor-tag-packageratestable.php:12
 msgid "Package Rates Table"
@@ -573,6 +582,19 @@ msgstr "Forfait non trouvé"
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:446
 msgid "TMSM WooCommerce Booking Thalasso Tags"
 msgstr "TMSM WooCommerce Booking Thalasso Tags"
+
+#~ msgid ""
+#~ "Rates per person per day in a double room, half board (except Hotel des "
+#~ "Marins, breakfast only"
+#~ msgid_plural ""
+#~ "Rates per person for %s days in a double room, half board (except Hotel "
+#~ "des Marins), breakfast only"
+#~ msgstr[0] ""
+#~ "Prix par jour et personne en chambre double en demi-pension (sauf à "
+#~ "l’Hôtel des Marins, petit déjeuner uniquement)."
+#~ msgstr[1] ""
+#~ "Prix pour %s jours et par personne en chambre double en demi-pension "
+#~ "(sauf à l’Hôtel des Marins, petit déjeuner uniquement)."
 
 #~ msgid "Discovery Price Per Person"
 #~ msgstr "Découverte prix par personne"
