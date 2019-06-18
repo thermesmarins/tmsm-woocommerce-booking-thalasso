@@ -54,12 +54,14 @@ class Elementor_Tag_DiscoveryPrice extends \Elementor\Core\DynamicTags\Tag {
 		$pdiscovery_pricesale = absint(esc_html(get_field('price_sale', $discovery->ID)));
 		$discovery_idresaweb = absint(esc_html(get_field('id_resaweb', $discovery->ID)));
 
+		$output .= '<span class="price">';
 		if(!empty($pdiscovery_pricesale)){
-			echo sprintf(__('From %s instead of %s','tmsm-woocommerce-booking-thalasso'), '<span class="pricevalue">'.sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_pricesale)).'</span>', '<del>'.sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_price )).'</del>');
+			$output .=  sprintf(__('From <span class="pricevalue">%s</span> <span class="instead">instead of <span class="salepricevalue">%s</span></span>','tmsm-woocommerce-booking-thalasso'), sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_pricesale)), sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_price )));
 		}
 		else{
-			echo '<span class="pricevalue">'.money_format( '%!.0n', $pdiscovery_price).'</span>';
+			$output .= '<span class="pricevalue">'.sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_price)).'</span>';
 		}
+		$output .= '</span>';
 
 		echo $output;
 	}

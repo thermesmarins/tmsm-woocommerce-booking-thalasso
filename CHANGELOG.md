@@ -1,3 +1,5 @@
+* **Tweak** - Reformat discovery price format
+
 ### 1.1.16: June 17th, 2019
 * **Fix** - Remove wc_price() dependency
 

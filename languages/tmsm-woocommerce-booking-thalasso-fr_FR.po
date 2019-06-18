@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2019-06-17 15:00+0200\n"
-"PO-Revision-Date: 2019-06-17 15:01+0200\n"
+"POT-Creation-Date: 2019-06-18 10:11+0200\n"
+"PO-Revision-Date: 2019-06-18 10:12+0200\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language: fr\n"
@@ -437,8 +437,19 @@ msgstr "Prix Découverte"
 
 #: includes/elementor/elementor-tag-discoveryprice.php:59
 #, php-format
-msgid "From %s instead of %s"
-msgstr "À partir de %s au lieu de %s"
+msgid ""
+"From <span class=\"pricevalue\">%s</span> <span class=\"instead\">instead of "
+"<span class=\"salepricevalue\">%s</span></span>"
+msgstr ""
+"À partir de <span class=\"pricevalue\">%s</span> <span class=\"instead\">au "
+"lieu de <span class=\"salepricevalue\">%s</span></span>"
+
+#: includes/elementor/elementor-tag-discoveryprice.php:59
+#: includes/elementor/elementor-tag-discoveryprice.php:62
+#: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:45
+#, php-format
+msgid "€%s"
+msgstr "%s €"
 
 #: includes/elementor/elementor-tag-noaccommodationpackageprice.php:12
 msgid "NoAccommodation/Package Price"
@@ -565,11 +576,6 @@ msgstr ""
 msgid "Spa Treatment Price Per Person"
 msgstr "Soin spa prix par personne"
 
-#: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:45
-#, php-format
-msgid "€%s"
-msgstr "%s €"
-
 #: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:48
 #, php-format
 msgid "%s <small>per person</small>"
@@ -582,6 +588,9 @@ msgstr "Forfait non trouvé"
 #: public/class-tmsm-woocommerce-booking-thalasso-public.php:446
 msgid "TMSM WooCommerce Booking Thalasso Tags"
 msgstr "TMSM WooCommerce Booking Thalasso Tags"
+
+#~ msgid "From %s instead of %s"
+#~ msgstr "À partir de %s au lieu de %s"
 
 #~ msgid ""
 #~ "Rates per person per day in a double room, half board (except Hotel des "

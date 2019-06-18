@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMSM WooCommerce Booking Thalasso\n"
-"POT-Creation-Date: 2019-06-17 15:00+0200\n"
+"POT-Creation-Date: 2019-06-18 10:11+0200\n"
 "PO-Revision-Date: 2014-10-24 21:08+0100\n"
 "Last-Translator: Nicolas Mollet <nico.mollet@gmail.com>\n"
 "Language-Team: Nicolas Mollet <nico.mollet@gmail.com>\n"
@@ -438,7 +438,16 @@ msgstr ""
 
 #: includes/elementor/elementor-tag-discoveryprice.php:59
 #, php-format
-msgid "From %s instead of %s"
+msgid ""
+"From <span class=\"pricevalue\">%s</span> <span class=\"instead"
+"\">instead of <span class=\"salepricevalue\">%s</span></span>"
+msgstr ""
+
+#: includes/elementor/elementor-tag-discoveryprice.php:59
+#: includes/elementor/elementor-tag-discoveryprice.php:62
+#: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:45
+#, php-format
+msgid "€%s"
 msgstr ""
 
 #: includes/elementor/elementor-tag-noaccommodationpackageprice.php:12
@@ -557,11 +566,6 @@ msgstr ""
 
 #: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:12
 msgid "Spa Treatment Price Per Person"
-msgstr ""
-
-#: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:45
-#, php-format
-msgid "€%s"
 msgstr ""
 
 #: includes/elementor/elementor-tag-spatreatmentpriceperperson.php:48
