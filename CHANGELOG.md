@@ -1,3 +1,4 @@
+### 1.1.17: August 6th, 2019
 * **Tweak** - Reformat discovery price format
 * **Fix** - Queried objets not correctly obtained in Loop Elements in Elementor Theme Builder
 
