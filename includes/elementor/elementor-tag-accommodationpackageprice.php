@@ -21,11 +21,23 @@ class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTag
 	}
 
 	public function render() {
+		global $post, $wp;
+
 		$output = '';
 		$shortcode = '';
 
+		$queried_object = get_queried_object();
+		if($queried_object){
+		}
+		else{
+			$current_url_postid = url_to_postid(home_url( $wp->request ) );
+			if(!empty($current_url_postid)){
+				$queried_object = get_post($current_url_postid);
+			}
+		}
+
 		// Package is the queried object
-		$package = get_queried_object();
+		$package = $queried_object;
 		if(empty($package)){
 			return;
 		}

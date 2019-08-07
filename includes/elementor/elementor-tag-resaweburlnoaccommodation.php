@@ -21,9 +21,20 @@ class Elementor_Tag_ResawebUrlNoAccommodation extends \Elementor\Core\DynamicTag
 	}
 
 	public function render() {
+		global $post, $wp;
+
 		$output = '';
 
 		$queried_object = get_queried_object();
+		if($queried_object){
+		}
+		else{
+			$current_url_postid = url_to_postid(home_url( $wp->request ) );
+			if(!empty($current_url_postid)){
+				$queried_object = get_post($current_url_postid);
+			}
+		}
+
 		if(get_post_type($queried_object) === 'package'){
 			$package = $queried_object;
 		}

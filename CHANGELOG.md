@@ -1,4 +1,5 @@
 * **Tweak** - Reformat discovery price format
+* **Fix** - Queried objets not correctly obtained in Loop Elements in Elementor Theme Builder
 
 ### 1.1.16: June 17th, 2019
 * **Fix** - Remove wc_price() dependency
