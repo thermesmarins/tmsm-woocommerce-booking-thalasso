@@ -11,7 +11,6 @@
 
     // Button Start Booking
     $(document).on('click', '.button-booking', function (e) {
-      console.log('click button');
       var productid = $(this).data('productid');
       var accommodationid = $(this).data('accommodationid');
       var packageid = $(this).data('packageid');
@@ -86,8 +85,7 @@
           output += '</form>';
 
           modalinner.html(output);
-          console.log('ajax success');
-          console.log(response);
+
 
           $('#tmsm-woocommerce-booking-thalasso-modalform').removeClass('loading');
           //bindButtonBooking();
