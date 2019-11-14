@@ -233,8 +233,8 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 
 		// Elementor
 		$this->loader->add_action( 'elementor/dynamic_tags/register_tags', $plugin_public, 'elementor_tags_register', 10, 1 );
-		$this->loader->add_action( 'elementor_pro/posts/query/accommodationpackage_price', $plugin_public, 'elementor_query_accommodationpackage_price', 10, 1);
-		$this->loader->add_action( 'elementor_pro/posts/query/package_discover', $plugin_public, 'elementor_query_package_discover', 10, 1);
+		$this->loader->add_action( 'elementor/query/accommodationpackage_price', $plugin_public, 'elementor_query_accommodationpackage_price', 10, 1);
+		$this->loader->add_action( 'elementor/query/package_discover', $plugin_public, 'elementor_query_package_discover', 10, 1);
 
 		// ACF
 		$this->loader->add_filter( 'acf/format_value/name=new', $plugin_public, 'acf_format_value_new', 200);
