@@ -1,3 +1,4 @@
+### 1.1.18: December 5th, 2019
 * Update Elementor query actions
 
 ### 1.1.17: August 6th, 2019
