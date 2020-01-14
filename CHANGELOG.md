@@ -1,3 +1,4 @@
+### 1.1.19: Janvuary 14th, 2020
 * **Fix** - Queried objets not correctly obtained in Loop Elements in Elementor Theme Builder (new fix)
 
 ### 1.1.18: December 5th, 2019
