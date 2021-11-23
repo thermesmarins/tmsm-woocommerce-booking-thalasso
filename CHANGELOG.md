@@ -1,3 +1,4 @@
+### 1.1.20: November 23rd, 2021
 * **Tweak** - Resaweb integration, add suffix parameter (double pipe || to line break in suffix)
 
 ### 1.1.19: Janvuary 14th, 2020
