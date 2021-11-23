@@ -7,7 +7,7 @@ use ElementorPro\Modules\DynamicTags\Module;
 if(!class_exists('\Elementor\Core\DynamicTags\Tag')){
 	die();
 }
-class Elementor_Tag_PackagePrice extends \Elementor\Core\DynamicTags\Tag {
+class Elementor_Tag_PackagePrice extends Tag {
 
 	public function get_name() {
 		return 'tmsm-woocommerce-booking-thalasso-packageprice';
@@ -94,12 +94,22 @@ class Elementor_Tag_PackagePrice extends \Elementor\Core\DynamicTags\Tag {
 			]
 		);
 
+		$this->add_control(
+			'suffix',
+			[
+				'label'   => __( 'Suffix', 'tmsm-woocommerce-booking-thalasso' ),
+				'type'    => Controls_Manager::TEXT,
+				'default' => '',
+			]
+		);
+
 	}
 
 	public function render() {
 
 		$from = $this->get_settings( 'from' );
 		$instead = $this->get_settings( 'instead' );
+		$suffix = $this->get_settings( 'suffix' );
 		$accommodation_codename = $this->get_settings( 'accommodation' );
 
 		$accommodation = get_posts([
@@ -141,7 +151,7 @@ class Elementor_Tag_PackagePrice extends \Elementor\Core\DynamicTags\Tag {
 		}
 
 		$shortcode = '[resaweb_load package_id="'.$package_idresaweb.'" lang="'.$lang.'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).'"]';
-		$shortcode .= '[resaweb_price from="'.$from.'" instead="'.$instead.'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).' hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" lang="'.$lang.'"]';
+		$shortcode .= '[resaweb_price from="'.esc_attr($from).'" instead="'.esc_attr($instead).'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).' hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" lang="'.$lang.'" suffix="'.esc_attr($suffix).'"]';
 		$output .= do_shortcode($shortcode);
 
 		echo $output;
