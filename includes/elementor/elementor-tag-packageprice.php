@@ -150,8 +150,9 @@ class Elementor_Tag_PackagePrice extends Tag {
 			$defaultnights = $package_daysmin;
 		}
 
+		$suffix = str_replace('||', '<br>', $suffix);
 		$shortcode = '[resaweb_load package_id="'.$package_idresaweb.'" lang="'.$lang.'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).'"]';
-		$shortcode .= '[resaweb_price from="'.esc_attr($from).'" instead="'.esc_attr($instead).'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).' hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" lang="'.$lang.'" suffix="'.esc_attr($suffix).'"]';
+		$shortcode .= '[resaweb_price from="'.esc_attr($from).'" instead="'.esc_attr($instead).'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).' hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" lang="'.$lang.'" suffix="'.($suffix).'"]';
 		$output .= do_shortcode($shortcode);
 
 		echo $output;
