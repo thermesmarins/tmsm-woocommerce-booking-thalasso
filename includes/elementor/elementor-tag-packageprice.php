@@ -134,6 +134,7 @@ class Elementor_Tag_PackagePrice extends Tag {
 		$package_idresaweb = absint(esc_html(get_field('id_resaweb', $package->ID)));
 		$package_codename = esc_html(get_field('codename', $package->ID));
 		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) );
+		$package_nblocations  = esc_html( get_field( 'location', $package->ID ) );
 
 		$triptype = get_field('trip_type', $package->ID); // term object trip_type
 		$triptype_defaultnights = null;
@@ -152,7 +153,7 @@ class Elementor_Tag_PackagePrice extends Tag {
 
 		$suffix = str_replace('||', '<br>', $suffix);
 		$shortcode = '[resaweb_load package_id="'.$package_idresaweb.'" lang="'.$lang.'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).'"]';
-		$shortcode .= '[resaweb_price from="'.esc_attr($from).'" instead="'.esc_attr($instead).'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).' hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" lang="'.$lang.'" suffix="'.($suffix).'"]';
+		$shortcode .= '[resaweb_price nblocations="'.esc_attr($package_nblocations).'" from="'.esc_attr($from).'" instead="'.esc_attr($instead).'" '.(!empty($accommodation) ? 'nights="'.$defaultnights.'"' :'' ).' hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" lang="'.$lang.'" suffix="'.($suffix).'"]';
 		$output .= do_shortcode($shortcode);
 
 		echo $output;
