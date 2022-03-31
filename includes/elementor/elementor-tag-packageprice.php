@@ -134,7 +134,7 @@ class Elementor_Tag_PackagePrice extends Tag {
 		$package_idresaweb = absint(esc_html(get_field('id_resaweb', $package->ID)));
 		$package_codename = esc_html(get_field('codename', $package->ID));
 		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) );
-		$package_nblocations  = esc_html( get_field( 'location', $package->ID ) );
+		$package_nblocations  = count( get_field( 'accommodation', $package->ID ));
 
 		$triptype = get_field('trip_type', $package->ID); // term object trip_type
 		$triptype_defaultnights = null;
