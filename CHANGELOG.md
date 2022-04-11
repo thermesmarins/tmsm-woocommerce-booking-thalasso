@@ -1,3 +1,5 @@
+* Update Moment to 2.29.2
+
 ### 1.1.20: November 23rd, 2021
 * **Tweak** - Resaweb integration, add suffix parameter (double pipe || to line break in suffix)
 
