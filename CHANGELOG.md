@@ -1,5 +1,6 @@
 ### 1.1.21: April 11th, 2022
 * Update Moment to 2.29.2
+* New package price attribute: nblocations
 
 ### 1.1.20: November 23rd, 2021
 * **Tweak** - Resaweb integration, add suffix parameter (double pipe || to line break in suffix)
