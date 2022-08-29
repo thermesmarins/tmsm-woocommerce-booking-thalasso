@@ -7,7 +7,7 @@ use ElementorPro\Modules\DynamicTags\Module;
 if(!class_exists('\Elementor\Core\DynamicTags\Tag')){
 	die();
 }
-class Elementor_Tag_DiscoveryPrice extends \Elementor\Core\DynamicTags\Tag {
+class Elementor_Tag_DiscoveryPrice extends Tag {
 
 	public function get_name() {
 		return 'tmsm-woocommerce-booking-thalasso-discoveryprice';
@@ -55,11 +55,14 @@ class Elementor_Tag_DiscoveryPrice extends \Elementor\Core\DynamicTags\Tag {
 		$discovery_idresaweb = absint(esc_html(get_field('id_resaweb', $discovery->ID)));
 
 		$output .= '<span class="price">';
+		$fmt = new NumberFormatter( get_user_locale(), NumberFormatter::CURRENCY );
 		if(!empty($pdiscovery_pricesale)){
-			$output .=  sprintf(__('From <span class="pricevalue">%s</span> <span class="instead">instead of <span class="salepricevalue">%s</span></span>','tmsm-woocommerce-booking-thalasso'), sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_pricesale)), sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_price )));
+
+
+			$output .=  sprintf(__('From <span class="pricevalue">%s</span> <span class="instead">instead of <span class="salepricevalue">%s</span></span>','tmsm-woocommerce-booking-thalasso'), $fmt->formatCurrency( $pdiscovery_pricesale, 'EUR' ), $fmt->formatCurrency( $pdiscovery_price, 'EUR' ));
 		}
 		else{
-			$output .= '<span class="pricevalue">'.sprintf(__('€%s','tmsm-woocommerce-booking-thalasso'), money_format( '%!.0n', $pdiscovery_price)).'</span>';
+			$output .= '<span class="pricevalue">'.$fmt->formatCurrency( $pdiscovery_price, 'EUR' ).'</span>';
 		}
 		$output .= '</span>';
 
