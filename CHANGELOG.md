@@ -1,3 +1,5 @@
+* Allow looking for a resaweb discovery price 
+
 ### 1.1.21: April 11th, 2022
 * Update Moment to 2.29.2
 * New package price attribute: nblocations

@@ -125,27 +125,32 @@ class Elementor_Tag_PackagePrice extends Tag {
 		if(empty($package)){
 			return;
 		}
-		if(get_post_type($package) !== 'package'){
+		if(get_post_type($package) !== 'package' && get_post_type($package) !== 'discovery' ){
 			return;
 		}
 
 		$lang = esc_html((function_exists('pll_current_language') ? pll_current_language() : substr(get_locale(),0, 2)));
 
 		$package_idresaweb = absint(esc_html(get_field('id_resaweb', $package->ID)));
-		$package_codename = esc_html(get_field('codename', $package->ID));
-		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) );
-		$package_nblocations  = count( get_field( 'accommodation', $package->ID ));
+		$package_codename = esc_html(get_field('codename', $package->ID) );
+		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) ?? 1 );
+		$package_nblocations  = count( get_field( 'accommodation', $package->ID ) ?? [] );
 
-		$triptype = get_field('trip_type', $package->ID); // term object trip_type
-		$triptype_defaultnights = null;
-		if(!empty($triptype)){
-			$triptype_slug = esc_html($triptype->slug);
-			$triptype_defaultnights = get_field('defaultnights', $triptype->taxonomy . '_' . $triptype->term_id);
+		if(get_post_type($package) === 'package'){
+			$triptype = get_field('trip_type', $package->ID); // term object trip_type
+			$triptype_defaultnights = null;
+			if(!empty($triptype)){
+				$triptype_slug = esc_html($triptype->slug);
+				$triptype_defaultnights = get_field('defaultnights', $triptype->taxonomy . '_' . $triptype->term_id);
+			}
+			if(empty($triptype_defaultnights)){
+				return;
+			}
+			$defaultnights = $triptype_defaultnights;
 		}
-		if(empty($triptype_defaultnights)){
-			return;
+		else{
+			$defaultnights = 1;
 		}
-		$defaultnights = $triptype_defaultnights;
 
 		if($defaultnights < $package_daysmin){
 			$defaultnights = $package_daysmin;

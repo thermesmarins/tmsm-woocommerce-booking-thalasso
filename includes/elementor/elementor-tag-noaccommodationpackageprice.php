@@ -39,7 +39,7 @@ class Elementor_Tag_NoAccommodationPackagePrice extends \Elementor\Core\DynamicT
 		if(empty($package)){
 			return;
 		}
-		if(get_post_type($package) !== 'package'){
+		if(get_post_type($package) !== 'package' && get_post_type($package) !== 'discovery' ){
 			return;
 		}
 
@@ -47,21 +47,31 @@ class Elementor_Tag_NoAccommodationPackagePrice extends \Elementor\Core\DynamicT
 
 		$package_idresaweb = absint( esc_html( get_field( 'id_resaweb', $package->ID ) ) );
 		$package_codename  = esc_html( get_field( 'codename', $package->ID ) );
-		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) );
+		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) ?? 1 );
 		$accommodation_codename  = 'TMS';
 
-		$triptype = get_field('trip_type', $package->ID); // term object trip_type
-		$triptype_defaultnights = null;
-		if(!empty($triptype)){
-			$triptype_slug = esc_html($triptype->slug);
-			$triptype_defaultnights = get_field('defaultnights', $triptype->taxonomy . '_' . $triptype->term_id);
+		if(get_post_type($package) === 'package'){
+			$triptype = get_field('trip_type', $package->ID); // term object trip_type
+			$triptype_defaultnights = null;
+			if(!empty($triptype)){
+				$triptype_slug = esc_html($triptype->slug);
+				$triptype_defaultnights = get_field('defaultnights', $triptype->taxonomy . '_' . $triptype->term_id);
+			}
+			if(empty($triptype_defaultnights)){
+				return;
+			}
 		}
-		if(empty($triptype_defaultnights)){
-			return;
-		}
+
 
 		$defaultnights_toload = [];
 		$defaultnights = 6;
+		$discovery_price_formatted = null;
+		if(get_post_type($package) === 'discovery' ){
+			$defaultnights = 1;
+			$discovery_price = absint( esc_html( get_field( 'price', $package->ID ) ) );
+			$discovery_price_formatted = sprintf( __( '€%s', 'tmsm-woocommerce-booking-thalasso' ), number_format_i18n( $discovery_price ) );
+
+		}
 
 		if($defaultnights < $package_daysmin){
 			$defaultnights = $package_daysmin;
@@ -71,7 +81,7 @@ class Elementor_Tag_NoAccommodationPackagePrice extends \Elementor\Core\DynamicT
 			$defaultnights_toload[] = $defaultnights;
 		}
 
-		$shortcode .= '[resaweb_price from="1" hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" lang="'.$lang.'" nights="'.$defaultnights.'"]';
+		$shortcode .= '[resaweb_price fallback="'.$discovery_price.'" from="1" hotel_id="'.$accommodation_codename.'" package_id="'.$package_idresaweb.'" lang="'.$lang.'" nights="'.$defaultnights.'"]';
 
 		foreach($defaultnights_toload as $defaultnights_toload_item){
 			$shortcode .= do_shortcode('[resaweb_load package_id="'.$package_idresaweb.'" nights="'.$defaultnights_toload_item.'" lang="'.$lang.']');
