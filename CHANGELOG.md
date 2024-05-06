@@ -1,3 +1,6 @@
+### 1.2.1: May 6th, 2024
+* Change the permalink for Accomodations and use the worpress native permalinks instead of the ACF values (resaweb url or site url).
+  
 ### 1.2.0: January 5th, 2023
 * Allow looking for a resaweb discovery price 
 
