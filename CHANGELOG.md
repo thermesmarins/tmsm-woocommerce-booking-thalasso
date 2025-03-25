@@ -1,3 +1,6 @@
+### 1.2.2: May 6th, 2024
+* add new default days for 4 nights trips
+
 ### 1.2.1: May 6th, 2024
 * Change the permalink for Accomodations and use the worpress native permalinks instead of the ACF values (resaweb url or site url).
   
