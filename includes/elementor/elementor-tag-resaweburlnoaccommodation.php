@@ -41,7 +41,9 @@ class Elementor_Tag_ResawebUrlNoAccommodation extends \Elementor\Core\DynamicTag
 		if(get_post_type($post) === 'package'){
 			$package = $post;
 		}
-
+		// Commenter pour la prod
+		// $noaccommodation_resaweburl = __( 'https://resaweb.lndo.site/fr/thalasso-sans-hebergement', 'tmsm-woocommerce-booking-thalasso' );
+		// Commenter pour le dev
 		$noaccommodation_resaweburl = __( 'https://reservation.thalasso-saintmalo.com/en/thalasso-sans-hebergement', 'tmsm-woocommerce-booking-thalasso' );
 		$package_codename  = esc_html( get_field( 'codename', $package->ID ) );
 

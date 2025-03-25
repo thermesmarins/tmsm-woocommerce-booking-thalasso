@@ -151,6 +151,11 @@ class Elementor_Tag_PackagePrice extends Tag {
 		else{
 			$defaultnights = 1;
 		}
+		// New default package defaultnights for 4 nights trip
+		if ($package_daysmin == 4 ) {
+			$defaultnights = 4;
+		}
+
 
 		if($defaultnights < $package_daysmin){
 			$defaultnights = $package_daysmin;

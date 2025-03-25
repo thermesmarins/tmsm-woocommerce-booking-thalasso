@@ -88,6 +88,10 @@ class Elementor_Tag_AccommodationPackagePrice extends \Elementor\Core\DynamicTag
 			}
 
 		}
+		if ($package_daysmin == 4 ) {
+			$defaultnights = 4;
+		}
+
 
 		if($defaultnights < $package_daysmin || $defaultnights > $package_daysmax){
 			$defaultnights = $package_daysmin;

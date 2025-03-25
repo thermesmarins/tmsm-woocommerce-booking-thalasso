@@ -72,6 +72,12 @@ class Elementor_Tag_NoAccommodationPackagePrice extends \Elementor\Core\DynamicT
 			$discovery_price_formatted = sprintf( __( '€%s', 'tmsm-woocommerce-booking-thalasso' ), number_format_i18n( $discovery_price ) );
 
 		}
+		// Todo error log 
+		// error_log('package_daysmin no accomodations : ' . $package_daysmin) ;
+		// error_log('default nights no accomodations : ' . $defaultnights) ;
+		if ($package_daysmin == 4 ) {
+			$defaultnights = 4;
+		}
 
 		if($defaultnights < $package_daysmin){
 			$defaultnights = $package_daysmin;
