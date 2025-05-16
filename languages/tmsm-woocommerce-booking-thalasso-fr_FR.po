@@ -513,10 +513,10 @@ msgid_plural ""
 "Rates per person for %s days in a double room, half board (except Hotel des "
 "Marins), breakfast only"
 msgstr[0] ""
-"Prix par jour et personne en chambre double en demi-pension (sauf à l’hôtel "
+"Prix par jour et par personne en chambre double en demi-pension (sauf à l’hôtel "
 "des Marins, petit déjeuner uniquement)."
 msgstr[1] ""
-"Prix par jour et personne en chambre double pour %s jours en demi-pension "
+"Prix par jour et par personne en chambre double pour %s jours en demi-pension "
 "(sauf à l’hôtel des Marins, petit déjeuner uniquement)."
 
 #: includes/elementor/elementor-tag-packagepriceexplanation.php:56

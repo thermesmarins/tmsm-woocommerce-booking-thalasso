@@ -33,6 +33,7 @@ class Elementor_Tag_PackagePriceExplanation extends \Elementor\Core\DynamicTags\
 		}
 
 		$package_daysmin  = esc_html( get_field( 'daysmin', $package->ID ) );
+		$package_daysmax  = esc_html( get_field( 'daysmax', $package->ID ) );
 
 		$triptype = get_field('trip_type', $package->ID); // term object trip_type
 		$triptype_defaultnights = null;
@@ -48,6 +49,9 @@ class Elementor_Tag_PackagePriceExplanation extends \Elementor\Core\DynamicTags\
 		if($defaultnights < $package_daysmin){
 			$defaultnights = $package_daysmin;
 		}
+		if ($package_daysmin == 4 && $package_daysmax == 4) {
+			$defaultnights = $package_daysmin;
+		}
 
 		if($defaultnights < 6){
 			$output .= sprintf(_n( 'Rates per person per day in a double room, half board (except Hotel des Marins, breakfast only)', 'Rates per person for %s days in a double room, half board (except Hotel des Marins), breakfast only', $defaultnights, 'tmsm-woocommerce-booking-thalasso' ), number_format_i18n( $defaultnights ));
@@ -55,6 +59,9 @@ class Elementor_Tag_PackagePriceExplanation extends \Elementor\Core\DynamicTags\
 		elseif($defaultnights == 6){
 			$output .= __('In hotel: Rates per person for 6 days in a double room, half board.','tmsm-woocommerce-booking-thalasso').'<br/>';
 			$output .= __('In Residence: Rates per person for 2 persons spa guests occupying the same apartment, including 6 treatments days and 7 nights from saturday to saturday.','tmsm-woocommerce-booking-thalasso');
+		}elseif($defaultnights == 4) {
+			$output .= __('In hotel: Rates per person for 4 days in a double room, half board.','tmsm-woocommerce-booking-thalasso').'<br/>';
+			
 		}
 
 		echo $output;
