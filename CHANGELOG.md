@@ -1,4 +1,7 @@
-### 1.2.2: May 6th, 2024
+### 1.2.3: June 3rd, 2025
+* Change translation for 4 days trip
+
+### 1.2.2: May 6th, 2025
 * add new default days for 4 nights trips
 
 ### 1.2.1: May 6th, 2024
