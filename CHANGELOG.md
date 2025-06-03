@@ -1,3 +1,6 @@
+### 1.2.4: June 3rd, 2025
+* Fix deprecated 'load_plugin_textdomain' on plugin loaded hook now on init
+
 ### 1.2.3: June 3rd, 2025
 * Change translation for 4 days trip
 
