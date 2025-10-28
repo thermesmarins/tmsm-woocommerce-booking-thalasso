@@ -1,3 +1,6 @@
+### 1.2.5: October 28th, 2025
+* Fix price digits to show the price only
+
 ### 1.2.4: June 3rd, 2025
 * Fix deprecated 'load_plugin_textdomain' on plugin loaded hook now on init
 
