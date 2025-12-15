@@ -1,3 +1,6 @@
+### 1.2.6: December 15th, 2025
+* Add new spatreatments on rest api.
+
 ### 1.2.5: October 28th, 2025
 * Fix price digits to show the price only
 
