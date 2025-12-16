@@ -1,3 +1,6 @@
+### 1.2.7: December 16th, 2025
+* Add discovery trip on rest api.
+
 ### 1.2.6: December 15th, 2025
 * Add new spatreatments on rest api.
 
