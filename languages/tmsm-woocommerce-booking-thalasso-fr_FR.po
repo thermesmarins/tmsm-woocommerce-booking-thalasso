@@ -221,6 +221,52 @@ msgstr "Nouveau type de forfait"
 msgid "Package Types"
 msgstr "Types de forfait"
 
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:294
+msgctxt "taxonomy general name"
+msgid "Durations"
+msgstr "Durées"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:295
+msgctxt "taxonomy singular name"
+msgid "Duration"
+msgstr "Durée"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:296
+msgid "Search Duration"
+msgstr "Rechercher une durée"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:297
+msgid "All Durations"
+msgstr "Toutes les durées"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:298
+msgid "Parent Duration"
+msgstr "Durée parent"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:299
+msgid "Parent Duration:"
+msgstr "Durée parent :"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:300
+msgid "Edit Duration"
+msgstr "Modifier la durée"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:301
+msgid "Update Duration"
+msgstr "Mettre à jour la durée"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:302
+msgid "Add New Duration"
+msgstr "Ajouter une durée"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:303
+msgid "New Duration"
+msgstr "Nouvelle durée"
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:304
+msgid "Durations"
+msgstr "Durées"
+
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:290
 msgctxt "taxonomy general name"
 msgid "Trip Types"
