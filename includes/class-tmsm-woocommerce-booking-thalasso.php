@@ -27,7 +27,8 @@
  * @subpackage Tmsm_Woocommerce_Booking_Thalasso/includes
  * @author     Nicolas Mollet <nico.mollet@gmail.com>
  */
-class Tmsm_Woocommerce_Booking_Thalasso {
+class Tmsm_Woocommerce_Booking_Thalasso
+{
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -66,8 +67,9 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 *
 	 * @since    1.0.0
 	 */
-	public function __construct() {
-		if ( defined( 'TMSM_WOOCOMMERCE_BOOKING_THALASSO_VERSION' ) ) {
+	public function __construct()
+	{
+		if (defined('TMSM_WOOCOMMERCE_BOOKING_THALASSO_VERSION')) {
 			$this->version = TMSM_WOOCOMMERCE_BOOKING_THALASSO_VERSION;
 		} else {
 			$this->version = '1.0.0';
@@ -78,7 +80,6 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-
 	}
 
 	/**
@@ -97,52 +98,52 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function load_dependencies() {
+	private function load_dependencies()
+	{
 
 		/**
 		 * Elementor tags
 		 */
-		if ( function_exists( '_is_elementor_installed' ) ) {
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-noaccommodationpackageprice.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-accommodationpackageprice.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-criteoproductid.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packageprice.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-discoveryprice.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packagepriceexplanation.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookresaweburl.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-resaweburlnoaccommodation.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookroombuttonlabel.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-bookdiscoverybuttonlabel.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-spatreatmentpriceperperson.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packageratestable.php';
-			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/elementor/elementor-tag-packageratescards.php';
+		if (function_exists('_is_elementor_installed')) {
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-noaccommodationpackageprice.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-accommodationpackageprice.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-criteoproductid.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-packageprice.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-discoveryprice.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-packagepriceexplanation.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-bookresaweburl.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-resaweburlnoaccommodation.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-bookroombuttonlabel.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-bookdiscoverybuttonlabel.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-spatreatmentpriceperperson.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-packageratestable.php';
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/elementor/elementor-tag-packageratescards.php';
 		}
 
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-tmsm-woocommerce-booking-thalasso-loader.php';
+		require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tmsm-woocommerce-booking-thalasso-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-tmsm-woocommerce-booking-thalasso-i18n.php';
+		require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-tmsm-woocommerce-booking-thalasso-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-tmsm-woocommerce-booking-thalasso-admin.php';
+		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-tmsm-woocommerce-booking-thalasso-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-tmsm-woocommerce-booking-thalasso-public.php';
+		require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-tmsm-woocommerce-booking-thalasso-public.php';
 
 		$this->loader = new Tmsm_Woocommerce_Booking_Thalasso_Loader();
-
 	}
 
 	/**
@@ -154,12 +155,12 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function set_locale() {
+	private function set_locale()
+	{
 
 		$plugin_i18n = new Tmsm_Woocommerce_Booking_Thalasso_i18n();
 
-		$this->loader->add_action( 'init', $plugin_i18n, 'load_plugin_textdomain' );
-
+		$this->loader->add_action('init', $plugin_i18n, 'load_plugin_textdomain');
 	}
 
 	/**
@@ -169,39 +170,41 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_admin_hooks() {
+	private function define_admin_hooks()
+	{
 
-		$plugin_admin = new Tmsm_Woocommerce_Booking_Thalasso_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Tmsm_Woocommerce_Booking_Thalasso_Admin($this->get_plugin_name(), $this->get_version());
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
+		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
 
 		// Post types
-		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_accommodation' );
-		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_package' );
-		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_discovery' );
-		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type_spatreatment' );
-		$this->loader->add_action( 'pre_get_posts', $plugin_admin, 'pre_get_posts' );
+		$this->loader->add_action('init', $plugin_admin, 'register_post_type_accommodation');
+		$this->loader->add_action('init', $plugin_admin, 'register_post_type_package');
+		$this->loader->add_action('init', $plugin_admin, 'register_post_type_discovery');
+		$this->loader->add_action('init', $plugin_admin, 'register_post_type_spatreatment');
+		$this->loader->add_action('pre_get_posts', $plugin_admin, 'pre_get_posts');
 
 		// Taxonomies
-		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_accommodationtype' );
-		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_packagetype' );
-		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_triptype' );
-		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_discoverytype' );
-		$this->loader->add_action( 'init', $plugin_admin, 'register_taxonomy_spatreatmenttype' );
+		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_accommodationtype');
+		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_packagetype');
+		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_duration');
+		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_triptype');
+		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_discoverytype');
+		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_spatreatmenttype');
 
 		// WooCommerce Product Type options
-		$this->loader->add_filter( 'product_type_options', $plugin_admin, 'woocommerce_product_type_options_bookable' );
-		$this->loader->add_action( 'woocommerce_variation_options', $plugin_admin, 'woocommerce_variation_options_bookable', 10 , 3 );
-		$this->loader->add_action( 'woocommerce_save_product_variation', $plugin_admin, 'woocommerce_save_product_variation_bookable', 10, 2 );
-		$this->loader->add_action( 'woocommerce_process_product_meta_simple', $plugin_admin, 'woocommerce_process_product_save_bookable_options', 10, 1 );
-		$this->loader->add_action( 'woocommerce_process_product_meta_variable', $plugin_admin, 'woocommerce_process_product_save_bookable_options', 10, 1 );
-		$this->loader->add_filter( 'woocommerce_product_data_tabs', $plugin_admin, 'woocommerce_product_data_tabs_bookable', 98 );
-		$this->loader->add_filter( 'woocommerce_product_data_panels', $plugin_admin, 'woocommerce_product_data_panels_bookable' );
+		$this->loader->add_filter('product_type_options', $plugin_admin, 'woocommerce_product_type_options_bookable');
+		$this->loader->add_action('woocommerce_variation_options', $plugin_admin, 'woocommerce_variation_options_bookable', 10, 3);
+		$this->loader->add_action('woocommerce_save_product_variation', $plugin_admin, 'woocommerce_save_product_variation_bookable', 10, 2);
+		$this->loader->add_action('woocommerce_process_product_meta_simple', $plugin_admin, 'woocommerce_process_product_save_bookable_options', 10, 1);
+		$this->loader->add_action('woocommerce_process_product_meta_variable', $plugin_admin, 'woocommerce_process_product_save_bookable_options', 10, 1);
+		$this->loader->add_filter('woocommerce_product_data_tabs', $plugin_admin, 'woocommerce_product_data_tabs_bookable', 98);
+		$this->loader->add_filter('woocommerce_product_data_panels', $plugin_admin, 'woocommerce_product_data_panels_bookable');
 
 		// ACF
-		$this->loader->add_action( 'acf/init', $plugin_admin, 'acf_register_groups' );
-		$this->loader->add_filter( 'acf/settings/show_admin', $plugin_admin, 'acf_show_admin' );
+		$this->loader->add_action('acf/init', $plugin_admin, 'acf_register_groups');
+		$this->loader->add_filter('acf/settings/show_admin', $plugin_admin, 'acf_show_admin');
 	}
 
 	/**
@@ -211,34 +214,34 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_public_hooks() {
+	private function define_public_hooks()
+	{
 
-		$plugin_public = new Tmsm_Woocommerce_Booking_Thalasso_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Tmsm_Woocommerce_Booking_Thalasso_Public($this->get_plugin_name(), $this->get_version());
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
+		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
 
 		// $this->loader->add_filter( 'post_type_link', $plugin_public, 'post_type_link_accommodation', 50, 4 );
 		// $this->loader->add_action( 'template_redirect', $plugin_public, 'template_redirect_accommodation' );
-		$this->loader->add_filter( 'body_class', $plugin_public, 'body_class', 10, 1 );
-		$this->loader->add_filter( 'post_class', $plugin_public, 'post_class', 10, 1 );
+		$this->loader->add_filter('body_class', $plugin_public, 'body_class', 10, 1);
+		$this->loader->add_filter('post_class', $plugin_public, 'post_class', 10, 1);
 
 		// WooCommerce Button Booking
-		$this->loader->add_action( 'woocommerce_before_add_to_cart_button', $plugin_public, 'woocommerce_before_add_to_cart_form' );
-		$this->loader->add_action( 'woocommerce_after_add_to_cart_button', $plugin_public, 'woocommerce_after_add_to_cart_form' );
+		$this->loader->add_action('woocommerce_before_add_to_cart_button', $plugin_public, 'woocommerce_before_add_to_cart_form');
+		$this->loader->add_action('woocommerce_after_add_to_cart_button', $plugin_public, 'woocommerce_after_add_to_cart_form');
 
 		// Ajax Functions
-		$this->loader->add_action( 'wp_ajax_nopriv_booking_start', $plugin_public, 'booking_start' );
-		$this->loader->add_action( 'wp_ajax_booking_start', $plugin_public, 'booking_start' );
+		$this->loader->add_action('wp_ajax_nopriv_booking_start', $plugin_public, 'booking_start');
+		$this->loader->add_action('wp_ajax_booking_start', $plugin_public, 'booking_start');
 
 		// Elementor
-		$this->loader->add_action( 'elementor/dynamic_tags/register_tags', $plugin_public, 'elementor_tags_register', 10, 1 );
-		$this->loader->add_action( 'elementor/query/accommodationpackage_price', $plugin_public, 'elementor_query_accommodationpackage_price', 10, 1);
-		$this->loader->add_action( 'elementor/query/package_discover', $plugin_public, 'elementor_query_package_discover', 10, 1);
+		$this->loader->add_action('elementor/dynamic_tags/register_tags', $plugin_public, 'elementor_tags_register', 10, 1);
+		$this->loader->add_action('elementor/query/accommodationpackage_price', $plugin_public, 'elementor_query_accommodationpackage_price', 10, 1);
+		$this->loader->add_action('elementor/query/package_discover', $plugin_public, 'elementor_query_package_discover', 10, 1);
 
 		// ACF
-		$this->loader->add_filter( 'acf/format_value/name=new', $plugin_public, 'acf_format_value_new', 200);
-
+		$this->loader->add_filter('acf/format_value/name=new', $plugin_public, 'acf_format_value_new', 200);
 	}
 
 	/**
@@ -246,7 +249,8 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 *
 	 * @since    1.0.0
 	 */
-	public function run() {
+	public function run()
+	{
 		$this->loader->run();
 	}
 
@@ -257,7 +261,8 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_plugin_name() {
+	public function get_plugin_name()
+	{
 		return $this->plugin_name;
 	}
 
@@ -267,7 +272,8 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @since     1.0.0
 	 * @return    Tmsm_Woocommerce_Booking_Thalasso_Loader    Orchestrates the hooks of the plugin.
 	 */
-	public function get_loader() {
+	public function get_loader()
+	{
 		return $this->loader;
 	}
 
@@ -277,9 +283,8 @@ class Tmsm_Woocommerce_Booking_Thalasso {
 	 * @since     1.0.0
 	 * @return    string    The version number of the plugin.
 	 */
-	public function get_version() {
+	public function get_version()
+	{
 		return $this->version;
 	}
-
-
 }
