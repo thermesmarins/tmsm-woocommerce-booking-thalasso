@@ -1,3 +1,7 @@
+### 1.2.8: December 30th, 2025
+* Add new duration taxonomie
+* Fix translations
+  
 ### 1.2.7: December 16th, 2025
 * Add discovery trip on rest api.
 
