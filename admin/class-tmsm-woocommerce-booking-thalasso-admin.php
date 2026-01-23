@@ -174,6 +174,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
+			'show_in_rest'      => true,
 			'rewrite'           => array('slug' => 'accomodation-type'),
 		);
 
@@ -276,6 +277,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
+			'show_in_rest'      => true,
 			'rewrite'           => array('slug' => 'package-type'),
 		);
 
@@ -310,6 +312,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
+			'show_in_rest'      => true,
 			'rewrite'           => array('slug' => 'duration'),
 		);
 
@@ -354,6 +357,78 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 	}
 
 	/**
+	 * Creates a new custom taxonomy: objectives
+	 *
+	 * @since 	1.0.0
+	 * @access 	public
+	 * @uses 	register_taxonomy()
+	 */
+	function register_taxonomy_objectives()
+	{
+		$labels = array(
+			'name'              => _x('Objectives', 'taxonomy general name', 'tmsm-woocommerce-booking-thalasso'),
+			'singular_name'     => _x('Objective', 'taxonomy singular name', 'tmsm-woocommerce-booking-thalasso'),
+			'search_items'      => __('Search Objective', 'tmsm-woocommerce-booking-thalasso'),
+			'all_items'         => __('All Objectives', 'tmsm-woocommerce-booking-thalasso'),
+			'parent_item'       => __('Parent Objective', 'tmsm-woocommerce-booking-thalasso'),
+			'parent_item_colon' => __('Parent Objective:', 'tmsm-woocommerce-booking-thalasso'),
+			'edit_item'         => __('Edit Objective', 'tmsm-woocommerce-booking-thalasso'),
+			'update_item'       => __('Update Objective', 'tmsm-woocommerce-booking-thalasso'),
+			'add_new_item'      => __('Add New Objective', 'tmsm-woocommerce-booking-thalasso'),
+			'new_item_name'     => __('New Objective', 'tmsm-woocommerce-booking-thalasso'),
+			'menu_name'         => __('Objectives', 'tmsm-woocommerce-booking-thalasso'),
+		);
+
+		$args = array(
+			'hierarchical'      => false,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'show_in_rest'      => true,
+			'rewrite'           => array('slug' => 'objective'),
+		);
+
+		register_taxonomy('objective', array('package'), $args);
+		
+		// Initialize default terms
+		$this->initialize_objectives_terms();
+	}
+
+	/**
+	 * Initialize default objectives terms
+	 *
+	 * @since 	1.0.0
+	 * @access 	public
+	 */
+	public function initialize_objectives_terms()
+	{
+		$terms = array(
+			'Forme',
+			'Santé',
+			'Bien-être',
+			'Poids & Minceur',
+			'Famille'
+		);
+
+		foreach ($terms as $term_name) {
+			// Check if term already exists
+			$term = term_exists($term_name, 'objective');
+			
+			if (!$term) {
+				// Create the term
+				wp_insert_term(
+					$term_name,
+					'objective',
+					array(
+						'slug' => sanitize_title($term_name),
+					)
+				);
+			}
+		}
+	}
+
+	/**
 	 * Creates a new custom taxonomy: triptype
 	 *
 	 * @since 	1.0.0
@@ -382,6 +457,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
+			'show_in_rest'      => true,
 			'rewrite'           => array('slug' => 'trip-type', 'with_front' => false),
 		);
 
@@ -486,6 +562,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
+			'show_in_rest'      => true,
 			'rewrite'           => array('slug' => 'discovery-type'),
 		);
 
@@ -605,6 +682,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
+			'show_in_rest'      => true,
 			'rewrite'           => array('slug' => 'spa-treatment-type'),
 		);
 
@@ -1298,6 +1376,13 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								array(
 									'param' => 'taxonomy',
 									'operator' => '==',
+									'value' => 'objective',
+								),
+							),
+							array(
+								array(
+									'param' => 'taxonomy',
+									'operator' => '==',
 									'value' => 'trip_type',
 								),
 							),
@@ -1502,6 +1587,28 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 									'id' => '',
 								),
 								'taxonomy' => 'duration',
+								'field_type' => 'checkbox',
+								'allow_null' => 0,
+								'add_term' => 0,
+								'save_terms' => 1,
+								'load_terms' => 1,
+								'return_format' => 'object',
+								'multiple' => 0,
+							),
+							array(
+								'key' => 'field_5add9b41ce379',
+								'label' => 'Objectifs',
+								'name' => 'objective',
+								'type' => 'taxonomy',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '25',
+									'class' => '',
+									'id' => '',
+								),
+								'taxonomy' => 'objective',
 								'field_type' => 'checkbox',
 								'allow_null' => 0,
 								'add_term' => 0,

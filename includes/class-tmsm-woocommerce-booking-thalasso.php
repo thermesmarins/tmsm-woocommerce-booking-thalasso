@@ -189,6 +189,7 @@ class Tmsm_Woocommerce_Booking_Thalasso
 		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_accommodationtype');
 		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_packagetype');
 		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_duration');
+		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_objectives');
 		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_triptype');
 		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_discoverytype');
 		$this->loader->add_action('init', $plugin_admin, 'register_taxonomy_spatreatmenttype');

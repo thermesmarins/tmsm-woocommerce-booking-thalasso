@@ -268,6 +268,52 @@ msgstr ""
 msgid "Durations"
 msgstr ""
 
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:369
+msgctxt "taxonomy general name"
+msgid "Objectives"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:370
+msgctxt "taxonomy singular name"
+msgid "Objective"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:371
+msgid "Search Objective"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:372
+msgid "All Objectives"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:373
+msgid "Parent Objective"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:374
+msgid "Parent Objective:"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:375
+msgid "Edit Objective"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:376
+msgid "Update Objective"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:377
+msgid "Add New Objective"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:378
+msgid "New Objective"
+msgstr ""
+
+#: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:379
+msgid "Objectives"
+msgstr ""
+
 #: admin/class-tmsm-woocommerce-booking-thalasso-admin.php:290
 msgctxt "taxonomy general name"
 msgid "Trip Types"
