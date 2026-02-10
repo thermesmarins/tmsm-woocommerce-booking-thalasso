@@ -1,7 +1,10 @@
-### 1.2.8: January 26th, 2026
+### 1.2.10: February 10th, 2026
+* Add new short_advantages input for trips
+
+### 1.2.9: January 26th, 2026
 * Add new objectives taxonomie
 * Fix translations
-* 
+
 ### 1.2.8: December 30th, 2025
 * Add new duration taxonomie
 * Fix translations
