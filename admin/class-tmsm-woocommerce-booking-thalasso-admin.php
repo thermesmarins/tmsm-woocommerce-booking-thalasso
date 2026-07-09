@@ -869,6 +869,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b92821b40a42',
 								'label' => 'Nombre de nuits par défaut',
 								'name' => 'defaultnights',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => '',
 								'required' => 1,
@@ -914,6 +915,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5f15b970c42',
 								'label' => 'Type de découverte',
 								'name' => 'discovery_type',
+								'translations' => 'sync',
 								'type' => 'taxonomy',
 								'instructions' => '',
 								'required' => 1,
@@ -936,6 +938,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b59b982258be',
 								'label' => 'ID Resaweb',
 								'name' => 'id_resaweb',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => '',
 								'required' => 0,
@@ -957,6 +960,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5f11f7a55dc',
 								'label' => 'Durée',
 								'name' => 'duration',
+								'translations' => 'sync',
 								'type' => 'text',
 								'instructions' => '',
 								'required' => 0,
@@ -976,6 +980,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5b0c4bfe052',
 								'label' => 'Prix',
 								'name' => 'price',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => '',
 								'required' => 0,
@@ -997,6 +1002,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5d07821adbbb1',
 								'label' => 'Prix promo',
 								'name' => 'price_sale',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => '',
 								'required' => 0,
@@ -1018,6 +1024,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b59b959258bc',
 								'label' => 'URL achat cadeau',
 								'name' => 'gift_url',
+								'translations' => 'translate',
 								'type' => 'url',
 								'instructions' => '',
 								'required' => 0,
@@ -1034,6 +1041,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b59b96b258bd',
 								'label' => 'URL réservation',
 								'name' => 'booking_url',
+								'translations' => 'translate',
 								'type' => 'url',
 								'instructions' => '',
 								'required' => 0,
@@ -1050,6 +1058,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b59b9237d542',
 								'label' => 'Description courte',
 								'name' => 'short_description',
+								'translations' => 'translate',
 								'type' => 'textarea',
 								'instructions' => '',
 								'required' => 0,
@@ -1069,6 +1078,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b8538dde0818',
 								'label' => 'Galerie d’images',
 								'name' => 'gallery',
+								'translations' => 'sync',
 								'type' => 'gallery',
 								'instructions' => '',
 								'required' => 0,
@@ -1127,6 +1137,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5b0b1c1fca4',
 								'label' => 'Type de soin',
 								'name' => 'spatreatment_type',
+								'translations' => 'sync',
 								'type' => 'taxonomy',
 								'instructions' => '',
 								'required' => 1,
@@ -1149,6 +1160,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5993752a733',
 								'label' => 'Durée',
 								'name' => 'duration',
+								'translations' => 'sync',
 								'type' => 'text',
 								'instructions' => '',
 								'required' => 0,
@@ -1168,6 +1180,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5993952a734',
 								'label' => 'Prix',
 								'name' => 'price',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => 'Prix total (sera affiché le prix calculé par personne)',
 								'required' => 0,
@@ -1189,6 +1202,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b59f042a0189',
 								'label' => 'Nombre de personnes',
 								'name' => 'persons',
+								'translations' => 'sync',
 								'type' => 'radio',
 								'instructions' => '',
 								'required' => 1,
@@ -1213,6 +1227,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5993c6a088a',
 								'label' => 'Nouveau',
 								'name' => 'new',
+								'translations' => 'sync',
 								'type' => 'true_false',
 								'instructions' => '',
 								'required' => 0,
@@ -1232,6 +1247,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b599405a088b',
 								'label' => 'URL achat cadeau',
 								'name' => 'gift_url',
+								'translations' => 'translate',
 								'type' => 'url',
 								'instructions' => '',
 								'required' => 0,
@@ -1248,6 +1264,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b59b5c2ee60e',
 								'label' => 'URL réservation',
 								'name' => 'booking_url',
+								'translations' => 'translate',
 								'type' => 'url',
 								'instructions' => '',
 								'required' => 0,
@@ -1264,6 +1281,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5993a62a735',
 								'label' => 'Description courte',
 								'name' => 'short_description',
+								'translations' => 'translate',
 								'type' => 'textarea',
 								'instructions' => '',
 								'required' => 1,
@@ -1283,6 +1301,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b8538efe081a',
 								'label' => 'Galerie d’images',
 								'name' => 'gallery',
+								'translations' => 'sync',
 								'type' => 'gallery',
 								'instructions' => '',
 								'required' => 0,
@@ -1341,6 +1360,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b87ec05f12a8',
 								'label' => 'Description secondaire',
 								'name' => 'secondary_desc',
+								'translations' => 'translate',
 								'type' => 'wysiwyg',
 								'instructions' => '',
 								'required' => 0,
@@ -1426,6 +1446,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b62f9d31fc44',
 								'label' => 'Nombre de nuits par défautt',
 								'name' => 'defaultnights',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => '',
 								'required' => 0,
@@ -1447,6 +1468,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b8d22b6e78ea',
 								'label' => 'Type d’hébergement',
 								'name' => 'accommodation_type',
+								'translations' => 'sync',
 								'type' => 'taxonomy',
 								'instructions' => '',
 								'required' => 1,
@@ -1493,6 +1515,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5ba3bf400a771',
 								'label' => 'Vidéo',
 								'name' => 'video',
+								'translations' => 'translate',
 								'type' => 'url',
 								'instructions' => '',
 								'required' => 0,
@@ -1533,6 +1556,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b597fb250c94',
 								'label' => 'Type de séjour',
 								'name' => 'trip_type',
+								'translations' => 'sync',
 								'type' => 'taxonomy',
 								'instructions' => '',
 								'required' => 0,
@@ -1555,6 +1579,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5add9b41ce377',
 								'label' => 'Type de forfait',
 								'name' => 'package_type',
+								'translations' => 'sync',
 								'type' => 'taxonomy',
 								'instructions' => '',
 								'required' => 0,
@@ -1577,6 +1602,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5add9b41ce378',
 								'label' => 'Durée',
 								'name' => 'duration',
+								'translations' => 'sync',
 								'type' => 'taxonomy',
 								'instructions' => '',
 								'required' => 0,
@@ -1599,6 +1625,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5add9b41ce379',
 								'label' => 'Objectifs',
 								'name' => 'objective',
+								'translations' => 'sync',
 								'type' => 'taxonomy',
 								'instructions' => '',
 								'required' => 0,
@@ -1621,6 +1648,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b9147d82987f',
 								'label' => 'Hébergements disponibles',
 								'name' => 'accommodation',
+								'translations' => 'sync',
 								'type' => 'post_object',
 								'instructions' => '',
 								'required' => 0,
@@ -1643,6 +1671,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5add9ad686f2b',
 								'label' => 'Jours minimum',
 								'name' => 'daysmin',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => '',
 								'required' => 1,
@@ -1664,6 +1693,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5add9b0286f2c',
 								'label' => 'Jours maximum',
 								'name' => 'daysmax',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => '',
 								'required' => 1,
@@ -1685,6 +1715,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b87bb6d74ac5',
 								'label' => 'Nouveau',
 								'name' => 'new',
+								'translations' => 'sync',
 								'type' => 'true_false',
 								'instructions' => '',
 								'required' => 0,
@@ -1704,6 +1735,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b87bbe21d67b',
 								'label' => 'Argumentaire',
 								'name' => 'pitch',
+								'translations' => 'translate',
 								'type' => 'text',
 								'instructions' => 'durée, soins, repas...',
 								'required' => 0,
@@ -1723,6 +1755,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b87bbe21d67c',
 								'label' => 'Avantages Courts',
 								'name' => 'court_advantage',
+								'translations' => 'translate',
 								'type' => 'text',
 								'instructions' => 'courte description des avantages',
 								'required' => 0,
@@ -1742,6 +1775,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b598b7aac662',
 								'label' => 'Description courte',
 								'name' => 'short_description',
+								'translations' => 'translate',
 								'type' => 'textarea',
 								'instructions' => '',
 								'required' => 1,
@@ -1761,6 +1795,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5addcb883f3af',
 								'label' => 'Avantages',
 								'name' => 'advantages',
+								'translations' => 'translate',
 								'type' => 'wysiwyg',
 								'instructions' => '',
 								'required' => 0,
@@ -1780,7 +1815,8 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b59b732917ca',
 								'label' => 'ID Resaweb',
 								'name' => 'id_resaweb',
-								'type' => 'text',
+								'translations' => 'sync',
+								'type' => 'number',
 								'instructions' => '',
 								'required' => 0,
 								'conditional_logic' => 0,
@@ -1793,12 +1829,15 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'placeholder' => '',
 								'prepend' => '',
 								'append' => '',
-								'maxlength' => '',
+								'min' => '',
+								'max' => '',
+								'step' => '',
 							),
 							array(
 								'key' => 'field_5b61ce089b222',
 								'label' => 'Nom de code Resaweb',
 								'name' => 'codename',
+								'translations' => 'sync',
 								'type' => 'text',
 								'instructions' => '',
 								'required' => 0,
@@ -1818,6 +1857,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b8538ebe0819',
 								'label' => 'Galerie d’images',
 								'name' => 'gallery',
+								'translations' => 'sync',
 								'type' => 'gallery',
 								'instructions' => '',
 								'required' => 0,
@@ -1843,6 +1883,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5add9a5386f2a',
 								'label' => 'Jour de début',
 								'name' => 'startday',
+								'translations' => 'sync',
 								'type' => 'checkbox',
 								'instructions' => 'Jours pour lequels on peut commencer le forfait',
 								'required' => 1,
@@ -1911,6 +1952,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5976b4739c7',
 								'label' => 'Type d’hébergement',
 								'name' => 'accommodation_type',
+								'translations' => 'sync',
 								'type' => 'taxonomy',
 								'instructions' => '',
 								'required' => 1,
@@ -1933,6 +1975,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5ad9f3f998ae8',
 								'label' => 'Étoiles',
 								'name' => 'stars',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => '',
 								'required' => 0,
@@ -1954,6 +1997,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5ad9f59d5060b',
 								'label' => 'Vue mer',
 								'name' => 'seaview',
+								'translations' => 'sync',
 								'type' => 'true_false',
 								'instructions' => '',
 								'required' => 0,
@@ -1973,6 +2017,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5ad9ff4798bbd',
 								'label' => 'Localisation',
 								'name' => 'location',
+								'translations' => 'translate',
 								'type' => 'text',
 								'instructions' => '',
 								'required' => 1,
@@ -1992,6 +2037,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5ad9fe4bde5db',
 								'label' => 'Description courte',
 								'name' => 'short_description',
+								'translations' => 'translate',
 								'type' => 'textarea',
 								'instructions' => 'Slogan',
 								'required' => 0,
@@ -2011,6 +2057,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b8535b9485af',
 								'label' => 'Galerie d’images',
 								'name' => 'gallery',
+								'translations' => 'sync',
 								'type' => 'gallery',
 								'instructions' => '',
 								'required' => 0,
@@ -2036,6 +2083,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b58877006b35',
 								'label' => 'URL Availpro',
 								'name' => 'availpro_url',
+								'translations' => 'translate',
 								'type' => 'url',
 								'instructions' => 'URL de la page de de réservation Availpro',
 								'required' => 1,
@@ -2052,6 +2100,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b5887a906b36',
 								'label' => 'URL Resaweb',
 								'name' => 'resaweb_url',
+								'translations' => 'translate',
 								'type' => 'url',
 								'instructions' => 'URL de la page de l’hébergement',
 								'required' => 0,
@@ -2068,6 +2117,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b58880c783c9',
 								'label' => 'Adresse',
 								'name' => 'address',
+								'translations' => 'translate',
 								'type' => 'textarea',
 								'instructions' => '',
 								'required' => 1,
@@ -2087,6 +2137,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b602c2f4639c',
 								'label' => 'URL Site web',
 								'name' => 'website_url',
+								'translations' => 'translate',
 								'type' => 'url',
 								'instructions' => '',
 								'required' => 0,
@@ -2103,6 +2154,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b602c544639d',
 								'label' => 'Email de contact',
 								'name' => 'email',
+								'translations' => 'sync',
 								'type' => 'email',
 								'instructions' => '',
 								'required' => 0,
@@ -2121,6 +2173,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b58882e783ca',
 								'label' => 'Téléphone',
 								'name' => 'phone',
+								'translations' => 'sync',
 								'type' => 'text',
 								'instructions' => '',
 								'required' => 1,
@@ -2140,6 +2193,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b588844783cb',
 								'label' => 'Fax',
 								'name' => 'fax',
+								'translations' => 'sync',
 								'type' => 'text',
 								'instructions' => '',
 								'required' => 0,
@@ -2159,6 +2213,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5ad9f49d1a416',
 								'label' => 'Checkin',
 								'name' => 'checkin',
+								'translations' => 'sync',
 								'type' => 'select',
 								'instructions' => '',
 								'required' => 1,
@@ -2192,6 +2247,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5ad9f4de9c63c',
 								'label' => 'Checkout',
 								'name' => 'checkout',
+								'translations' => 'sync',
 								'type' => 'select',
 								'instructions' => '',
 								'required' => 1,
@@ -2224,6 +2280,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5b59b71d31a3b',
 								'label' => 'ID Resaweb',
 								'name' => 'id_resaweb',
+								'translations' => 'sync',
 								'type' => 'number',
 								'instructions' => '',
 								'required' => 0,
@@ -2245,6 +2302,7 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 								'key' => 'field_5ad9f3e298ae7',
 								'label' => 'Nom de code',
 								'name' => 'codename',
+								'translations' => 'sync',
 								'type' => 'text',
 								'instructions' => '3 caractères',
 								'required' => 1,
@@ -2300,5 +2358,118 @@ class Tmsm_Woocommerce_Booking_Thalasso_Admin
 			public function acf_show_admin($path)
 			{
 				return defined('WP_DEBUG') && true === WP_DEBUG;
+			}
+
+			/**
+			 * Fixes ACF taxonomy fields not being synchronized to Polylang translations.
+			 *
+			 * ACF batches wp_set_object_terms() calls for taxonomy fields in a single
+			 * request-wide queue (ACF_Field_Taxonomy::$save_post_terms) and flushes it,
+			 * on `acf/save_post`, against the post_id of the currently submitted post only.
+			 * When Polylang Pro's ACF integration pushes a 'sync' field value to a
+			 * translation mid-save (via a nested acf_update_value() call), ACF queues
+			 * that translation's terms too, but flushes them onto the source post instead:
+			 * the translation's ACF postmeta ends up correct, but wp_set_object_terms()
+			 * never runs for it, so the taxonomy assignment itself never reaches the DB.
+			 * This re-applies the terms directly to each translation, bypassing that
+			 * broken deferred flush.
+			 *
+			 * These taxonomies also have `show_ui` enabled, so a term can be assigned to a
+			 * translation independently of the ACF field (native taxonomy metabox). To avoid
+			 * wiping such terms, this only ever adds/removes the terms it previously pushed
+			 * itself (tracked in a private `_pll_acf_sync_{field_key}` meta), never touching
+			 * terms assigned through any other means.
+			 *
+			 * @since 1.0.0
+			 * @param int|string $post_id
+			 */
+			public function acf_fix_synced_taxonomy_fields($post_id)
+			{
+				if (!is_numeric($post_id) || !function_exists('pll_get_post_translations')) {
+					return;
+				}
+
+				$post_id = (int) $post_id;
+				$translations = pll_get_post_translations($post_id);
+
+				if (count($translations) < 2) {
+					return;
+				}
+
+				$field_objects = get_field_objects($post_id, false);
+
+				if (empty($field_objects)) {
+					return;
+				}
+
+				foreach ($field_objects as $field) {
+					if ('taxonomy' !== $field['type'] || empty($field['taxonomy']) || 'sync' !== ($field['translations'] ?? '')) {
+						continue;
+					}
+
+					$taxonomy = $field['taxonomy'];
+					$source_ids = array_map('intval', (array) $field['value']);
+					$is_translated_taxonomy = function_exists('pll_is_translated_taxonomy') && pll_is_translated_taxonomy($taxonomy);
+					$marker_key = '_pll_acf_sync_' . $field['key'];
+
+					foreach ($translations as $lang => $tr_id) {
+						$tr_id = (int) $tr_id;
+
+						if ($tr_id === $post_id) {
+							continue;
+						}
+
+						// For a Polylang-translated taxonomy, push the target language's equivalent term, not the source's raw ID.
+						if ($is_translated_taxonomy) {
+							$new_ids = array();
+							foreach ($source_ids as $term_id) {
+								$tr_term_id = pll_get_term($term_id, $lang);
+								if ($tr_term_id) {
+									$new_ids[] = (int) $tr_term_id;
+								}
+							}
+						} else {
+							$new_ids = $source_ids;
+						}
+
+						$current_ids = wp_get_object_terms($tr_id, $taxonomy, array('fields' => 'ids'));
+						$current_ids = is_array($current_ids) ? array_map('intval', $current_ids) : array();
+						$previously_pushed_ids = array_map('intval', (array) get_post_meta($tr_id, $marker_key, true));
+
+						// Keep terms assigned independently of this field (e.g. via the native taxonomy metabox).
+						$foreign_ids = array_diff($current_ids, $previously_pushed_ids);
+						$final_ids   = array_unique(array_merge($foreign_ids, $new_ids));
+
+						wp_set_object_terms($tr_id, $final_ids, $taxonomy, false);
+						update_post_meta($tr_id, $marker_key, $new_ids);
+					}
+				}
+			}
+
+			/**
+			 * Hides Polylang's "Synchronize this post" button on the language metabox.
+			 *
+			 * That button (dashicons-controls-repeat, "Synchronize this post") triggers
+			 * `PLL_Sync_Post::sync_posts()`, which copies *every* custom field verbatim
+			 * to the translation (via the `Copy_All` strategy), ignoring each ACF field's
+			 * `translations` setting entirely. Enabling it would silently overwrite
+			 * `translate` fields (descriptions, addresses, etc.) with the source
+			 * language's content. The field-level `sync`/`translate` settings already
+			 * cover the intended use case on every save, so this button is redundant
+			 * and only adds risk — hidden here rather than removed, to avoid touching
+			 * Polylang Pro's own code.
+			 *
+			 * @since 1.0.0
+			 */
+			public function acf_hide_sync_post_button()
+			{
+				$screen = get_current_screen();
+				$post_types = array('accommodation', 'package', 'discovery', 'spatreatment');
+
+				if (!$screen || !in_array($screen->post_type, $post_types, true)) {
+					return;
+				}
+
+				echo '<style>.pll-sync-column { display: none !important; }</style>';
 			}
 		}

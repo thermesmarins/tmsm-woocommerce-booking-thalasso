@@ -206,6 +206,12 @@ class Tmsm_Woocommerce_Booking_Thalasso
 		// ACF
 		$this->loader->add_action('acf/init', $plugin_admin, 'acf_register_groups');
 		$this->loader->add_filter('acf/settings/show_admin', $plugin_admin, 'acf_show_admin');
+
+		// Fix ACF taxonomy fields not being synchronized to Polylang translations (see acf_fix_synced_taxonomy_fields doc block).
+		$this->loader->add_action('acf/save_post', $plugin_admin, 'acf_fix_synced_taxonomy_fields', 20);
+
+		// Hide Polylang's "Synchronize this post" button (see acf_hide_sync_post_button doc block).
+		$this->loader->add_action('admin_head', $plugin_admin, 'acf_hide_sync_post_button');
 	}
 
 	/**

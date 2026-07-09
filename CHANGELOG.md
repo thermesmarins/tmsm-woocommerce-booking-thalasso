@@ -1,3 +1,8 @@
+### 1.2.11: July 9th, 2026
+* Add Polylang translation settings (`sync` or `translate`) to every ACF field, so Polylang Pro knows how to handle each field across languages
+* Fix ACF taxonomy fields (duration, objective, package type, trip type, accommodation type, discovery type, spa treatment type) not being synchronized to translations on save
+* Hide Polylang's "Synchronize this post" button on Accommodation, Package, Discovery and Spa Treatment, as it bypasses the field-level translation settings above and could overwrite translated content
+
 ### 1.2.10: February 10th, 2026
 * Add new short_advantages input for trips
 
